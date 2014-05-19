@@ -9,7 +9,7 @@ import java.util.LinkedList;
 
 public class MakeInput {
 	public static void main(String[] args) throws Exception {
-		if (args.length != 1) {
+		if (args.length != 2) {
 			System.err.println("Usage: [conf identify] [output dir]");
 			System.exit(1);
 		}
@@ -36,7 +36,8 @@ public class MakeInput {
 			temp = null;
 			int f_count = 0;
 			while ((temp = conf_reader.readLine()) != null) {
-				if (temp.startsWith("#") || temp.startsWith("-") || temp.equals(""))
+				if (temp.startsWith("#") || temp.startsWith("-")
+						|| temp.equals(""))
 					continue;
 				String feature_name = temp.trim();
 
@@ -77,7 +78,8 @@ public class MakeInput {
 			conf_reader.close();
 
 			// begin to output
-			PrintStream outp = new PrintStream(args[1]+"t+"."+conf_id+".svm_buffer");
+			PrintStream outp = new PrintStream(args[1] + t + "." + conf_id
+					+ ".svm_buffer");
 			Iterator<SVMLine> iter = lines.iterator();
 			while (iter.hasNext()) {
 				SVMLine line = iter.next();

@@ -1,1 +1,1 @@
-java -cp codes/yep/bin/ libsvm_interface.MakeInput $1
+java -cp codes/yep/bin/ libsvm_interface.MakeInput $1 ./model/
