@@ -10,4 +10,4 @@ echo begin to predict by svm model
 ./codes/libsvm/svm-predict -b 1 ./model/test.$1.svm_buffer.scale ./T.buf/$1/svm.model ./T.buf/$1/svm_pred.txt
 
 echo make submission
-java -cp ./codes/yep/bin evaluation.MakeSubmission ./T.buf/$1/pred.txt test.txt ./T.buf/$1/submission.txt ./data/projectIDMapping
+java -cp ./codes/yep/bin evaluation.MakeSubmission ./T.buf/$1/svm_pred.txt test.txt ./T.buf/$1/submission.txt ./data/projectIDMapping
