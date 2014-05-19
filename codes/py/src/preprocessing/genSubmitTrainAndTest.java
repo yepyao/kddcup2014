@@ -48,7 +48,6 @@ public class genSubmitTrainAndTest {
 		FileOutputStream f2 = new FileOutputStream(outpath);
 		BufferedWriter out = new BufferedWriter(new OutputStreamWriter(f2));
 		s = in.readLine();
-		s = in.readLine();
 		while (s != null){
 			ArrayList<String> splits = CSVFileUtil.fromCSVLinetoArray(s);
 			String user = "0";
@@ -65,7 +64,6 @@ public class genSubmitTrainAndTest {
 		in = new BufferedReader(new InputStreamReader(f));
 		f2 = new FileOutputStream(outpath2);
 		out = new BufferedWriter(new OutputStreamWriter(f2));
-		s = in.readLine();
 		s = in.readLine();
 		while (s != null){
 			ArrayList<String> splits = CSVFileUtil.fromCSVLinetoArray(s);
