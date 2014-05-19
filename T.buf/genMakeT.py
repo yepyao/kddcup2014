@@ -65,5 +65,5 @@ if __name__ == '__main__':
         dep += ' '.join( [('features/%s.txt.%s' % (fn,item)) for item in gi]) +' '
         dep += ' '.join( [('features/%s.txt.%s' % (fn,item)) for item in ggfd])+' '
         arg = ' -gd '+ ' '.join(gd) + ' -g '+ ' '.join(gl)+' ' + ' -i '+ ' '.join(gi)+' ' + ' -efd '+ ' '.join(ggfd)+' ' + ' -u '+ ' '.join(gu)+' '
-        print ('%s.%s.buffer:' % (fn,sys.argv[2])) + dep
-        print '\tkddcup_combine_ugroup %s.txt %s.%s.buffer  %s -max_block 20000 -scale_score 1'%( fn, fn, sys.argv[2], arg )
+        print ('%s.%s.buffer:' % ('model/'+fn,sys.argv[2])) + dep
+        print '\tkddcup_combine_ugroup %s.txt %s.%s.buffer  %s -max_block 20000 -scale_score 1'%( fn, 'model/'+fn, sys.argv[2], arg )

@@ -30,15 +30,29 @@ public class AllData {
 	private AllData(){
 		//get raw data
 		try{
-			getProjects();
-			getResourse();
-			getEssays();
-			//getDonations();
-			getOutcomes();
+			//getProjects();
+			//getResourse();
+			//getEssays();
+			getDonations();
+			//getOutcomes();
 		} catch(Exception e){
 			e.printStackTrace();
 			System.exit(1);
 		}
+	}
+
+	private void getDonations() throws Exception {
+		System.out.println("Begin loading donations...");
+		CSVFileUtil input = new CSVFileUtil(input_dir + "donations.csv");
+		String line = input.readLine();
+		while ((line = input.readLine())!=null){
+			Donation donation = Donation.render(line);
+			donations.put(donation.donationid, donation);
+			
+		}
+		System.out.println("End loading donations...");
+		System.out.println("Get donations entry: " + donations.keySet().size());
+		
 	}
 
 	private void getResourse() throws Exception {

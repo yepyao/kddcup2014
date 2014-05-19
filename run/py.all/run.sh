@@ -1,2 +1,2 @@
 #!/bin/bash
-../run_ali.sh 0 200
+../run_kddcup.sh 0 200

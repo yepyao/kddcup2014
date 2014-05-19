@@ -38,8 +38,7 @@ do
 #    cat log stats.txt > log.txt 2>/dev/null
 
 #    java -cp ../../java/kalen/ML/bin:../../java/kalen/kddcup2013/bin eval.GroupedMAP ../../test.txt pred.txt ../../test.txt.imfb ../../features/test.txt.kalen_AuthorHasAff > stats.txt
-           python ../../codes/python/kalen/output_submit.py pred.txt ../../test.txt ../../submit.txt 1378
-	   python ../../codes/python/py/evaluation.py ../../submit.txt ../../data/data_clean
+     java -cp ../../code/yep/bin evaluation.MakeSubmission pred.txt ../../data/test.txt submission.txt ../../data/projectIDMapping
 #    cat stats.txt
 	
 #	java -cp ../../code/yep.jar yep.main.MakeSubmission ../../test.txt pred.txt submission.txt
