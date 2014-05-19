@@ -10,7 +10,7 @@ import java.util.LinkedList;
 public class MakeInput {
 	public static void main(String[] args) throws Exception {
 		if (args.length != 1) {
-			System.err.println("Usage: [conf identify]");
+			System.err.println("Usage: [conf identify] [output dir]");
 			System.exit(1);
 		}
 		String conf_id = args[0];
@@ -77,7 +77,7 @@ public class MakeInput {
 			conf_reader.close();
 
 			// begin to output
-			PrintStream outp = new PrintStream(t+"."+conf_id+".svm_buffer");
+			PrintStream outp = new PrintStream(args[1]+"t+"."+conf_id+".svm_buffer");
 			Iterator<SVMLine> iter = lines.iterator();
 			while (iter.hasNext()) {
 				SVMLine line = iter.next();
