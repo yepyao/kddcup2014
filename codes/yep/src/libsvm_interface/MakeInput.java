@@ -36,7 +36,7 @@ public class MakeInput {
 			temp = null;
 			int f_count = 0;
 			while ((temp = conf_reader.readLine()) != null) {
-				if (temp.startsWith("#") || temp.equals(""))
+				if (temp.startsWith("#") || temp.startsWith("-") || temp.equals(""))
 					continue;
 				String feature_name = temp.trim();
 
@@ -77,7 +77,7 @@ public class MakeInput {
 			conf_reader.close();
 
 			// begin to output
-			PrintStream outp = new PrintStream(args[2]);
+			PrintStream outp = new PrintStream(args[1]);
 			Iterator<SVMLine> iter = lines.iterator();
 			while (iter.hasNext()) {
 				SVMLine line = iter.next();
