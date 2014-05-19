@@ -29,10 +29,16 @@ public class EssayLength {
 		in = new BufferedReader(new InputStreamReader(f));
 		Hashtable<String, String> price = new Hashtable<String, String>();
 		s  = in.readLine();
+		s = in.readLine();
+		boolean flag  = true;
 		while (s != null){
 			ArrayList<String> splits = CSVFileUtil.fromCSVLinetoArray(s);
 			double length = 0;
-			if (splits.size() > 5) length = splits.get(5).length();
+			if (splits.size() > 5) length = Math.log(splits.get(5).length()+1);
+			if (flag){
+				System.out.println(splits.get(5));
+				flag = false;
+			}
 			price.put(splits.get(0), String.valueOf(length));
 			s = in.readLine();
 		}
