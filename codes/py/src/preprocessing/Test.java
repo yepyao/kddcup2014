@@ -16,13 +16,15 @@ public class Test {
 		BufferedReader in = new BufferedReader(new InputStreamReader(f));
 		FileInputStream f2 = new FileInputStream(inpath2);
 		BufferedReader in2 = new BufferedReader(new InputStreamReader(f2));
-		String s = in.readLine();
+		String s = in2.readLine();
 		System.out.println(s);
-		s = in.readLine();
+		s = in2.readLine();
+		ArrayList<String> splits = CSVFileUtil.fromCSVLinetoArray(s);
+		System.out.println(splits.get(25));
 		Hashtable<String, Integer> pos = new Hashtable<String, Integer>();
 		int posNum = 0;
 		while (s != null){
-			ArrayList<String> splits = CSVFileUtil.fromCSVLinetoArray(s);
+			splits = CSVFileUtil.fromCSVLinetoArray(s);
 			if (splits.get(1).equals("t")){
 				pos.put(splits.get(0), 1);
 				posNum++;
@@ -37,7 +39,7 @@ public class Test {
 		int sum = 0;
 		int right = 0;
 		while (s != null){
-			ArrayList<String> splits = CSVFileUtil.fromCSVLinetoArray(s);
+			splits = CSVFileUtil.fromCSVLinetoArray(s);
 			if (teacher.get(splits.get(1)) == null){
 				userNum++;
 				if (pos.get(splits.get(0)) == null) teacher.put(splits.get(1), 1);

@@ -16,7 +16,6 @@ public class MakeFeature {
 			System.err.println("Usage: [feature name]");
 			System.exit(1);
 		}
-		String feature_name = args[0];
 
 		ArrayList<String> map = new ArrayList<String>();
 		BufferedReader map_reader = new BufferedReader(new FileReader(
@@ -43,55 +42,93 @@ public class MakeFeature {
 
 		AllData data = AllData.getInstance(null);
 
-		LinkedList<Integer> train_pid = new LinkedList<Integer>();
-		LinkedList<Integer> test_pid = new LinkedList<Integer>();
-		
-		BufferedReader reader = new BufferedReader(new FileReader("train.txt"));
-		temp = null;
-		while ((temp = reader.readLine())!=null){
-			String[] arr = temp.split(" ");
-			int newid = Integer.parseInt(arr[1]);
-			train_pid.add(newid);
-		}
-		reader.close();
-		reader = new BufferedReader(new FileReader("test.txt"));
-		temp = null;
-		while ((temp = reader.readLine())!=null){
-			String[] arr = temp.split(" ");
-			int newid = Integer.parseInt(arr[1]);
-			test_pid.add(newid);
-		}
-		reader.close();
+		String[] feature_names = args[0].split(",");
+		for (String feature_name : feature_names) {
+			LinkedList<Integer> train_pid = new LinkedList<Integer>();
+			LinkedList<Integer> test_pid = new LinkedList<Integer>();
 
-		LinkedList<Double> train_feature = new LinkedList<Double>();
-		LinkedList<Double> test_feature = new LinkedList<Double>();
+			BufferedReader reader = new BufferedReader(new FileReader(
+					"train.txt"));
+			temp = null;
+			while ((temp = reader.readLine()) != null) {
+				String[] arr = temp.split(" ");
+				int newid = Integer.parseInt(arr[1]);
+				train_pid.add(newid);
+			}
+			reader.close();
+			reader = new BufferedReader(new FileReader("test.txt"));
+			temp = null;
+			while ((temp = reader.readLine()) != null) {
+				String[] arr = temp.split(" ");
+				int newid = Integer.parseInt(arr[1]);
+				test_pid.add(newid);
+			}
+			reader.close();
 
-		Feature feature = null;
+			LinkedList<Double> train_feature = new LinkedList<Double>();
+			LinkedList<Double> test_feature = new LinkedList<Double>();
 
-		//switch
-		if (feature_name.equals("yep_EssayLength")) {
-			feature = new EssayLength();
-		}
-		
-		feature.map = map;
-		feature.data = data;
+			Feature feature = null;
 
-		feature.getFeature(train_feature, test_feature);
-		
-		PrintStream outp = new PrintStream("features/train.txt."+feature_name);
-		outp.println("1");
-		Iterator<Double> iter = train_feature.iterator();
-		while (iter.hasNext()){
-			outp.println("1 0:"+iter.next());
+			// switch
+			if (feature_name.equals("yep_EssayLength")) {
+				feature = new EssayLength();
+			}
+			if (feature_name.equals("yep_StudentReached")) {
+				feature = new StudentReached();
+			}
+			if (feature_name.equals("yep_Price")) {
+				feature = new Price();
+			}
+			if (feature_name.equals("yep_PriceSquare")) {
+				feature = new PriceSquare();
+			}
+
+			feature.train_pid = train_pid;
+			feature.test_pid = test_pid;
+
+			feature.map = map;
+			feature.data = data;
+
+			feature.getFeature(train_feature, test_feature);
+
+			// scale
+			double mean = 0;
+			Iterator<Double> iter = train_feature.iterator();
+			while (iter.hasNext()) {
+				mean += iter.next();
+			}
+			mean /= train_feature.size();
+
+			double var = 0;
+			iter = train_feature.iterator();
+			while (iter.hasNext()) {
+				double v = iter.next();
+				var += (v - mean) * (v - mean);
+			}
+			var = var / train_feature.size();
+			System.out.println("mean: " + mean + " var: " + var);
+
+			PrintStream outp = new PrintStream("features/train.txt."
+					+ feature_name);
+			outp.println("1");
+			iter = train_feature.iterator();
+			while (iter.hasNext()) {
+				double v = iter.next();
+				v = (v - mean) / Math.sqrt(var);
+				outp.println("1 0:" + v);
+			}
+			outp.close();
+
+			outp = new PrintStream("features/test.txt." + feature_name);
+			outp.println("1");
+			iter = test_feature.iterator();
+			while (iter.hasNext()) {
+				double v = iter.next();
+				v = (v - mean) / Math.sqrt(var);
+				outp.println("1 0:" + v);
+			}
+			outp.close();
 		}
-		outp.close();
-		
-		outp = new PrintStream("features/test.txt."+feature_name);
-		outp.println("1");
-		iter = test_feature.iterator();
-		while (iter.hasNext()){
-			outp.println("1 0:"+iter.next());
-		}
-		outp.close();
 	}
 }

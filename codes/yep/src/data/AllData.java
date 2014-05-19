@@ -12,11 +12,11 @@ public class AllData {
 	//config
 	static String input_dir = "./data/";
 	//raw data
-	HashMap<String, Project> projects = new HashMap<String, Project>();  //projectid to project
-	HashMap<String, Resource> resources = new HashMap<String, Resource>();
-	HashMap<String, Essay> essays = new HashMap<String, Essay>(); //projectid to esssy
-	HashMap<String, Donation> donations = new HashMap<String, Donation>();
-	HashMap<String, Outcome> outcomes = new HashMap<String, Outcome>();
+	public HashMap<String, Project> projects = new HashMap<String, Project>();  //projectid to project
+	public HashMap<String, Resource> resources = new HashMap<String, Resource>();
+	public HashMap<String, Essay> essays = new HashMap<String, Essay>(); //projectid to esssy
+	public HashMap<String, Donation> donations = new HashMap<String, Donation>();
+	public HashMap<String, Outcome> outcomes = new HashMap<String, Outcome>();
 	
 	//relations
 	
