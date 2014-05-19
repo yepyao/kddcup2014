@@ -3,3 +3,4 @@
 /features/
 /train.txt
 /test.txt
+*.model
