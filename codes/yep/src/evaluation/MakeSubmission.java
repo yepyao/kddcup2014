@@ -32,8 +32,10 @@ public class MakeSubmission {
 				throw new Exception("newid not continuous!");
 			}
 			map.add(projectid);
+			count++;
 		}
 		map_reader.close();
+		System.out.println("map reading ok: "+count);
 		
 		LinkedList<Case> data = new LinkedList<Case>();
 		BufferedReader pred_reader = new BufferedReader(new FileReader(args[0]));
