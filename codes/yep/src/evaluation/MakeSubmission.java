@@ -60,7 +60,7 @@ public class MakeSubmission {
 				throw new Exception("field number not equal to 3 in test file!");
 			}
 			
-			double pred_value = Double.parseDouble(arr[2]);
+			double pred_value = Double.parseDouble(pred_line);
 			int project_newid = Integer.parseInt(arr[1]);
 			boolean label = false;
 			if (arr[2].equals("1")) label = true;
