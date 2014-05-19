@@ -32,7 +32,7 @@ public class EssayLength {
 		while (s != null){
 			ArrayList<String> splits = CSVFileUtil.fromCSVLinetoArray(s);
 			double length = 0;
-			if (splits.size() > 5) length = Math.log(splits.get(5).length()+1)*2;
+			if (splits.size() > 5) length = Math.log(splits.get(5).length()+1);
 			price.put(splits.get(0), String.valueOf(length));
 			s = in.readLine();
 		}
