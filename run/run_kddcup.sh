@@ -23,7 +23,7 @@ do
 # run training, use different seed to ensure different kinds of pos/neg pair in each round
     svd_feature config.conf max_round=1 num_round=$nround start_counter=$i continue=1 seed=$((i+10)) silent=1
     
-    svd_feature_infer config.conf pred=$((i+1)) silent=1 test:buffer_feature=../../train.${PWD##*/}.buffer name_pred=pred.train.txt
+    svd_feature_infer config.conf pred=$((i+1)) silent=1 test:buffer_feature=../../model/train.${PWD##*/}.buffer name_pred=pred.train.txt
     svd_feature_infer config.conf pred=$((i+1)) silent=1
 #    python ../../python/evalMAE.py ../../test.txt pred.txt $((i+1)) > stats.txt   
 #    java -cp ../../java/py/bin preprocess.MAP ../../test.txt pred.txt > stats.txt
@@ -38,7 +38,7 @@ do
 #    cat log stats.txt > log.txt 2>/dev/null
 
 #    java -cp ../../java/kalen/ML/bin:../../java/kalen/kddcup2013/bin eval.GroupedMAP ../../test.txt pred.txt ../../test.txt.imfb ../../features/test.txt.kalen_AuthorHasAff > stats.txt
-     java -cp ../../code/yep/bin evaluation.MakeSubmission pred.txt ../../data/test.txt submission.txt ../../data/projectIDMapping
+     java -cp ../../codes/yep/bin evaluation.MakeSubmission pred.txt ../../data/test.txt submission.txt ../../data/projectIDMapping
 #    cat stats.txt
 	
 #	java -cp ../../code/yep.jar yep.main.MakeSubmission ../../test.txt pred.txt submission.txt
