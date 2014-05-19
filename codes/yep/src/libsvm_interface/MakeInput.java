@@ -9,8 +9,8 @@ import java.util.LinkedList;
 
 public class MakeInput {
 	public static void main(String[] args) throws Exception {
-		if (args.length != 2) {
-			System.err.println("Usage: [conf identify] [output]");
+		if (args.length != 1) {
+			System.err.println("Usage: [conf identify]");
 			System.exit(1);
 		}
 		String conf_id = args[0];
@@ -77,7 +77,7 @@ public class MakeInput {
 			conf_reader.close();
 
 			// begin to output
-			PrintStream outp = new PrintStream(args[1]);
+			PrintStream outp = new PrintStream(t+"."+conf_id+".svm_buffer");
 			Iterator<SVMLine> iter = lines.iterator();
 			while (iter.hasNext()) {
 				SVMLine line = iter.next();
