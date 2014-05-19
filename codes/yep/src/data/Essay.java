@@ -19,6 +19,7 @@ public class Essay {
 			essay.short_description = arr[3];
 			essay.need_statement = arr[4];
 			essay.essay = arr[5];
+			//System.out.println(arr[5]);
 		}catch (Exception e){
 			e.printStackTrace();
 			System.err.println(line);

@@ -18,6 +18,9 @@ public class AllData {
 	HashMap<String, Donation> donations = new HashMap<String, Donation>();
 	HashMap<String, Outcome> outcomes = new HashMap<String, Outcome>();
 	
+	//relations
+	
+	
 	static AllData instance = null;
 	public static AllData getInstance(String dir){
 		if (instance == null) {
@@ -30,10 +33,10 @@ public class AllData {
 	private AllData(){
 		//get raw data
 		try{
-			//getProjects();
+			getProjects();
 			//getResourse();
-			//getEssays();
-			getDonations();
+			getEssays();
+			//getDonations();
 			//getOutcomes();
 		} catch(Exception e){
 			e.printStackTrace();

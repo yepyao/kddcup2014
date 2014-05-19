@@ -30,15 +30,10 @@ public class EssayLength {
 		Hashtable<String, String> price = new Hashtable<String, String>();
 		s  = in.readLine();
 		s = in.readLine();
-		boolean flag  = true;
 		while (s != null){
 			ArrayList<String> splits = CSVFileUtil.fromCSVLinetoArray(s);
 			double length = 0;
 			if (splits.size() > 5) length = Math.log(splits.get(5).length()+1);
-			if (flag){
-				System.out.println(splits.get(5));
-				flag = false;
-			}
 			price.put(splits.get(0), String.valueOf(length));
 			s = in.readLine();
 		}
@@ -49,12 +44,24 @@ public class EssayLength {
 		FileOutputStream f2 = new FileOutputStream(args[3]);
 		BufferedWriter out = new BufferedWriter(new OutputStreamWriter(f2));
 		s = in.readLine();
+		double avg = 0;
+		double deviation = 0;
+		int n = 0;
+		ArrayList<Integer> num = new ArrayList<Integer>();
 		out.write("1"+"\n");
 		while (s != null){
+			n++;
 			String[] temp = s.split(" ");
-			out.write("1 0:"+price.get(id.get(temp[1]))+"\n");
+			Double ans = Double.valueOf(price.get(id.get(temp[1])));
+			avg += ans;
 			s = in.readLine();
 		}
+		avg = avg / n;
+		for (int i = 0; i < num.size(); i++)
+			deviation += (num.get(i) - avg) * (num.get(i) - avg);
+		deviation = Math.sqrt(deviation / n);
+		for (int i = 0; i < num.size(); i++)
+			out.write("1 0:"+String.valueOf((num.get(i)-avg)/deviation)+"\n");
 		in.close();
 		out.close();
 		
@@ -66,7 +73,9 @@ public class EssayLength {
 		out.write("1"+"\n");
 		while (s != null){
 			String[] temp = s.split(" ");
-			out.write("1 0:"+price.get(id.get(temp[1]))+"\n");
+			Double ans = Double.valueOf(price.get(id.get(temp[1])));
+			ans = (ans - avg) /deviation;
+			out.write("1 0:"+String.valueOf(ans)+"\n");
 			s = in.readLine();
 		}
 		in.close();
