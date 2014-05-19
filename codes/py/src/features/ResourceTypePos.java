@@ -37,7 +37,7 @@ public class ResourceTypePos {
 		}
 		in.close();
 		
-		f = new FileInputStream(args[1]); //projects.csv
+		f = new FileInputStream(args[2]); //projects.csv
 		in = new BufferedReader(new InputStreamReader(f));
 		Hashtable<String, Integer> type = new Hashtable<String, Integer>();
 		Hashtable<String, String> projectType = new Hashtable<String, String>();
@@ -54,9 +54,9 @@ public class ResourceTypePos {
 		}
 		in.close();
 		
-		f = new FileInputStream(args[2]); //train.txt
+		f = new FileInputStream(args[3]); //train.txt
 		in = new BufferedReader(new InputStreamReader(f));
-		FileOutputStream f2 = new FileOutputStream(args[3]);
+		FileOutputStream f2 = new FileOutputStream(args[4]);
 		BufferedWriter out = new BufferedWriter(new OutputStreamWriter(f2));
 		s = in.readLine();
 		double avg = 0;
@@ -83,9 +83,9 @@ public class ResourceTypePos {
 		out.close();
 		System.out.println(avg+" "+deviation);
 		
-		f = new FileInputStream(args[4]); //test.txt
+		f = new FileInputStream(args[5]); //test.txt
 		in = new BufferedReader(new InputStreamReader(f));
-		f2 = new FileOutputStream(args[5]);
+		f2 = new FileOutputStream(args[6]);
 		out = new BufferedWriter(new OutputStreamWriter(f2));
 		s = in.readLine();
 		out.write("1"+"\n");
