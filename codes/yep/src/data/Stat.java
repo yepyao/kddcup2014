@@ -3,10 +3,9 @@ package data;
 public class Stat {
 
 	public static void main(String[] args) {
-		AllData data = AllData.getInstance();
-		System.out.println(data.projects.keySet().size());
-		System.out.println(data.essays.keySet().size());
-		System.out.println(data.outcomes.keySet().size());
+		String dir = null;
+		if (args.length > 0) dir = args[0];
+		AllData data = AllData.getInstance(dir);
 
 	}
 

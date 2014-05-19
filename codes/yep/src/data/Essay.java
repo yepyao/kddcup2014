@@ -11,8 +11,8 @@ public class Essay {
 	public static Essay render(String line){
 		Essay essay = new Essay();
 		try{
-			String[] arr = Helper.split_csv(line);
-			
+			String[] arr = CSVFileUtil.fromCSVLine(line, 6);
+			//render
 			essay.projectid = arr[0];
 			essay.teacher_acctid = arr[1];
 			essay.title = arr[2];

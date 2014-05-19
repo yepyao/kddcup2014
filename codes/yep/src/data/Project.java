@@ -44,29 +44,29 @@ public class Project {
 	public static Project render(String line){
 		Project project = new Project();
 		try{
-			String[] arr = Helper.split_csv(line);
+			String[] arr = CSVFileUtil.fromCSVLine(line, 35);
 			//render
 			project.projectid = arr[0];
 			project.teacher_acctid = arr[1];
 			project.schoolid = arr[2];
 			project.school_ncesid = arr[3];
-			project.school_latitude = Double.parseDouble(arr[4]);
-			project.school_longitude = Double.parseDouble(arr[5]);
+			project.school_latitude = Helper.parseDouble(arr[4]);
+			project.school_longitude = Helper.parseDouble(arr[5]);
 			project.school_city = arr[6];
 			project.school_state = arr[7];
 			project.school_zip = arr[8];
 			project.school_metro = arr[9];
 			project.school_district = arr[10];
 			project.school_county = arr[11];
-			project.school_charter = bool(arr[12]);
-			project.school_magnet = bool(arr[13]);
-			project.school_year_round = bool(arr[14]);
-			project.school_nlns = bool(arr[15]);
-			project.school_kipp = bool(arr[16]);
-			project.school_charter_ready_promise = bool(arr[17]);
+			project.school_charter = Helper.parseBool(arr[12]);
+			project.school_magnet = Helper.parseBool(arr[13]);
+			project.school_year_round = Helper.parseBool(arr[14]);
+			project.school_nlns = Helper.parseBool(arr[15]);
+			project.school_kipp = Helper.parseBool(arr[16]);
+			project.school_charter_ready_promise = Helper.parseBool(arr[17]);
 			project.teacher_prefix = arr[18];
-			project.teacher_teach_for_america = bool(arr[19]);
-			project.teacher_ny_teaching_fellow = bool (arr[20]);
+			project.teacher_teach_for_america = Helper.parseBool(arr[19]);
+			project.teacher_ny_teaching_fellow = Helper.parseBool (arr[20]);
 			project.primary_focus_subject = arr[21];
 			project.primary_focus_area = arr[22];
 			project.secondary_focus_subject = arr[23];
@@ -74,12 +74,12 @@ public class Project {
 			project.resource_type = arr[25];
 			project.poverty_level = arr[26];
 			project.grade_level = arr[27];
-			project.fulfillment_labor_materials = Double.parseDouble('0'+arr[28]);
-			project.total_price_excluding_optional_support = Double.parseDouble(arr[29]);
-			project.total_price_including_optional_support = Double.parseDouble(arr[30]); 
+			project.fulfillment_labor_materials = Helper.parseDouble('0'+arr[28]);
+			project.total_price_excluding_optional_support = Helper.parseDouble(arr[29]);
+			project.total_price_including_optional_support = Helper.parseDouble(arr[30]); 
 			project.students_reached = Integer.parseInt('0'+arr[31]);
-			project.eligible_double_your_impact_match = bool(arr[32]);
-			project.eligible_almost_home_match = bool(arr[33]);
+			project.eligible_double_your_impact_match = Helper.parseBool(arr[32]);
+			project.eligible_almost_home_match = Helper.parseBool(arr[33]);
 			project.date_posted = arr[34];
 		}catch (Exception e){
 			e.printStackTrace();
@@ -87,16 +87,5 @@ public class Project {
 			System.exit(1);
 		}
 		return project;
-	}
-	
-	private static boolean bool(String value) throws Exception{
-		if (value.equals("t")) return true;
-		else {
-			if (!(value.equals("f") || value.equals(""))) {
-				System.err.println("value: "+ value);
-				throw new Exception("Wrong boolean value.");
-			}
-			return false;
-		}
 	}
 }
