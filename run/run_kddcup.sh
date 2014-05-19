@@ -38,7 +38,7 @@ do
 #    cat log stats.txt > log.txt 2>/dev/null
 
 #    java -cp ../../java/kalen/ML/bin:../../java/kalen/kddcup2013/bin eval.GroupedMAP ../../test.txt pred.txt ../../test.txt.imfb ../../features/test.txt.kalen_AuthorHasAff > stats.txt
-     java -cp ../../codes/yep/bin evaluation.MakeSubmission pred.txt ../../data/test.txt submission.txt ../../data/projectIDMapping
+     java -cp ../../codes/yep/bin evaluation.MakeSubmission pred.txt ../../test.txt submission.txt ../../data/projectIDMapping
 #    cat stats.txt
 	
 #	java -cp ../../code/yep.jar yep.main.MakeSubmission ../../test.txt pred.txt submission.txt
