@@ -63,7 +63,8 @@ public class SchoolIDPosRatio2 {
 			if (splits.size() > 33 && posH.get(splits.get(0)) != null){
 				if (school.get(splits.get(2)) == null) school.put(splits.get(2), 1);
 				else school.put(splits.get(2), school.get(splits.get(2))+1);
-			}else if (splits.size() > 33 && train.get(splits.get(0)) != null){
+			//}else if (splits.size() > 33 && train.get(splits.get(0)) != null){
+			}else if (splits.size() > 33){
 				if (schoolAll.get(splits.get(2)) == null) schoolAll.put(splits.get(2), 1);
 				else schoolAll.put(splits.get(2), schoolAll.get(splits.get(2))+1);
 			}
