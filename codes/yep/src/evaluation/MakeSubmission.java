@@ -35,7 +35,7 @@ public class MakeSubmission {
 			count++;
 		}
 		map_reader.close();
-		System.out.println("map reading ok: "+count);
+		//System.out.println("map reading ok: "+count);
 		
 		LinkedList<Case> data = new LinkedList<Case>();
 		BufferedReader pred_reader = new BufferedReader(new FileReader(args[0]));
