@@ -14,28 +14,41 @@ import preprocessing.CSVFileUtil;
 
 public class TeacherAccPosRatio {
 	public static void main(String[] args) throws IOException{
-		FileInputStream f = new FileInputStream(args[0]); // outcomes.csv
+		FileInputStream f = new FileInputStream(args[1]); //mapping
 		BufferedReader in = new BufferedReader(new InputStreamReader(f));
-		String s = in.readLine();
-		s = in.readLine();
-		Hashtable<String, Integer> posH = new Hashtable<String, Integer>();
-		while (s != null){
-			ArrayList<String> splits = CSVFileUtil.fromCSVLinetoArray(s);
-			if (splits.get(1).equals("t")) 	posH.put(splits.get(0), 1);
-			s = in.readLine();
-		}
-		in.close();
-		
-		f = new FileInputStream(args[1]); //mapping
-		in = new BufferedReader(new InputStreamReader(f));
 		Hashtable<String, String> id = new Hashtable<String, String>();
-		s = in.readLine();
+		String s = in.readLine();
 		while (s != null){
 			String[] temp = s.split(" ");
 			id.put(temp[1], temp[0]);
 			s = in.readLine();
 		}
 		in.close();
+		
+		f = new FileInputStream(args[3]); //train.txt
+		in = new BufferedReader(new InputStreamReader(f));
+		Hashtable<String, Integer> train = new Hashtable<String, Integer>();
+		s = in.readLine();
+		while (s != null){
+			String[] temp = s.split(" ");
+			train.put(id.get(temp[1]), 1);
+			s = in.readLine();
+		}
+		in.close();
+		
+		f = new FileInputStream(args[0]); // outcomes.csv
+		in = new BufferedReader(new InputStreamReader(f));
+		s = in.readLine();
+		s = in.readLine();
+		Hashtable<String, Integer> posH = new Hashtable<String, Integer>();
+		while (s != null){
+			ArrayList<String> splits = CSVFileUtil.fromCSVLinetoArray(s);
+			if (splits.get(1).equals("t") && train.get(splits.get(0)) != null) 	posH.put(splits.get(0), 1);
+			s = in.readLine();
+		}
+		in.close();
+		
+		
 		
 		f = new FileInputStream(args[2]); //projects.csv
 		in = new BufferedReader(new InputStreamReader(f));
