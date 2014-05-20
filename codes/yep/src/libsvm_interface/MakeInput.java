@@ -92,6 +92,11 @@ public class MakeInput {
 				outp.println();
 			}
 			outp.close();
+			
+			outp = new PrintStream(args[1] + t + "." + conf_id
+					+ ".svm_buffer.group");
+			outp.println(lines.size());
+			outp.close();
 		}// end for "test" "train"
 	}
 }
