@@ -40,7 +40,10 @@ public class AUC {
 				}
 				c = iter.next();
 			}
-			auc += (pre_p + p) * (n - pre_n);
+			double temp = pre_p + p;
+			temp *= n - pre_n;
+			auc += temp;
+			
 			//System.out.println("auc: "+auc);
 		}
 		//System.out.println("p: " + p + " n: " + n);
