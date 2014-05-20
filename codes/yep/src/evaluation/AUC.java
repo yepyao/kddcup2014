@@ -6,7 +6,7 @@ import java.util.LinkedList;
 
 public class AUC {
 	public static double calcAUC(LinkedList<Case> data) {
-		int auc = 0;
+		double auc = 0;
 		Collections.sort(data);
 		int P = 0, N = 0;
 		Iterator<Case> iter = data.iterator();
@@ -41,10 +41,11 @@ public class AUC {
 				c = iter.next();
 			}
 			auc += (pre_p + p) * (n - pre_n);
+			//System.out.println("auc: "+auc);
 		}
 		//System.out.println("p: " + p + " n: " + n);
 		auc += (p + P) * (N - n);
-		return (double) auc / (P * N * 2);
+		return auc / P / N / 2;
 
 	}
 }
