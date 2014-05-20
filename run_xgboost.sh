@@ -1,7 +1,7 @@
 echo make libsvm-xgboost format input files
 java -cp codes/yep/bin/ libsvm_interface.MakeInput $1 ./model/
 
-$round = 10
+$round = 200
 echo begin to run xgboost
 cd ./xgboost_run/$1/
 xgboost $1.conf num_round=$round
