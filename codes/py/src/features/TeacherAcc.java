@@ -14,7 +14,7 @@ import preprocessing.CSVFileUtil;
 
 public class TeacherAcc {
 	public static void main(String[] args) throws IOException{
-		FileInputStream f = new FileInputStream(args[1]); //mapping
+		FileInputStream f = new FileInputStream(args[0]); //mapping
 		BufferedReader in = new BufferedReader(new InputStreamReader(f));
 		Hashtable<String, String> id = new Hashtable<String, String>();
 		String s = in.readLine();
@@ -25,95 +25,49 @@ public class TeacherAcc {
 		}
 		in.close();
 		
-		f = new FileInputStream(args[3]); //train.txt
+		f = new FileInputStream(args[1]); //projects.csv
 		in = new BufferedReader(new InputStreamReader(f));
-		Hashtable<String, Integer> train = new Hashtable<String, Integer>();
-		s = in.readLine();
-		while (s != null){
-			String[] temp = s.split(" ");
-			train.put(id.get(temp[1]), 1);
-			s = in.readLine();
-		}
-		in.close();
-		
-		f = new FileInputStream(args[0]); // outcomes.csv
-		in = new BufferedReader(new InputStreamReader(f));
-		s = in.readLine();
-		s = in.readLine();
-		Hashtable<String, Integer> posH = new Hashtable<String, Integer>();
-		while (s != null){
-			ArrayList<String> splits = CSVFileUtil.fromCSVLinetoArray(s);
-			if (splits.get(1).equals("t") && train.get(splits.get(0)) != null) 	posH.put(splits.get(0), 1);
-			s = in.readLine();
-		}
-		in.close();
-		
-		
-		
-		f = new FileInputStream(args[2]); //projects.csv
-		in = new BufferedReader(new InputStreamReader(f));
-		Hashtable<String, Integer> school = new Hashtable<String, Integer>();
-		Hashtable<String, Integer> schoolAll = new Hashtable<String, Integer>();
-		Hashtable<String, String> projectschool = new Hashtable<String, String>();
+		Hashtable<String, Integer> teacher = new Hashtable<String, Integer>();
+		Hashtable<String, String> projectTeacher = new Hashtable<String, String>();
+		int teacherNum = 0;
 		s  = in.readLine();
 		s = in.readLine();
 		while (s != null){
 			ArrayList<String> splits = CSVFileUtil.fromCSVLinetoArray(s);
-			projectschool.put(splits.get(0), splits.get(2));
-			if (splits.size() > 33 && posH.get(splits.get(0)) != null){
-				if (school.get(splits.get(2)) == null) school.put(splits.get(2), 1);
-				else school.put(splits.get(2), school.get(splits.get(2))+1);
-			}else if (splits.size() > 33){
-				if (schoolAll.get(splits.get(2)) == null) schoolAll.put(splits.get(2), 1);
-				else schoolAll.put(splits.get(2), schoolAll.get(splits.get(2))+1);
+			projectTeacher.put(splits.get(0), splits.get(1));
+			if (splits.size() > 33){
+				if (teacher.get(splits.get(1)) == null){
+					teacher.put(splits.get(1), teacherNum);
+					teacherNum++;
+				}
 			}
 			s = in.readLine();
 		}
 		in.close();
 		
-		f = new FileInputStream(args[3]); //train.txt
+		f = new FileInputStream(args[2]); //train.txt
 		in = new BufferedReader(new InputStreamReader(f));
-		FileOutputStream f2 = new FileOutputStream(args[4]);
+		FileOutputStream f2 = new FileOutputStream(args[3]);
 		BufferedWriter out = new BufferedWriter(new OutputStreamWriter(f2));
 		s = in.readLine();
-		double avg = 0;
-		double deviation = 0;
-		int n = 0;
-		ArrayList<Double> num = new ArrayList<Double>();
-		out.write("1"+"\n");
+		out.write("300000"+"\n");
 		while (s != null){
-			n++;
 			String[] temp = s.split(" ");
-			double ans = 0;
-			if (school.get(projectschool.get(id.get(temp[1]))) != null && schoolAll.get(projectschool.get(id.get(temp[1]))) != null)
-				ans = (double)school.get(projectschool.get(id.get(temp[1]))) / (double)schoolAll.get(projectschool.get(id.get(temp[1])));
-			num.add(ans);
-			avg += ans;
+			out.write("1 "+teacher.get(projectTeacher.get(id.get(temp[1])))+":1"+"\n");
 			s = in.readLine();
 		}
-		avg = avg / n;
-		for (int i = 0; i < num.size(); i++)
-			deviation += (num.get(i) - avg) * (num.get(i) - avg);
-		deviation = Math.sqrt(deviation / n);
-		for (int i = 0; i < num.size(); i++)
-			out.write("1 0:"+String.valueOf((num.get(i)-avg)/deviation)+"\n");
 		in.close();
 		out.close();
-		System.out.println(avg+" "+deviation);
 		
-		f = new FileInputStream(args[5]); //test.txt
+		f = new FileInputStream(args[4]); //test.txt
 		in = new BufferedReader(new InputStreamReader(f));
-		f2 = new FileOutputStream(args[6]);
+		f2 = new FileOutputStream(args[5]);
 		out = new BufferedWriter(new OutputStreamWriter(f2));
 		s = in.readLine();
-		out.write("1"+"\n");
+		out.write("300000"+"\n");
 		while (s != null){
 			String[] temp = s.split(" ");
-			double ans = 0;
-			if (school.get(projectschool.get(id.get(temp[1]))) != null && schoolAll.get(projectschool.get(id.get(temp[1]))) != null)
-				ans = (double)school.get(projectschool.get(id.get(temp[1]))) / (double)schoolAll.get(projectschool.get(id.get(temp[1])));
-			ans = (ans - avg) /deviation;
-			out.write("1 0:"+String.valueOf(ans)+"\n");
+			out.write("1 "+teacher.get(projectTeacher.get(id.get(temp[1])))+":1"+"\n");
 			s = in.readLine();
 		}
 		in.close();
