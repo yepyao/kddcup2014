@@ -87,6 +87,9 @@ public class MakeFeature {
 			if (feature_name.equals("yep_PovertyLevel")) {
 				featurelist = new PovertyLevel();
 			}
+			if (feature_name.equals("yep_GradeLevel")) {
+				featurelist = new GradeLevel();
+			} 
 
 			featurelist.train_pid = train_pid;
 			featurelist.test_pid = test_pid;
