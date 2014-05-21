@@ -36,6 +36,9 @@ features/train.txt.py_SchoolStatePosRatio  features/test.txt.py_SchoolStatePosRa
 	java -cp codes/py/bin features.SchoolStatePosRatio data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolStatePosRatio test.txt features/test.txt.py_SchoolStatePosRatio
 features/train.txt.py_SchoolZipPosRatio  features/test.txt.py_SchoolZipPosRatio:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
 	java -cp codes/py/bin features.SchoolZipPosRatio data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolZipPosRatio test.txt features/test.txt.py_SchoolZipPosRatio
+features/train.txt.py_SchoolCharter  features/test.txt.py_SchoolCharter:data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.SchoolCharter data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolCharter test.txt features/test.txt.py_SchoolCharter
+
 
 
 
