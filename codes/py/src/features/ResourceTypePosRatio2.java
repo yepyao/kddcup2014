@@ -12,7 +12,7 @@ import java.util.Hashtable;
 
 import preprocessing.CSVFileUtil;
 
-public class TeacherAccPosRatio3 {
+public class ResourceTypePosRatio2 {
 	public static void main(String[] args) throws IOException{
 		FileInputStream f = new FileInputStream(args[1]); //mapping
 		BufferedReader in = new BufferedReader(new InputStreamReader(f));
@@ -59,14 +59,14 @@ public class TeacherAccPosRatio3 {
 		s = in.readLine();
 		while (s != null){
 			ArrayList<String> splits = CSVFileUtil.fromCSVLinetoArray(s);
-			projectTeacher.put(splits.get(0), splits.get(1));
+			projectTeacher.put(splits.get(0), splits.get(25));
 			if (train.get(splits.get(0)) != null && splits.size() > 33){
 				if (posH.get(splits.get(0)) != null){
-					if (teacher.get(splits.get(1)) == null) teacher.put(splits.get(1), 1);
-					else teacher.put(splits.get(1), teacher.get(splits.get(1))+1);
+					if (teacher.get(splits.get(25)) == null) teacher.put(splits.get(25), 1);
+					else teacher.put(splits.get(25), teacher.get(splits.get(25))+1);
 				}
-				if (teacherAll.get(splits.get(1)) == null) teacherAll.put(splits.get(1), 1);
-				else teacherAll.put(splits.get(1), teacherAll.get(splits.get(1))+1);
+				if (teacherAll.get(splits.get(25)) == null) teacherAll.put(splits.get(25), 1);
+				else teacherAll.put(splits.get(25), teacherAll.get(splits.get(25))+1);
 			}
 			s = in.readLine();
 		}
@@ -77,17 +77,23 @@ public class TeacherAccPosRatio3 {
 		FileOutputStream f2 = new FileOutputStream(args[4]);
 		BufferedWriter out = new BufferedWriter(new OutputStreamWriter(f2));
 		s = in.readLine();
-		out.write("2"+"\n");
+		out.write("3"+"\n");
 		while (s != null){
 			String[] temp = s.split(" ");
-			String one = "0";
-			if (teacher.get(projectTeacher.get(id.get(temp[1]))) != null) one = String.valueOf(teacher.get(projectTeacher.get(id.get(temp[1]))));
-			String two = "0";
-			if (teacherAll.get(projectTeacher.get(id.get(temp[1]))) != null) two = String.valueOf(teacherAll.get(projectTeacher.get(id.get(temp[1]))));
+			int one = 0;
+			if (teacher.get(projectTeacher.get(id.get(temp[1]))) != null){
+				one = teacher.get(projectTeacher.get(id.get(temp[1])));
+				if (temp[2].equals("1")) one--;
+			}
+			int two = 0;
+			if (teacherAll.get(projectTeacher.get(id.get(temp[1]))) != null){
+				two = teacherAll.get(projectTeacher.get(id.get(temp[1])));
+				two--;
+			}
 			double three = 0;
-			if (!two.equals("0")) three = Double.valueOf(one) / Double.valueOf(two); 
-			//out.write("3 "+"0:"+one+" 1:"+two+" 2:"+String.valueOf(three)+"\n");
-			out.write("2 "+"0:"+one+" 1:"+two+"\n");
+			if (two != 0) three = (double) one / two; 
+			out.write("3 "+"0:"+String.valueOf(one)+" 1:"+String.valueOf(two)+" 2:"+String.valueOf(three)+"\n");
+	//		out.write("2 "+"0:"+String.valueOf(one)+" 1:"+String.valueOf(two)+"\n");
 			s = in.readLine();
 		}
 		in.close();
@@ -98,17 +104,23 @@ public class TeacherAccPosRatio3 {
 		f2 = new FileOutputStream(args[6]);
 		out = new BufferedWriter(new OutputStreamWriter(f2));
 		s = in.readLine();
-		out.write("2"+"\n");
+		out.write("3"+"\n");
 		while (s != null){
 			String[] temp = s.split(" ");
-			String one = "0";
-			if (teacher.get(projectTeacher.get(id.get(temp[1]))) != null) one = String.valueOf(teacher.get(projectTeacher.get(id.get(temp[1]))));
-			String two = "0";
-			if (teacherAll.get(projectTeacher.get(id.get(temp[1]))) != null) two = String.valueOf(teacherAll.get(projectTeacher.get(id.get(temp[1]))));
+			int one = 0;
+			if (teacher.get(projectTeacher.get(id.get(temp[1]))) != null){
+				one = teacher.get(projectTeacher.get(id.get(temp[1])));
+				if (temp[2].equals("1")) one--;
+			}
+			int two = 0;
+			if (teacherAll.get(projectTeacher.get(id.get(temp[1]))) != null){
+				two = teacherAll.get(projectTeacher.get(id.get(temp[1])));
+				two--;
+			}
 			double three = 0;
-			if (!two.equals("0")) three = Double.valueOf(one) / Double.valueOf(two); 
-			//out.write("3 "+"0:"+one+" 1:"+two+" 2:"+String.valueOf(three)+"\n");
-			out.write("2 "+"0:"+one+" 1:"+two+"\n");
+			if (two != 0) three = (double) one / two; 
+			out.write("3 "+"0:"+String.valueOf(one)+" 1:"+String.valueOf(two)+" 2:"+String.valueOf(three)+"\n");
+	//		out.write("2 "+"0:"+String.valueOf(one)+" 1:"+String.valueOf(two)+"\n");
 			s = in.readLine();
 		}
 		in.close();
