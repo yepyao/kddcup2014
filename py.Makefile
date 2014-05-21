@@ -38,6 +38,25 @@ features/train.txt.py_SchoolZipPosRatio  features/test.txt.py_SchoolZipPosRatio:
 	java -cp codes/py/bin features.SchoolZipPosRatio data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolZipPosRatio test.txt features/test.txt.py_SchoolZipPosRatio
 features/train.txt.py_SchoolCharter  features/test.txt.py_SchoolCharter:data/projectIDMapping data/projects.csv train.txt test.txt
 	java -cp codes/py/bin features.SchoolCharter data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolCharter test.txt features/test.txt.py_SchoolCharter
+features/train.txt.py_SchoolMagnet  features/test.txt.py_SchoolMagnet:data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.SchoolMagnet data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolMagnet test.txt features/test.txt.py_SchoolMagnet
+features/train.txt.py_SchoolYearRound  features/test.txt.py_SchoolYearRound:data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.SchoolYearRound data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolYearRound test.txt features/test.txt.py_SchoolYearRound
+features/train.txt.py_SchoolNlns  features/test.txt.py_SchoolNlns:data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.SchoolNlns data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolNlns test.txt features/test.txt.py_SchoolNlns
+features/train.txt.py_SchoolKipp  features/test.txt.py_SchoolKipp:data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.SchoolKipp data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolKipp test.txt features/test.txt.py_SchoolKipp
+features/train.txt.py_SchoolCharterReadyPromise  features/test.txt.py_SchoolCharterReadyPromise:data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.SchoolCharterReadyPromise data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolCharterReadyPromise test.txt features/test.txt.py_SchoolCharterReadyPromise
+features/train.txt.py_TeacherPrefix  features/test.txt.py_TeacherPrefix:data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.TeacherPrefix data/projectIDMapping data/projects.csv train.txt features/train.txt.py_TeacherPrefix test.txt features/test.txt.py_TeacherPrefix
+features/train.txt.py_TeacherTeachForAmerica  features/test.txt.py_TeacherTeachForAmerica:data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.TeacherTeachForAmerica data/projectIDMapping data/projects.csv train.txt features/train.txt.py_TeacherTeachForAmerica test.txt features/test.txt.py_TeacherTeachForAmerica
+
+
+
+
+
 
 
 
