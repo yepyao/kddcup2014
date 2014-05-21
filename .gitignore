@@ -2,5 +2,7 @@
 /model/
 /features/
 /train.txt
+/train.txt.backup
+/head.train.txt
 /test.txt
 *.model
