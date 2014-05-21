@@ -90,6 +90,9 @@ public class MakeFeature {
 			if (feature_name.equals("yep_GradeLevel")) {
 				featurelist = new GradeLevel();
 			} 
+			if (feature_name.equals("yep_PostDate")) {
+				featurelist = new PostDate();
+			} 
 
 			featurelist.train_pid = train_pid;
 			featurelist.test_pid = test_pid;
