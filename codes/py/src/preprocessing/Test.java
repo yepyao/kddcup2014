@@ -14,7 +14,11 @@ public class Test {
 		FileInputStream f = new FileInputStream(inpath);
 		BufferedReader in = new BufferedReader(new InputStreamReader(f));
 		String s = in.readLine();
+		String[] temp = s.split(",");
 		s = in.readLine();
+		ArrayList<String> temp2 = CSVFileUtil.fromCSVLinetoArray(s);
+		for (int i = 0; i < temp2.size(); i++)
+			System.out.println(temp[i]+" "+temp2.get(i));
 		int max = 0;
 		Hashtable<String, Integer> h = new Hashtable<String, Integer>();
 		String type ="asdfa";
