@@ -52,6 +52,12 @@ features/train.txt.py_TeacherPrefix  features/test.txt.py_TeacherPrefix:data/pro
 	java -cp codes/py/bin features.TeacherPrefix data/projectIDMapping data/projects.csv train.txt features/train.txt.py_TeacherPrefix test.txt features/test.txt.py_TeacherPrefix
 features/train.txt.py_TeacherTeachForAmerica  features/test.txt.py_TeacherTeachForAmerica:data/projectIDMapping data/projects.csv train.txt test.txt
 	java -cp codes/py/bin features.TeacherTeachForAmerica data/projectIDMapping data/projects.csv train.txt features/train.txt.py_TeacherTeachForAmerica test.txt features/test.txt.py_TeacherTeachForAmerica
+features/train.txt.py_TeacherNyTeachingFellow  features/test.txt.py_TeacherNyTeachingFellow:data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.TeacherNyTeachingFellow data/projectIDMapping data/projects.csv train.txt features/train.txt.py_TeacherNyTeachingFellow test.txt features/test.txt.py_TeacherNyTeachingFellow
+features/train.txt.py_PrimaryFocusSubject  features/test.txt.py_PrimaryFocusSubject:data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.PrimaryFocusSubject data/projectIDMapping data/projects.csv train.txt features/train.txt.py_PrimaryFocusSubject test.txt features/test.txt.py_PrimaryFocusSubject
+
+
 
 
 
