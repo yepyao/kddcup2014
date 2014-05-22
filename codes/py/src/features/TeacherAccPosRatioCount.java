@@ -129,22 +129,22 @@ public class TeacherAccPosRatioCount {
 		out.write("3"+"\n");
 		while (s != null){
 			String[] temp = s.split(" ");
-			double one = 0;
+			int one = 0;
 			if (teacher.get(projectTeacher.get(id.get(temp[1]))) != null){
-				one += teacher.get(projectTeacher.get(id.get(temp[1])));
+		//		one += teacher.get(projectTeacher.get(id.get(temp[1])));
 			}
 			if (teacher2.get(projectTeacher.get(id.get(temp[1]))) != null){
 				one += teacher2.get(projectTeacher.get(id.get(temp[1])));
 			}
-			double two = 0;
+			int two = 0;
 			if (teacherAll.get(projectTeacher.get(id.get(temp[1]))) != null){
-				two += teacherAll.get(projectTeacher.get(id.get(temp[1])));
+		//		two += teacherAll.get(projectTeacher.get(id.get(temp[1])));
 			}
 			if (teacherAll2.get(projectTeacher.get(id.get(temp[1]))) != null){
 				two += teacherAll2.get(projectTeacher.get(id.get(temp[1])));
 			}
-			one = one / 2;
-			two = two / 2;
+		//	one = one / 2;
+		//	two = two / 2;
 			double three = 0;
 			if (two != 0) three = (double) one / two; 
 			out.write("3 "+"0:"+String.valueOf((int)one)+" 1:"+String.valueOf((int)two)+" 2:"+String.valueOf(three)+"\n");
