@@ -76,7 +76,7 @@ public class Stat2 {
 		//Essay essay = data.essays.get(project.projectid);
 		//return (double)essay.essay.length();
 		//return (project.teacher_teach_for_america)?"T":"F";
-		return project.fulfillment_labor_materials;
+		return (double)project.students_reached;
 	}
 
 }
