@@ -22,13 +22,13 @@ public class genTrainAndTest {
 	
 	
 	public static void main(String[] args) throws IOException{
-		FileInputStream f = new FileInputStream(inpath);
+		FileInputStream f = new FileInputStream(args[0]);
 		BufferedReader in = new BufferedReader(new InputStreamReader(f));
-		FileOutputStream f2 = new FileOutputStream(outpath);
+		FileOutputStream f2 = new FileOutputStream(args[1]);
 		BufferedWriter out = new BufferedWriter(new OutputStreamWriter(f2));
-		FileOutputStream f3 = new FileOutputStream(outpath2);
+		FileOutputStream f3 = new FileOutputStream(args[2]);
 		BufferedWriter out2 = new BufferedWriter(new OutputStreamWriter(f3));
-		FileOutputStream f4 = new FileOutputStream(outpath3);
+		FileOutputStream f4 = new FileOutputStream(args[3]);
 		BufferedWriter out3 = new BufferedWriter(new OutputStreamWriter(f4));
 		String s = in.readLine();
 		s = in.readLine();
@@ -36,7 +36,7 @@ public class genTrainAndTest {
 		int id = 0;
 		while (s != null){
 			ArrayList<String> splits = CSVFileUtil.fromCSVLinetoArray(s);
-	//		if (splits.get(34).equals("2010-03-14")) break;
+			if (splits.get(34).equals("2010-03-14")) break;
 			if (h.get(splits.get(0)) == null){
 				h.put(splits.get(0), id);
 				out3.write(splits.get(0)+" "+String.valueOf(id)+"\n");

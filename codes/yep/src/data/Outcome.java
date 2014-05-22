@@ -18,7 +18,7 @@ public class Outcome {
 	public static Outcome render(String line){
 		Outcome outcome = new Outcome();
 		try{
-			outcome.origin = line; 
+			//outcome.origin = line; 
 			String[] arr = CSVFileUtil.fromCSVLine(line, 12);
 			//render
 			outcome.projectid = arr[0];

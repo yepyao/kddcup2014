@@ -2,6 +2,8 @@ package data;
 
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -14,6 +16,7 @@ public class Stat {
 			dir = args[0];
 		AllData data = AllData.getInstance(dir, "projects,outcomes");
 
+		/*
 		Iterator<Project> iter = data.projects.values().iterator();
 		PrintStream outp = new PrintStream("model/stat.check.date.csv");
 		while (iter.hasNext()) {
@@ -26,12 +29,19 @@ public class Stat {
 		}
 		outp.close();
 		System.exit(0);
-
+		 */
 		HashMap<String, Integer> field_map = new HashMap<String, Integer>();
-
+		Iterator<Project> iter = data.projects.values().iterator();
+		
+		SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd");
+		Date compare = dateformat.parse("2010-03-15");
+		
 		int count = 0;
 		while (iter.hasNext()) {
 			Project project = iter.next();
+			Date date = dateformat.parse(project.date_posted);
+			if (date.getTime() < compare.getTime()) continue;
+			
 			String field = getString(project);
 			if (!field_map.containsKey(field)) {
 				field_map.put(field, count);
@@ -46,6 +56,9 @@ public class Stat {
 
 		while (iter.hasNext()) {
 			Project project = iter.next();
+			Date date = dateformat.parse(project.date_posted);
+			if (date.getTime() < compare.getTime()) continue;
+			
 			if (data.outcomes.containsKey(project.projectid)) {
 				int index = field_map.get(getString(project));
 				all_count[index]++;
@@ -66,8 +79,8 @@ public class Stat {
 	}
 
 	private static String getString(Project project) {
-		return project.primary_focus_subject;
-		// return (project.eligible_almost_home_match )?"T":"F";
+		return project.grade_level;
+		//return (project.teacher_teach_for_america)?"T":"F";
 	}
 
 }

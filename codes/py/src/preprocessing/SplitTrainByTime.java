@@ -19,11 +19,11 @@ public class SplitTrainByTime {
 	//36710 582616
 
 	public static void main(String[] args) throws IOException{
-		FileInputStream f = new FileInputStream(inpath);
+		FileInputStream f = new FileInputStream(args[0]);
 		BufferedReader in = new BufferedReader(new InputStreamReader(f));
-		FileOutputStream f2 = new FileOutputStream(outpath);
+		FileOutputStream f2 = new FileOutputStream(args[3]);
 		BufferedWriter out = new BufferedWriter(new OutputStreamWriter(f2));
-		FileOutputStream f3 = new FileOutputStream(outpath2);
+		FileOutputStream f3 = new FileOutputStream(args[4]);
 		BufferedWriter out2 = new BufferedWriter(new OutputStreamWriter(f3));
 		String s = in.readLine();
 		s = in.readLine();
@@ -35,7 +35,7 @@ public class SplitTrainByTime {
 		}
 		in.close();
 		
-		f = new FileInputStream(inpath3);
+		f = new FileInputStream(args[2]);
 		in = new BufferedReader(new InputStreamReader(f));
 		s = in.readLine();
 		Hashtable<String, String> id = new Hashtable<String, String>();
@@ -46,11 +46,11 @@ public class SplitTrainByTime {
 		}
 		in.close();
 		
-		f = new FileInputStream(inpath2);
+		f = new FileInputStream(args[1]);
 		in = new BufferedReader(new InputStreamReader(f));
 		s = in.readLine();
-		double line = (double)44772 / (619326+44772);
-		line = line * 619326;
+		double line = (double)44772 / (425697+44772);
+		line = line * 425697;
 		int index = 0;
 		while (s != null){
 			ArrayList<String> splits = CSVFileUtil.fromCSVLinetoArray(s);
