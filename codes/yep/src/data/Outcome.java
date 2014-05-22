@@ -1,6 +1,7 @@
 package data;
 
 public class Outcome {
+	public String origin;
 	public String projectid;
 	public boolean is_exciting; //ground truth of whether a project is exciting from business perspective
 	public boolean at_least_1_teacher_referred_donor; //teacher referred = donor donated because teacher shared a link or publicized their page
@@ -17,6 +18,7 @@ public class Outcome {
 	public static Outcome render(String line){
 		Outcome outcome = new Outcome();
 		try{
+			outcome.origin = line; 
 			String[] arr = CSVFileUtil.fromCSVLine(line, 12);
 			//render
 			outcome.projectid = arr[0];

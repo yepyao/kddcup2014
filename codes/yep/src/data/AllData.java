@@ -22,22 +22,22 @@ public class AllData {
 	
 	
 	static AllData instance = null;
-	public static AllData getInstance(String dir){
+	public static AllData getInstance(String dir, String files){
 		if (instance == null) {
 			if (dir!=null) input_dir = dir;
-			instance = new AllData(); 
+			instance = new AllData(files); 
 		}
 		return instance;
 	}
 	
-	private AllData(){
+	private AllData(String files){
 		//get raw data
 		try{
-			getProjects();
-			//getResourse();
-			getEssays();
-			//getDonations();
-			//getOutcomes();
+			if (files.contains("all") || files.contains("projects")) getProjects();
+			if (files.contains("all") || files.contains("resourse")) getResourse();
+			if (files.contains("all") || files.contains("essays")) getEssays();
+			if (files.contains("all") || files.contains("donation")) getDonations();
+			if (files.contains("all") || files.contains("outcomes")) getOutcomes();
 		} catch(Exception e){
 			e.printStackTrace();
 			System.exit(1);

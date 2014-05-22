@@ -41,7 +41,7 @@ public class MakeFeature {
 		map_reader.close();
 		System.out.println("map reading ok: " + count);
 
-		AllData data = AllData.getInstance(null);
+		AllData data = AllData.getInstance(null, "projects,essays");
 
 		String[] feature_names = args[0].split(",");
 		for (String feature_name : feature_names) {

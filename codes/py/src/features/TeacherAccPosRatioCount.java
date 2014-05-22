@@ -134,14 +134,14 @@ public class TeacherAccPosRatioCount {
 				one += teacher.get(projectTeacher.get(id.get(temp[1])));
 			}
 			if (teacher2.get(projectTeacher.get(id.get(temp[1]))) != null){
-				one = teacher2.get(projectTeacher.get(id.get(temp[1])));
+				one += teacher2.get(projectTeacher.get(id.get(temp[1])));
 			}
 			int two = 0;
 			if (teacherAll.get(projectTeacher.get(id.get(temp[1]))) != null){
-				two = teacherAll.get(projectTeacher.get(id.get(temp[1])));
+				two += teacherAll.get(projectTeacher.get(id.get(temp[1])));
 			}
 			if (teacherAll2.get(projectTeacher.get(id.get(temp[1]))) != null){
-				two = teacherAll2.get(projectTeacher.get(id.get(temp[1])));
+				two += teacherAll2.get(projectTeacher.get(id.get(temp[1])));
 			}
 			double three = 0;
 			if (two != 0) three = (double) one / two; 

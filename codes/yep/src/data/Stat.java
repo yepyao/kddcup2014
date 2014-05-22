@@ -1,24 +1,73 @@
 package data;
 
+import java.io.FileNotFoundException;
+import java.io.PrintStream;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 
 public class Stat {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		String dir = null;
 		if (args.length > 0)
 			dir = args[0];
-		AllData data = AllData.getInstance(dir);
-		HashSet<String> schoolids = new HashSet<String>();
+		AllData data = AllData.getInstance(dir, "projects,outcomes");
+
 		Iterator<Project> iter = data.projects.values().iterator();
+		PrintStream outp = new PrintStream("model/stat.check.date.csv");
 		while (iter.hasNext()) {
 			Project project = iter.next();
-			if (!schoolids.contains(project.schoolid))
-				schoolids.add(project.schoolid);
+			if (data.outcomes.containsKey(project.projectid)) {
+				Outcome outcome = data.outcomes.get(project.projectid);
+				outp.println(project.projectid + "," + project.date_posted
+						+ "," + outcome.is_exciting + "," + outcome.origin);
+			}
 		}
-		System.out.println("schoolid num: "+schoolids.size());
+		outp.close();
+		System.exit(0);
 
+		HashMap<String, Integer> field_map = new HashMap<String, Integer>();
+
+		int count = 0;
+		while (iter.hasNext()) {
+			Project project = iter.next();
+			String field = getString(project);
+			if (!field_map.containsKey(field)) {
+				field_map.put(field, count);
+				count++;
+			}
+		}
+		System.out.println("field_map num: " + count);
+
+		int[] all_count = new int[count];
+		int[] ex_count = new int[count];
+		iter = data.projects.values().iterator();
+
+		while (iter.hasNext()) {
+			Project project = iter.next();
+			if (data.outcomes.containsKey(project.projectid)) {
+				int index = field_map.get(getString(project));
+				all_count[index]++;
+				if (data.outcomes.get(project.projectid).is_exciting)
+					ex_count[index]++;
+			}
+		}
+
+		for (String field : field_map.keySet()) {
+			int index = field_map.get(field);
+			System.out.print(field);
+			System.out.print("\t" + all_count[index]);
+			System.out.print("\t" + ex_count[index]);
+			System.out.println("\t" + (double) ex_count[index]
+					/ all_count[index]);
+		}
+
+	}
+
+	private static String getString(Project project) {
+		return project.primary_focus_subject;
+		// return (project.eligible_almost_home_match )?"T":"F";
 	}
 
 }
