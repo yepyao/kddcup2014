@@ -141,7 +141,7 @@ public class TeacherAccPosRatioCount {
 				two += teacherAll.get(projectTeacher.get(id.get(temp[1])));
 			}
 			if (teacherAll2.get(projectTeacher.get(id.get(temp[1]))) != null){
-				two = teacherAll2.get(projectTeacher.get(id.get(temp[1])));
+				two += teacherAll2.get(projectTeacher.get(id.get(temp[1])));
 			}
 			one = one / 2;
 			two = two / 2;
