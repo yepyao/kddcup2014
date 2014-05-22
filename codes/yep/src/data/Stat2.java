@@ -12,7 +12,7 @@ public class Stat2 {
 		String dir = null;
 		if (args.length > 0)
 			dir = args[0];
-		data = AllData.getInstance(dir, "projects,outcomes,essays");
+		data = AllData.getInstance(dir, "projects,outcomes,essays,resources");
 
 		Iterator<Project> iter = data.projects.values().iterator();
 		
@@ -74,9 +74,9 @@ public class Stat2 {
 
 	private static Double getString(Project project) {
 		//Essay essay = data.essays.get(project.projectid);
-		//return (double)essay.essay.length();
+		//return (double)essay.title.length();
 		//return (project.teacher_teach_for_america)?"T":"F";
-		return (double)project.students_reached;
+		return (double)data.project2resourses.get(project.projectid).size();
 	}
 
 }

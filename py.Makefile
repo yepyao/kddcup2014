@@ -71,6 +71,24 @@ features/train.txt.py_SchoolCityPosRatioCount  features/test.txt.py_SchoolCityPo
 	java -cp codes/py/bin features.TeacherAccPosRatioCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolCityPosRatioCount test.txt features/test.txt.py_SchoolCityPosRatioCount 6
 features/train.txt.py_ResourceTypePosRatioCount  features/test.txt.py_ResourceTypePosRatioCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
 	java -cp codes/py/bin features.TeacherAccPosRatioCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_ResourceTypePosRatioCount test.txt features/test.txt.py_ResourceTypePosRatioCount 25
+features/train.txt.py_SchoolIDPosRatioCount  features/test.txt.py_SchoolIDPosRatioCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.TeacherAccPosRatioCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolIDPosRatioCount test.txt features/test.txt.py_SchoolIDPosRatioCount 2
+features/train.txt.py_SchoolNcesidPosRatioCount  features/test.txt.py_SchoolNcesidPosRatioCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.TeacherAccPosRatioCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolNcesidPosRatioCount test.txt features/test.txt.py_SchoolNcesidPosRatioCount 3
+features/train.txt.py_SchoolStatePosRatioCount  features/test.txt.py_SchoolStatePosRatioCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.TeacherAccPosRatioCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolStatePosRatioCount test.txt features/test.txt.py_SchoolStatePosRatioCount 7
+features/train.txt.py_SchoolZipPosRatioCount  features/test.txt.py_SchoolZipPosRatioCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.TeacherAccPosRatioCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolZipPosRatioCount test.txt features/test.txt.py_SchoolZipPosRatioCount 8
+features/train.txt.py_SchoolMetroPosRatioCount  features/test.txt.py_SchoolMetroPosRatioCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.TeacherAccPosRatioCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolMetroPosRatioCount test.txt features/test.txt.py_SchoolMetroPosRatioCount 9
+features/train.txt.py_SchoolDistrictPosRatioCount  features/test.txt.py_SchoolDistrictPosRatioCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.TeacherAccPosRatioCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolDistrictPosRatioCount test.txt features/test.txt.py_SchoolDistrictPosRatioCount 10
+
+
+
+
+
+
 
 
 

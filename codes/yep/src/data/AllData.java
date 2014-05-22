@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 
@@ -19,6 +20,7 @@ public class AllData {
 	public HashMap<String, Outcome> outcomes = new HashMap<String, Outcome>();
 	
 	//relations
+	public HashMap<String,ArrayList<Resource>> project2resourses = new HashMap<String, ArrayList<Resource>>();
 	
 	
 	static AllData instance = null;
@@ -34,7 +36,7 @@ public class AllData {
 		//get raw data
 		try{
 			if (files.contains("all") || files.contains("projects")) getProjects();
-			if (files.contains("all") || files.contains("resourse")) getResourse();
+			if (files.contains("all") || files.contains("resources")) getResourse();
 			if (files.contains("all") || files.contains("essays")) getEssays();
 			if (files.contains("all") || files.contains("donation")) getDonations();
 			if (files.contains("all") || files.contains("outcomes")) getOutcomes();
@@ -63,8 +65,14 @@ public class AllData {
 		CSVFileUtil input = new CSVFileUtil(input_dir + "resources.csv");
 		String line = input.readLine();
 		while ((line = input.readLine())!=null){
-			Resource resourse = Resource.render(line);
-			resources.put(resourse.resourceid, resourse);
+			Resource resource = Resource.render(line);
+			resources.put(resource.resourceid, resource);
+			
+			String projectid = resource.projectid;
+			//add to project2resources list
+			if (!project2resourses.containsKey(projectid))
+				project2resourses.put(projectid, new ArrayList<Resource>());
+			project2resourses.get(projectid).add(resource);
 			
 		}
 		System.out.println("End loading resourses...");
@@ -103,7 +111,8 @@ public class AllData {
 		while ((line = input.readLine())!=null){
 			Project project = Project.render(line);
 			projects.put(project.projectid, project);
-			
+			if (!project2resourses.containsKey(project.projectid))
+				project2resourses.put(project.projectid, new ArrayList<Resource>());
 		}
 		System.out.println("End loading projects...");
 		System.out.println("Get projects entry: " + projects.keySet().size());
