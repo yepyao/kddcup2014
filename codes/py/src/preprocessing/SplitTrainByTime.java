@@ -49,8 +49,8 @@ public class SplitTrainByTime {
 		f = new FileInputStream(inpath2);
 		in = new BufferedReader(new InputStreamReader(f));
 		s = in.readLine();
-		double line = (double)44772 / (425697+44772);
-		line = line * 425697;
+		double line = (double)44772 / (619326+44772);
+		line = line * 619326;
 		int index = 0;
 		while (s != null){
 			ArrayList<String> splits = CSVFileUtil.fromCSVLinetoArray(s);

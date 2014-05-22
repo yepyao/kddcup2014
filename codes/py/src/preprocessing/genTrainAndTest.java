@@ -36,7 +36,7 @@ public class genTrainAndTest {
 		int id = 0;
 		while (s != null){
 			ArrayList<String> splits = CSVFileUtil.fromCSVLinetoArray(s);
-			if (splits.get(34).equals("2010-03-14")) break;
+	//		if (splits.get(34).equals("2010-03-14")) break;
 			if (h.get(splits.get(0)) == null){
 				h.put(splits.get(0), id);
 				out3.write(splits.get(0)+" "+String.valueOf(id)+"\n");
