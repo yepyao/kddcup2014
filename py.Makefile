@@ -65,6 +65,9 @@ features/train.txt.py_PrimaryFocusSubject  features/test.txt.py_PrimaryFocusSubj
 	java -cp codes/py/bin features.PrimaryFocusSubject data/projectIDMapping data/projects.csv train.txt features/train.txt.py_PrimaryFocusSubject test.txt features/test.txt.py_PrimaryFocusSubject
 features/train.txt.py_PrimaryFocusSubjectPosRatio  features/test.txt.py_PrimaryFocusSubjectPosRatio:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
 	java -cp codes/py/bin features.PrimaryFocusSubjectPosRatio data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_PrimaryFocusSubjectPosRatio test.txt features/test.txt.py_PrimaryFocusSubjectPosRatio
+features/train.txt.py_TeacherAccPosRatioCount  features/test.txt.py_TeacherAccPosRatioCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.TeacherAccPosRatioCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_TeacherAccPosRatioCount test.txt features/test.txt.py_TeacherAccPosRatioCount 1
+
 
 
 

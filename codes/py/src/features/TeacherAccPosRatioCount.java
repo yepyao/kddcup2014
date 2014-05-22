@@ -12,7 +12,7 @@ import java.util.Hashtable;
 
 import preprocessing.CSVFileUtil;
 
-public class TeacherAccPosRatio4 {
+public class TeacherAccPosRatioCount {
 	public static void main(String[] args) throws IOException{
 		FileInputStream f = new FileInputStream(args[1]); //mapping
 		BufferedReader in = new BufferedReader(new InputStreamReader(f));
@@ -28,8 +28,10 @@ public class TeacherAccPosRatio4 {
 		f = new FileInputStream(args[3]); //train.txt
 		in = new BufferedReader(new InputStreamReader(f));
 		Hashtable<String, Integer> train = new Hashtable<String, Integer>();
+		int trainSum = 0;
 		s = in.readLine();
 		while (s != null){
+			trainSum++;
 			String[] temp = s.split(" ");
 			train.put(id.get(temp[1]), 1);
 			s = in.readLine();
@@ -54,20 +56,33 @@ public class TeacherAccPosRatio4 {
 		in = new BufferedReader(new InputStreamReader(f));
 		Hashtable<String, Integer> teacher = new Hashtable<String, Integer>();
 		Hashtable<String, Integer> teacherAll = new Hashtable<String, Integer>();
+		Hashtable<String, Integer> teacher2 = new Hashtable<String, Integer>();
+		Hashtable<String, Integer> teacherAll2 = new Hashtable<String, Integer>();
 		Hashtable<String, String> projectTeacher = new Hashtable<String, String>();
 		s  = in.readLine();
 		s = in.readLine();
 		int field = Integer.valueOf(args[7]);
+		int index = 0;
 		while (s != null){
 			ArrayList<String> splits = CSVFileUtil.fromCSVLinetoArray(s);
 			projectTeacher.put(splits.get(0), splits.get(field));
 			if (train.get(splits.get(0)) != null && splits.size() > 33){
-				if (posH.get(splits.get(0)) != null){
-					if (teacher.get(splits.get(field)) == null) teacher.put(splits.get(field), 1);
-					else teacher.put(splits.get(field), teacher.get(splits.get(field))+1);
+				index++;
+				if (index < trainSum / 2){
+					if (posH.get(splits.get(0)) != null){
+						if (teacher.get(splits.get(field)) == null) teacher.put(splits.get(field), 1);
+						else teacher.put(splits.get(field), teacher.get(splits.get(field))+1);
+					}
+					if (teacherAll.get(splits.get(field)) == null) teacherAll.put(splits.get(field), 1);
+					else teacherAll.put(splits.get(field), teacherAll.get(splits.get(field))+1);
+				}else{
+					if (posH.get(splits.get(0)) != null){
+						if (teacher2.get(splits.get(field)) == null) teacher2.put(splits.get(field), 1);
+						else teacher2.put(splits.get(field), teacher2.get(splits.get(field))+1);
+					}
+					if (teacherAll2.get(splits.get(field)) == null) teacherAll2.put(splits.get(field), 1);
+					else teacherAll2.put(splits.get(field), teacherAll2.get(splits.get(field))+1);
 				}
-				if (teacherAll.get(splits.get(field)) == null) teacherAll.put(splits.get(field), 1);
-				else teacherAll.put(splits.get(field), teacherAll.get(splits.get(field))+1);
 			}
 			s = in.readLine();
 		}
@@ -79,20 +94,26 @@ public class TeacherAccPosRatio4 {
 		BufferedWriter out = new BufferedWriter(new OutputStreamWriter(f2));
 		s = in.readLine();
 		out.write("3"+"\n");
+		index = 0;
 		while (s != null){
 			String[] temp = s.split(" ");
 			int one = 0;
-			if (teacher.get(projectTeacher.get(id.get(temp[1]))) != null){
-				one = teacher.get(projectTeacher.get(id.get(temp[1])));
-				if (temp[2].equals("1")) one--;
-			}
 			int two = 0;
-			if (teacherAll.get(projectTeacher.get(id.get(temp[1]))) != null){
-				two = teacherAll.get(projectTeacher.get(id.get(temp[1])));
-				two--;
-			}
 			double three = 0;
-			if (two != 0) three = (double) one / two; 
+			index++;
+			if (index < trainSum / 2){
+				if (teacher2.get(projectTeacher.get(id.get(temp[1]))) != null)
+					one = teacher2.get(projectTeacher.get(id.get(temp[1])));
+				if (teacherAll2.get(projectTeacher.get(id.get(temp[1]))) != null)
+					two = teacherAll2.get(projectTeacher.get(id.get(temp[1])));
+				if (two != 0) three = (double) one / two;
+			}else{
+				if (teacher.get(projectTeacher.get(id.get(temp[1]))) != null)
+					one = teacher.get(projectTeacher.get(id.get(temp[1])));
+				if (teacherAll.get(projectTeacher.get(id.get(temp[1]))) != null)
+					two = teacherAll.get(projectTeacher.get(id.get(temp[1])));
+				if (two != 0) three = (double) one / two;
+			}
 			out.write("3 "+"0:"+String.valueOf(one)+" 1:"+String.valueOf(two)+" 2:"+String.valueOf(three)+"\n");
 	//		out.write("2 "+"0:"+String.valueOf(one)+" 1:"+String.valueOf(two)+"\n");
 			s = in.readLine();
@@ -110,11 +131,17 @@ public class TeacherAccPosRatio4 {
 			String[] temp = s.split(" ");
 			int one = 0;
 			if (teacher.get(projectTeacher.get(id.get(temp[1]))) != null){
-				one = teacher.get(projectTeacher.get(id.get(temp[1])));
+				one += teacher.get(projectTeacher.get(id.get(temp[1])));
+			}
+			if (teacher2.get(projectTeacher.get(id.get(temp[1]))) != null){
+				one = teacher2.get(projectTeacher.get(id.get(temp[1])));
 			}
 			int two = 0;
 			if (teacherAll.get(projectTeacher.get(id.get(temp[1]))) != null){
 				two = teacherAll.get(projectTeacher.get(id.get(temp[1])));
+			}
+			if (teacherAll2.get(projectTeacher.get(id.get(temp[1]))) != null){
+				two = teacherAll2.get(projectTeacher.get(id.get(temp[1])));
 			}
 			double three = 0;
 			if (two != 0) three = (double) one / two; 
