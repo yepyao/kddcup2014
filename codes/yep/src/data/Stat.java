@@ -80,7 +80,7 @@ public class Stat {
 	}
 
 	private static String getString(Project project) {
-		return project.resource_type;
+		return (project.eligible_almost_home_match)?"True":"False" ;
 		/*
 		//return project.grade_level;
 		//return (project.teacher_teach_for_america)?"T":"F";

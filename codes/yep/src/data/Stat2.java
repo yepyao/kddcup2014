@@ -75,7 +75,7 @@ public class Stat2 {
 	}
 
 	private static Double getString(Project project) {
-		return project.students_reached;
+		return (double)project.students_reached;
 		//Essay essay = data.essays.get(project.projectid);
 		//return (double)essay.need_statement.length();
 		//return (project.teacher_teach_for_america)?"T":"F";
