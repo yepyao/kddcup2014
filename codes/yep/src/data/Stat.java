@@ -9,12 +9,13 @@ import java.util.HashSet;
 import java.util.Iterator;
 
 public class Stat {
-
+	static AllData data = null;
+	
 	public static void main(String[] args) throws Exception {
 		String dir = null;
 		if (args.length > 0)
 			dir = args[0];
-		AllData data = AllData.getInstance(dir, "projects,outcomes");
+		data = AllData.getInstance(dir, "projects,essays,outcomes");
 
 		/*
 		Iterator<Project> iter = data.projects.values().iterator();
@@ -79,8 +80,22 @@ public class Stat {
 	}
 
 	private static String getString(Project project) {
-		return project.grade_level;
+		return project.resource_type;
+		/*
+		//return project.grade_level;
 		//return (project.teacher_teach_for_america)?"T":"F";
+		boolean has_social_keyword = false;
+		Essay essay = data.essays.get(project.projectid);
+		
+		String essay_str = essay.essay.toLowerCase();
+		if (essay_str.contains("facebook")
+				|| essay_str.contains("twitter")
+				|| essay_str.contains("myspace")
+				|| essay_str.contains("google+")){
+			has_social_keyword = true;
+		}
+		return (has_social_keyword)?"True":"False";
+		*/
 	}
 
 }

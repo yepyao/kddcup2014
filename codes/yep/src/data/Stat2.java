@@ -1,6 +1,7 @@
 package data;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -9,6 +10,7 @@ public class Stat2 {
 	static AllData data = null;
 	
 	public static void main(String[] args) throws Exception {
+
 		String dir = null;
 		if (args.length > 0)
 			dir = args[0];
@@ -73,10 +75,16 @@ public class Stat2 {
 	}
 
 	private static Double getString(Project project) {
+		return project.students_reached;
 		//Essay essay = data.essays.get(project.projectid);
-		//return (double)essay.title.length();
+		//return (double)essay.need_statement.length();
 		//return (project.teacher_teach_for_america)?"T":"F";
-		return (double)data.project2resourses.get(project.projectid).size();
+		//ArrayList<Resource> resources = data.project2resourses.get(project.projectid);
+		//double max_prize = 0;
+		//for(int i=0;i<resources.size();i++)
+		//	if (resources.get(i).item_unit_price>max_prize)
+		//		max_prize = resources.get(i).item_quantity;
+		//return (double)max_prize;
 	}
 
 }
