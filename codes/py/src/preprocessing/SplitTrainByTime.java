@@ -19,11 +19,11 @@ public class SplitTrainByTime {
 	//36710 582616
 
 	public static void main(String[] args) throws IOException{
-		FileInputStream f = new FileInputStream(args[0]);
+		FileInputStream f = new FileInputStream(inpath);
 		BufferedReader in = new BufferedReader(new InputStreamReader(f));
-		FileOutputStream f2 = new FileOutputStream(args[3]);
+		FileOutputStream f2 = new FileOutputStream(outpath);
 		BufferedWriter out = new BufferedWriter(new OutputStreamWriter(f2));
-		FileOutputStream f3 = new FileOutputStream(args[4]);
+		FileOutputStream f3 = new FileOutputStream(outpath2);
 		BufferedWriter out2 = new BufferedWriter(new OutputStreamWriter(f3));
 		String s = in.readLine();
 		s = in.readLine();
@@ -35,7 +35,7 @@ public class SplitTrainByTime {
 		}
 		in.close();
 		
-		f = new FileInputStream(args[2]);
+		f = new FileInputStream(inpath3);
 		in = new BufferedReader(new InputStreamReader(f));
 		s = in.readLine();
 		Hashtable<String, String> id = new Hashtable<String, String>();
@@ -46,7 +46,7 @@ public class SplitTrainByTime {
 		}
 		in.close();
 		
-		f = new FileInputStream(args[1]);
+		f = new FileInputStream(inpath2);
 		in = new BufferedReader(new InputStreamReader(f));
 		s = in.readLine();
 		double line = (double)44772 / (425697+44772);

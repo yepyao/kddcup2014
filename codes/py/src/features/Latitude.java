@@ -12,7 +12,7 @@ import java.util.Hashtable;
 
 import preprocessing.CSVFileUtil;
 
-public class Price {
+public class Latitude {
 	public static void main(String[] args) throws IOException{
 		FileInputStream f = new FileInputStream(args[0]); //mapping
 		BufferedReader in = new BufferedReader(new InputStreamReader(f));
@@ -33,7 +33,7 @@ public class Price {
 		while (s != null){
 			ArrayList<String> splits = CSVFileUtil.fromCSVLinetoArray(s);
 			if (splits.size() > 33){
-				price.put(splits.get(0), Double.valueOf(splits.get(29)));
+				price.put(splits.get(0), Double.valueOf(splits.get(4)));
 			}
 			s = in.readLine();
 		}
@@ -44,26 +44,13 @@ public class Price {
 		FileOutputStream f2 = new FileOutputStream(args[3]);
 		BufferedWriter out = new BufferedWriter(new OutputStreamWriter(f2));
 		s = in.readLine();
-		double avg = 0;
-		double deviation = 0;
-		ArrayList<Double> num = new ArrayList<Double>();
 		out.write("1"+"\n");
 		while (s != null){
 			String[] temp = s.split(" ");
-			Double ans = Double.valueOf(0);
-			if (price.get(id.get(temp[1])) != null) 
-				ans = price.get(id.get(temp[1]));
-			num.add(ans);
-			avg += ans;
+			out.write("1 0:"+price.get(id.get(temp[1]))+"\n");
 			s = in.readLine();
 		}
-		avg = avg / num.size();
-		for (int i = 0; i < num.size(); i++)
-			deviation += (num.get(i) - avg) * (num.get(i) - avg);
-		deviation = Math.sqrt(deviation / num.size());
-		for (int i = 0; i < num.size(); i++)
-			out.write("1 0:"+String.valueOf((num.get(i)-avg)/deviation)+"\n");
-		System.out.println(avg+" "+deviation);
+		
 		in.close();
 		out.close();
 		
@@ -75,11 +62,7 @@ public class Price {
 		out.write("1"+"\n");
 		while (s != null){
 			String[] temp = s.split(" ");
-			Double ans = Double.valueOf(0);
-			if (price.get(id.get(temp[1])) != null) 
-				ans = Double.valueOf(price.get(id.get(temp[1])));
-			ans = (ans - avg) /deviation;
-			out.write("1 0:"+String.valueOf(ans)+"\n");
+			out.write("1 0:"+price.get(id.get(temp[1]))+"\n");
 			s = in.readLine();
 		}
 		in.close();

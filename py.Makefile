@@ -1,6 +1,6 @@
 features/train.txt.py_TeacherOwnProjectNum  features/test.txt.py_TeacherOwnProjectNum:data/projectIDMapping data/projects.csv train.txt test.txt
 	java -cp codes/py/bin features.TeacherOwnProjectNum data/projectIDMapping data/projects.csv train.txt features/train.txt.py_TeacherOwnProjectNum test.txt features/test.txt.py_TeacherOwnProjectNum
-features/train.txt.py_Price  features/test.txt.py_Price:data/projectIDMapping data/projects.csv train.txt test.txt
+features/train.txt.py_Price features/test.txt.py_Price:data/projectIDMapping data/projects.csv train.txt test.txt
 	java -cp codes/py/bin features.Price data/projectIDMapping data/projects.csv train.txt features/train.txt.py_Price test.txt features/test.txt.py_Price
 features/train.txt.py_EssayLength  features/test.txt.py_EssayLength:data/projectIDMapping data/essays.csv train.txt test.txt
 	java -cp codes/py/bin features.EssayLength data/projectIDMapping data/essays.csv train.txt features/train.txt.py_EssayLength test.txt features/test.txt.py_EssayLength
@@ -119,6 +119,12 @@ features/train.txt.py_EligibleDoubleYourImpactMatchPosRatioCount  features/test.
 	java -cp codes/py/bin features.TeacherAccPosRatioCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_EligibleDoubleYourImpactMatchPosRatioCount test.txt features/test.txt.py_EligibleDoubleYourImpactMatchPosRatioCount 32
 features/train.txt.py_EligibleAlmostHomeMatchPosRatioCount  features/test.txt.py_EligibleAlmostHomeMatchPosRatioCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
 	java -cp codes/py/bin features.TeacherAccPosRatioCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_EligibleAlmostHomeMatchPosRatioCount test.txt features/test.txt.py_EligibleAlmostHomeMatchPosRatioCount 33
+features/train.txt.py_Latitude features/test.txt.py_Latitude:data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.Latitude data/projectIDMapping data/projects.csv train.txt features/train.txt.py_Latitude test.txt features/test.txt.py_Latitude
+features/train.txt.py_Longitude features/test.txt.py_Longitude:data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.Longitude data/projectIDMapping data/projects.csv train.txt features/train.txt.py_Longitude test.txt features/test.txt.py_Longitude
+
+
 
 
 
