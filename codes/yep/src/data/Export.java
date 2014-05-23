@@ -25,7 +25,7 @@ public class Export {
 			if (date.getTime() < compare.getTime())
 				continue;
 
-			if (data.outcomes.get(project.projectid).is_exciting) {
+			if (data.outcomes.containsKey(project.projectid) && data.outcomes.get(project.projectid).great_chat) {
 
 				double year = (date.getTime() - compare.getTime() + 0.0) / 1000
 						/ 3600 / 24 / 365;

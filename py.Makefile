@@ -115,6 +115,12 @@ features/train.txt.py_PovertyLevelPosRatioCount  features/test.txt.py_PovertyLev
 	java -cp codes/py/bin features.TeacherAccPosRatioCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_PovertyLevelPosRatioCount test.txt features/test.txt.py_PovertyLevelPosRatioCount 26
 features/train.txt.py_GradeLevelPosRatioCount  features/test.txt.py_GradeLevelPosRatioCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
 	java -cp codes/py/bin features.TeacherAccPosRatioCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_GradeLevelPosRatioCount test.txt features/test.txt.py_GradeLevelPosRatioCount 27
+features/train.txt.py_EligibleDoubleYourImpactMatchPosRatioCount  features/test.txt.py_EligibleDoubleYourImpactMatchPosRatioCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.TeacherAccPosRatioCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_EligibleDoubleYourImpactMatchPosRatioCount test.txt features/test.txt.py_EligibleDoubleYourImpactMatchPosRatioCount 32
+features/train.txt.py_EligibleAlmostHomeMatchPosRatioCount  features/test.txt.py_EligibleAlmostHomeMatchPosRatioCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.TeacherAccPosRatioCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_EligibleAlmostHomeMatchPosRatioCount test.txt features/test.txt.py_EligibleAlmostHomeMatchPosRatioCount 33
+
+
 
 
 
