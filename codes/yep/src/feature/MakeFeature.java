@@ -41,7 +41,7 @@ public class MakeFeature {
 		map_reader.close();
 		System.out.println("map reading ok: " + count);
 
-		AllData data = AllData.getInstance(null, "projects,essays");
+		AllData data = AllData.getInstance(null, "projects,resources,essays");
 
 		String[] feature_names = args[0].split(",");
 		for (String feature_name : feature_names) {
@@ -92,6 +92,12 @@ public class MakeFeature {
 			} 
 			if (feature_name.equals("yep_PostDate")) {
 				featurelist = new PostDate();
+			} 
+			if (feature_name.equals("yep_Fulfillment")) {
+				featurelist = new Fulfillment();
+			} 
+			if (feature_name.equals("yep_MaxUnitPrize")) {
+				featurelist = new MaxUnitPrize();
 			} 
 
 			featurelist.train_pid = train_pid;

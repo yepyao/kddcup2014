@@ -83,6 +83,29 @@ features/train.txt.py_SchoolMetroPosRatioCount  features/test.txt.py_SchoolMetro
 	java -cp codes/py/bin features.TeacherAccPosRatioCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolMetroPosRatioCount test.txt features/test.txt.py_SchoolMetroPosRatioCount 9
 features/train.txt.py_SchoolDistrictPosRatioCount  features/test.txt.py_SchoolDistrictPosRatioCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
 	java -cp codes/py/bin features.TeacherAccPosRatioCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolDistrictPosRatioCount test.txt features/test.txt.py_SchoolDistrictPosRatioCount 10
+features/train.txt.py_SchoolCountyPosRatioCount  features/test.txt.py_SchoolCountyPosRatioCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.TeacherAccPosRatioCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolCountyPosRatioCount test.txt features/test.txt.py_SchoolCountyPosRatioCount 11
+features/train.txt.py_SchoolCharterPosRatioCount  features/test.txt.py_SchoolCharterPosRatioCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.TeacherAccPosRatioCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolCharterPosRatioCount test.txt features/test.txt.py_SchoolCharterPosRatioCount 12
+features/train.txt.py_SchoolMagnetPosRatioCount  features/test.txt.py_SchoolMagnetPosRatioCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.TeacherAccPosRatioCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolMagnetPosRatioCount test.txt features/test.txt.py_SchoolMagnetPosRatioCount 13
+features/train.txt.py_SchoolYearRoundPosRatioCount  features/test.txt.py_SchoolYearRoundPosRatioCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.TeacherAccPosRatioCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolYearRoundPosRatioCount test.txt features/test.txt.py_SchoolYearRoundPosRatioCount 14
+features/train.txt.py_SchoolNlnsPosRatioCount  features/test.txt.py_SchoolNlnsPosRatioCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.TeacherAccPosRatioCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolNlnsPosRatioCount test.txt features/test.txt.py_SchoolNlnsPosRatioCount 15
+features/train.txt.py_SchoolKippPosRatioCount  features/test.txt.py_SchoolKippPosRatioCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.TeacherAccPosRatioCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolKippPosRatioCount test.txt features/test.txt.py_SchoolKippPosRatioCount 16
+features/train.txt.py_SchoolCharterReadyPromisePosRatioCount  features/test.txt.py_SchoolCharterReadyPromisePosRatioCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.TeacherAccPosRatioCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolCharterReadyPromisePosRatioCount test.txt features/test.txt.py_SchoolCharterReadyPromisePosRatioCount 17
+features/train.txt.py_TeacherPrefixPosRatioCount  features/test.txt.py_TeacherPrefixPosRatioCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.TeacherAccPosRatioCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_TeacherPrefixPosRatioCount test.txt features/test.txt.py_TeacherPrefixPosRatioCount 18
+
+
+
+
+
+
+
 
 
 
