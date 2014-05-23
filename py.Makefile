@@ -99,6 +99,30 @@ features/train.txt.py_SchoolCharterReadyPromisePosRatioCount  features/test.txt.
 	java -cp codes/py/bin features.TeacherAccPosRatioCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolCharterReadyPromisePosRatioCount test.txt features/test.txt.py_SchoolCharterReadyPromisePosRatioCount 17
 features/train.txt.py_TeacherPrefixPosRatioCount  features/test.txt.py_TeacherPrefixPosRatioCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
 	java -cp codes/py/bin features.TeacherAccPosRatioCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_TeacherPrefixPosRatioCount test.txt features/test.txt.py_TeacherPrefixPosRatioCount 18
+features/train.txt.py_TeacherTeachForAmericaPosRatioCount  features/test.txt.py_TeacherTeachForAmericaPosRatioCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.TeacherAccPosRatioCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_TeacherTeachForAmericaPosRatioCount test.txt features/test.txt.py_TeacherTeachForAmericaPosRatioCount 19
+features/train.txt.py_TeacherNyTeachingFellowPosRatioCount  features/test.txt.py_TeacherNyTeachingFellowPosRatioCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.TeacherAccPosRatioCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_TeacherNyTeachingFellowPosRatioCount test.txt features/test.txt.py_TeacherNyTeachingFellowPosRatioCount 20
+features/train.txt.py_PrimaryFocusSubjectPosRatioCount  features/test.txt.py_PrimaryFocusSubjectPosRatioCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.TeacherAccPosRatioCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_PrimaryFocusSubjectPosRatioCount test.txt features/test.txt.py_PrimaryFocusSubjectPosRatioCount 21
+features/train.txt.py_PrimaryFocusAreaPosRatioCount  features/test.txt.py_PrimaryFocusAreaPosRatioCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.TeacherAccPosRatioCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_PrimaryFocusAreaPosRatioCount test.txt features/test.txt.py_PrimaryFocusAreaPosRatioCount 22
+features/train.txt.py_SecondFocusSubjectPosRatioCount  features/test.txt.py_SecondFocusSubjectPosRatioCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.TeacherAccPosRatioCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SecondFocusSubjectPosRatioCount test.txt features/test.txt.py_SecondFocusSubjectPosRatioCount 23
+features/train.txt.py_SecondFocusAreaPosRatioCount  features/test.txt.py_SecondFocusAreaPosRatioCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.TeacherAccPosRatioCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SecondFocusAreaPosRatioCount test.txt features/test.txt.py_SecondFocusAreaPosRatioCount 24
+features/train.txt.py_PovertyLevelPosRatioCount  features/test.txt.py_PovertyLevelPosRatioCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.TeacherAccPosRatioCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_PovertyLevelPosRatioCount test.txt features/test.txt.py_PovertyLevelPosRatioCount 26
+features/train.txt.py_GradeLevelPosRatioCount  features/test.txt.py_GradeLevelPosRatioCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.TeacherAccPosRatioCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_GradeLevelPosRatioCount test.txt features/test.txt.py_GradeLevelPosRatioCount 27
+
+
+
+
+
+
+
+
 
 
 
