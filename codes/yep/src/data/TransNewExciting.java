@@ -14,7 +14,7 @@ import libsvm_interface.SVMLine;
 public class TransNewExciting {
 
 	static AllData data = null;
-	
+
 	public static void main(String[] args) throws Exception {
 		ArrayList<String> map = new ArrayList<String>();
 		BufferedReader map_reader = new BufferedReader(new FileReader(
@@ -38,38 +38,38 @@ public class TransNewExciting {
 		}
 		map_reader.close();
 		System.out.println("map reading ok: " + count);
-		
+
 		data = AllData.getInstance(null, "projects,outcomes");
-		
-		BufferedReader reader = new BufferedReader(new FileReader("train_old.txt"));
+
+		BufferedReader reader = new BufferedReader(new FileReader(
+				"train_old.txt"));
 		PrintStream outp = new PrintStream("train.txt");
 		temp = null;
 		int pos = 0;
-		
+
 		SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd");
-		Date point = dateformat.parse("2013-06-30");
+		// Date point = dateformat.parse("2013-06-30");
 		count = 0;
 		while ((temp = reader.readLine()) != null) {
 			String[] arr = temp.split(" ");
 			int pid = Integer.parseInt(arr[1]);
 			int label = Integer.parseInt(arr[2]);
-			
+
 			Project project = data.projects.get(map.get(pid));
 			Date date = dateformat.parse(project.date_posted);
-			
+
 			int new_label = label;
-			if (date.getTime() < point.getTime()) 
-				new_label = (new_exciting(project))?1:0;
+			// if (date.getTime() < point.getTime())
+			new_label = (new_exciting(project)) ? 1 : 0;
+
 			count++;
-			outp.println(arr[0]+" "+arr[1]+" "+new_label);
+			outp.println(arr[0] + " " + arr[1] + " " + new_label);
 			pos += new_label;
 		}
-		System.out.println("count"+count);
+		System.out.println("count" + count);
 		reader.close();
 		outp.close();
 		System.out.println("pos num: " + pos);
-		
-		
 
 	}
 
@@ -77,14 +77,10 @@ public class TransNewExciting {
 		Outcome outcome = data.outcomes.get(project.projectid);
 		if (outcome.is_exciting)
 			return true;
-		if (outcome.at_least_1_teacher_referred_donor
-				&& outcome.fully_funded
-				&& outcome.at_least_1_green_donation
-				&& (outcome.donation_from_thoughtful_donor
-						|| outcome.one_non_teacher_referred_donor_giving_100_plus || outcome.three_or_more_non_teacher_referred_donors)) {
-			if (outcome.great_messages_proportion>47) return true;
-			else return false;
-		} else
+		if (outcome.at_least_1_teacher_referred_donor && outcome.great_chat)
+			return true;
+		else
 			return false;
+
 	}
 }
