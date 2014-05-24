@@ -11,6 +11,7 @@ import data.AllData;
 public class MakeSvmWeight {
 
 	public static void main(String[] args) throws Exception {
+		System.exit(1);
 		if (args.length != 2) {
 			System.err.println("Usage: [conf identify] [output dir]");
 			System.exit(1);
