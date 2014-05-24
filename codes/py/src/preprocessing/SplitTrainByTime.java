@@ -58,8 +58,10 @@ public class SplitTrainByTime {
 			String item = id.get(splits.get(0));
 			String rate = "0";
 			if (posH.get(splits.get(0)) != null) rate = "1";
-			if (index < line)
+			if (index < line){
 				out2.write(user+" "+item+" "+rate+"\n");
+				System.out.println(splits.get(34));
+			}
 			else
 				out.write(user+" "+item+" "+rate+"\n");
 			s = in.readLine();

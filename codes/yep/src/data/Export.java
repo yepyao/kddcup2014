@@ -2,6 +2,7 @@ package data;
 
 import java.io.PrintStream;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Iterator;
 
@@ -29,7 +30,8 @@ public class Export {
 			double latitude = project.school_latitude;
 			double longitude = project.school_longitude;	
 			if (data.outcomes.containsKey(project.projectid)) {
-				if (data.outcomes.get(project.projectid).is_exciting)
+				if (dateformat.parse(project.date_posted).getTime() > dateformat.parse("2013-10-06").getTime())
+				//if (data.outcomes.get(project.projectid).is_exciting)
 					outp.println(latitude+","+longitude);
 			}else outp2.println(latitude+","+longitude);
 				

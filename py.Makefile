@@ -127,6 +127,11 @@ features/train.txt.py_Month1 features/test.txt.py_Month1:data/projectIDMapping d
 	java -cp codes/py/bin features.Month1 data/projectIDMapping data/projects.csv train.txt features/train.txt.py_Month1 test.txt features/test.txt.py_Month1
 features/train.txt.py_EssayWordNum  features/test.txt.py_EssayWordNum:data/projectIDMapping data/essays.csv train.txt test.txt
 	java -cp codes/py/bin features.EssayWordNum data/projectIDMapping data/essays.csv train.txt features/train.txt.py_EssayWordNum test.txt features/test.txt.py_EssayWordNum
+features/train.txt.py_MonthCountPosRatioCount  features/test.txt.py_MonthCountPosRatioCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.MonthCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_MonthCountPosRatioCount test.txt features/test.txt.py_MonthCountPosRatioCount 34
+features/train.txt.py_TeacherAccTeacherReferedDonorCount  features/test.txt.py_TeacherAccTeacherReferedDonorCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_TeacherAccTeacherReferedDonorCount test.txt features/test.txt.py_TeacherAccTeacherReferedDonorCount 1 2
+
 
 
 

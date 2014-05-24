@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.PrintStream;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedList;
 
@@ -80,6 +81,7 @@ public class MakeInput {
 			// begin to output
 			PrintStream outp = new PrintStream(args[1] + t + "." + conf_id
 					+ ".svm_buffer");
+			//if (t.equals("train")) Collections.shuffle(lines);
 			Iterator<SVMLine> iter = lines.iterator();
 			int count = 0;
 			int output_count = 0;
@@ -88,8 +90,8 @@ public class MakeInput {
 				count++;
 				int duplicate = 1;
 				
-				if (t.equals("train") && count < lines.size() * 0.2)
-					duplicate = 2;
+				//if (t.equals("train") && count > lines.size() * 0.2 && line.label == 1)
+					//duplicate = 3;
 				
 				for (int i = 0; i < duplicate; i++) {
 					output_count++;
