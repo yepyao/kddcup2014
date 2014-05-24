@@ -15,6 +15,7 @@ public class Export {
 		data = AllData.getInstance(dir, "projects,outcomes");
 
 		PrintStream outp = new PrintStream("model/export.csv");
+		PrintStream outp2 = new PrintStream("model/export_ex.csv");
 
 		Iterator<Project> iter = data.projects.values().iterator();
 		SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd");
@@ -24,14 +25,16 @@ public class Export {
 			Date date = dateformat.parse(project.date_posted);
 			if (date.getTime() < compare.getTime())
 				continue;
-
-			if (data.outcomes.get(project.projectid).is_exciting) {
-
-				double year = (date.getTime() - compare.getTime() + 0.0) / 1000
-						/ 3600 / 24 / 365;
-				outp.println(year);
-			}
+			
+			double latitude = project.school_latitude;
+			double longitude = project.school_longitude;	
+			if (data.outcomes.containsKey(project.projectid)) {
+				if (data.outcomes.get(project.projectid).is_exciting)
+					outp.println(latitude+","+longitude);
+			}else outp2.println(latitude+","+longitude);
+				
 		}
 		outp.close();
+		outp2.close();
 	}
 }

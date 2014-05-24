@@ -7,11 +7,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.Hashtable;
 
 public class genTrainAndTest {
@@ -62,7 +58,9 @@ public class genTrainAndTest {
 				}
 				int year = Integer.valueOf(splits.get(34).substring(0, 4));
 				if (year >= 2014) out2.write(s+"\n");
-				else out.write(s+"\n");
+				else {
+					out.write(s+"\n");
+				}
 			}
 			s = in.readLine();
 		}

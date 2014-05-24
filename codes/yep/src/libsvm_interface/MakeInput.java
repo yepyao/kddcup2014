@@ -81,21 +81,33 @@ public class MakeInput {
 			PrintStream outp = new PrintStream(args[1] + t + "." + conf_id
 					+ ".svm_buffer");
 			Iterator<SVMLine> iter = lines.iterator();
+			int count = 0;
+			int output_count = 0;
 			while (iter.hasNext()) {
 				SVMLine line = iter.next();
-				outp.print(line.label);
-				Iterator<SVMFeature> fiter = line.features.iterator();
-				while (fiter.hasNext()) {
-					SVMFeature feature = fiter.next();
-					outp.print(" " + feature.fid + ":" + feature.fv);
+				count++;
+				int duplicate = 1;
+				
+				if (t.equals("train") && count < lines.size() * 0.2)
+					duplicate = 2;
+				
+				for (int i = 0; i < duplicate; i++) {
+					output_count++;
+					outp.print(line.label);
+					Iterator<SVMFeature> fiter = line.features.iterator();
+					while (fiter.hasNext()) {
+						SVMFeature feature = fiter.next();
+						outp.print(" " + feature.fid + ":" + feature.fv);
+					}
+					outp.println();
 				}
-				outp.println();
 			}
 			outp.close();
-			
+
 			outp = new PrintStream(args[1] + t + "." + conf_id
 					+ ".svm_buffer.group");
-			outp.println(lines.size());
+			outp.println(output_count);
+			System.out.println(t+" output lines: "+output_count);
 			outp.close();
 		}// end for "test" "train"
 	}

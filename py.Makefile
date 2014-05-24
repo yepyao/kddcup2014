@@ -123,6 +123,12 @@ features/train.txt.py_Latitude features/test.txt.py_Latitude:data/projectIDMappi
 	java -cp codes/py/bin features.Latitude data/projectIDMapping data/projects.csv train.txt features/train.txt.py_Latitude test.txt features/test.txt.py_Latitude
 features/train.txt.py_Longitude features/test.txt.py_Longitude:data/projectIDMapping data/projects.csv train.txt test.txt
 	java -cp codes/py/bin features.Longitude data/projectIDMapping data/projects.csv train.txt features/train.txt.py_Longitude test.txt features/test.txt.py_Longitude
+features/train.txt.py_Month1 features/test.txt.py_Month1:data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.Month1 data/projectIDMapping data/projects.csv train.txt features/train.txt.py_Month1 test.txt features/test.txt.py_Month1
+features/train.txt.py_EssayWordNum  features/test.txt.py_EssayWordNum:data/projectIDMapping data/essays.csv train.txt test.txt
+	java -cp codes/py/bin features.EssayWordNum data/projectIDMapping data/essays.csv train.txt features/train.txt.py_EssayWordNum test.txt features/test.txt.py_EssayWordNum
+
+
 
 
 

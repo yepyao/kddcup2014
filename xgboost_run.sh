@@ -12,7 +12,6 @@ echo make feature
 
 echo make libsvm-xgboost format input files
 java -cp codes/yep/bin/ libsvm_interface.MakeInput $1 ./model/
-java -cp codes/yep/bin/ libsvm_interface.MakeSvmWeight $1 ./model/
 
 round=0200
 echo begin to run xgboost
