@@ -12,7 +12,7 @@ import java.util.Hashtable;
 
 import preprocessing.CSVFileUtil;
 
-public class EssayWordNum {
+public class TitleWordNum {
 	public static void main(String[] args) throws IOException{
 		FileInputStream f = new FileInputStream(args[0]); //mapping
 		BufferedReader in = new BufferedReader(new InputStreamReader(f));
@@ -33,7 +33,7 @@ public class EssayWordNum {
 		while (s != null){
 			ArrayList<String> splits = CSVFileUtil.fromCSVLinetoArray(s);
 			double length = 0;
-			if (splits.size() > 5) length = splits.get(5).split("\\s").length;
+			if (splits.size() > 5) length = splits.get(2).split("\\s").length;
 			essayLength.put(splits.get(0), String.valueOf(length));
 			s = in.readLine();
 		}
