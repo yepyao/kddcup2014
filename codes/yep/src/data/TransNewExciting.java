@@ -48,7 +48,7 @@ public class TransNewExciting {
 		
 		SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd");
 		Date point = dateformat.parse("2013-06-30");
-		
+		count = 0;
 		while ((temp = reader.readLine()) != null) {
 			String[] arr = temp.split(" ");
 			int pid = Integer.parseInt(arr[1]);
@@ -60,9 +60,11 @@ public class TransNewExciting {
 			int new_label = label;
 			if (date.getTime() < point.getTime()) 
 				new_label = (new_exciting(project))?1:0;
+			count++;
 			outp.println(arr[0]+" "+arr[1]+" "+new_label);
 			pos += new_label;
 		}
+		System.out.println("count"+count);
 		reader.close();
 		outp.close();
 		System.out.println("pos num: " + pos);
