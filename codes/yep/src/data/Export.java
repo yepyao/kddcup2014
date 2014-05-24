@@ -34,17 +34,23 @@ public class Export {
 				continue;
 			if (!data.outcomes.containsKey(project.projectid))
 				continue;
-
+			
+			outp.println((date.getTime()-compare.getTime()+0.0)/1000/3600/24/365);
+			
 			if (date.getTime() < point.getTime())
 				count_left++;
 			else
 				count_right++;
 
 			if (date.getTime() < point.getTime()) {
-				if (new_exciting(project))
+				if (new_exciting(project)){
 					ex_left++;
-			} else if (data.outcomes.get(project.projectid).is_exciting)
+					outp2.println((date.getTime()-compare.getTime()+0.0)/1000/3600/24/365);
+				}
+			} else if (data.outcomes.get(project.projectid).is_exciting){
 				ex_right++;
+				outp2.println((date.getTime()-compare.getTime()+0.0)/1000/3600/24/365);
+			}
 
 		}
 		System.out.println((double) count_left / count_right);
