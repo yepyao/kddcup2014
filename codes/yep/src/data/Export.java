@@ -21,22 +21,50 @@ public class Export {
 		Iterator<Project> iter = data.projects.values().iterator();
 		SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd");
 		Date compare = dateformat.parse("2010-03-15");
+		Date point = dateformat.parse("2013-06-30");
+
+		int count_left = 0;
+		int count_right = 0;
+		int ex_left = 0;
+		int ex_right = 0;
 		while (iter.hasNext()) {
 			Project project = iter.next();
 			Date date = dateformat.parse(project.date_posted);
 			if (date.getTime() < compare.getTime())
 				continue;
-			
-			double latitude = project.school_latitude;
-			double longitude = project.school_longitude;	
-			if (data.outcomes.containsKey(project.projectid)) {
-				if (dateformat.parse(project.date_posted).getTime() > dateformat.parse("2013-10-06").getTime())
-				//if (data.outcomes.get(project.projectid).is_exciting)
-					outp.println(latitude+","+longitude);
-			}else outp2.println(latitude+","+longitude);
-				
+			if (!data.outcomes.containsKey(project.projectid))
+				continue;
+
+			if (date.getTime() < point.getTime())
+				count_left++;
+			else
+				count_right++;
+
+			if (date.getTime() < point.getTime()) {
+				if (new_exciting(project))
+					ex_left++;
+			} else if (data.outcomes.get(project.projectid).is_exciting)
+				ex_right++;
+
 		}
+		System.out.println((double) count_left / count_right);
+		System.out.println((double) ex_left / ex_right);
 		outp.close();
 		outp2.close();
+	}
+
+	private static boolean new_exciting(Project project) {
+		Outcome outcome = data.outcomes.get(project.projectid);
+		if (outcome.is_exciting)
+			return true;
+		if (outcome.at_least_1_teacher_referred_donor
+				&& outcome.fully_funded
+				&& outcome.at_least_1_green_donation
+				&& (outcome.donation_from_thoughtful_donor
+						|| outcome.one_non_teacher_referred_donor_giving_100_plus || outcome.three_or_more_non_teacher_referred_donors)) {
+			if (outcome.great_messages_proportion>47) return true;
+			else return false;
+		} else
+			return false;
 	}
 }
