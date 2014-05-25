@@ -66,8 +66,9 @@ public class TeacherAccPosRatioCount {
 		while (s != null){
 			ArrayList<String> splits = CSVFileUtil.fromCSVLinetoArray(s);
 			projectTeacher.put(splits.get(0), splits.get(field));
+			if (train.get(splits.get(0)) != null) index++;
 			if (train.get(splits.get(0)) != null && splits.size() > 33){
-				index++;
+//				index++;
 				if (index < trainSum / 2){
 					if (posH.get(splits.get(0)) != null){
 						if (teacher.get(splits.get(field)) == null) teacher.put(splits.get(field), 1);

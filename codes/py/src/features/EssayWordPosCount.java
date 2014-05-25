@@ -124,6 +124,7 @@ public class EssayWordPosCount {
 		s = in.readLine();
 		out.write("1"+"\n");
 		index = 0;
+		Double threshold  = Double.valueOf(args[8]);
 		while (s != null){
 			String[] temp = s.split(" ");
 			String[] words = projectEssay.get(id.get(temp[1])).split("\\s");
@@ -135,18 +136,20 @@ public class EssayWordPosCount {
 						newWord = newWord + words[i].charAt(j);
 				words[i] = newWord;
 			}
-			double max = 0;
 			index++;
+			int num = 0;
 			if (index < trainSum / 2){
 				for (int i = 0; i < words.length; i++)
 					if (hit2.get(words[i]) != null)
-						max = Math.max(max, Double.valueOf(hit2.get(words[i])) / (double)show2.get(words[i]));
+						if (Double.valueOf(hit2.get(words[i])) / (double)show2.get(words[i]) > threshold)
+							num++;
 			}else{
 				for (int i = 0; i < words.length; i++)
 					if (hit1.get(words[i]) != null)
-						max = Math.max(max, Double.valueOf(hit1.get(words[i])) / (double)show1.get(words[i]));
+						if (Double.valueOf(hit1.get(words[i])) / (double)show1.get(words[i]) > threshold)
+							num++;
 			}
-			out.write("1 0:"+String.valueOf(max)+"\n");
+			out.write("1 0:"+String.valueOf(num)+"\n");
 			s = in.readLine();
 		}
 		in.close();
@@ -169,16 +172,17 @@ public class EssayWordPosCount {
 						newWord = newWord + words[i].charAt(j);
 				words[i] = newWord;
 			}
-			double max1 = 0;
-			double max2 = 0;
-			for (int i = 0; i < words.length; i++)
+			int num = 0;
+			for (int i = 0; i < words.length; i++){
+				double ans1 = 0;
+				double ans2 = 0;
 				if (hit1.get(words[i]) != null)
-					max1 = Math.max(max1, Double.valueOf(hit1.get(words[i])) / (double)show1.get(words[i]));
-			for (int i = 0; i < words.length; i++)
+					ans1 = Double.valueOf(hit1.get(words[i])) / (double)show1.get(words[i]);
 				if (hit2.get(words[i]) != null)
-					max2 = Math.max(max2, Double.valueOf(hit2.get(words[i])) / (double)show2.get(words[i]));
-			double ans = (max1 + max2) / 2;
-			out.write("1 0:"+String.valueOf(ans)+"\n");
+					ans2 = Double.valueOf(hit2.get(words[i])) / (double)show2.get(words[i]);
+				if ((ans1 + ans2)/2 > threshold) num++;
+			}
+			out.write("1 0:"+String.valueOf(num)+"\n");
 			s = in.readLine();
 		}
 		in.close();
