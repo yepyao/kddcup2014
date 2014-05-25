@@ -137,6 +137,15 @@ features/train.txt.py_EssayTopicModel features/test.txt.py_EssayTopicModel:data/
 	java -cp codes/py/bin features.EssayTopicModel data/projectIDMapping data/topic/essay-topic-distributions.csv train.txt features/train.txt.py_EssayTopicModel test.txt features/test.txt.py_EssayTopicModel 30
 features/train.txt.py_EssayWordPosCount  features/test.txt.py_EssayWordPosCount:data/outcomes.csv data/projectIDMapping data/essays.csv train.txt test.txt
 	java -cp codes/py/bin features.EssayWordPosCount data/outcomes.csv data/projectIDMapping data/essays.csv train.txt features/train.txt.py_EssayWordPosCount test.txt features/test.txt.py_EssayWordPosCount 5 0.2 Word.txt
+features/train.txt.py_SchoolCharterHD  features/test.txt.py_SchoolCharterHD:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.HighDimFeature data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolCharterHD test.txt features/test.txt.py_SchoolCharterHD 12
+features/train.txt.py_SchoolMagnetHD  features/test.txt.py_SchoolMagnetHD:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.HighDimFeature data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolMagnetHD test.txt features/test.txt.py_SchoolMagnetHD 13
+features/train.txt.py_YearRoundHD  features/test.txt.py_YearRoundHD:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.HighDimFeature data/projectIDMapping data/projects.csv train.txt features/train.txt.py_YearRoundHD test.txt features/test.txt.py_YearRoundHD 14
+features/train.txt.py_TeacherPrefixHD  features/test.txt.py_TeacherPrefixHD:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.HighDimFeature data/projectIDMapping data/projects.csv train.txt features/train.txt.py_TeacherPrefixHD test.txt features/test.txt.py_TeacherPrefixHD 18
+
 
 
 
