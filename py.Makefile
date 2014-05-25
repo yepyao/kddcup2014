@@ -157,6 +157,14 @@ features/train.txt.py_SecondFocusAreaHD  features/test.txt.py_SecondFocusAreaHD:
 	java -cp codes/py/bin features.HighDimFeature data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SecondFocusAreaHD test.txt features/test.txt.py_SecondFocusAreaHD 24
 features/train.txt.py_ResourceTypeHD  features/test.txt.py_ResourceTypeHD:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
 	java -cp codes/py/bin features.HighDimFeature data/projectIDMapping data/projects.csv train.txt features/train.txt.py_ResourceTypeHD test.txt features/test.txt.py_ResourceTypeHD 25
+features/train.txt.py_PovertyLevelHD  features/test.txt.py_PovertyLevelHD:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.HighDimFeature data/projectIDMapping data/projects.csv train.txt features/train.txt.py_PovertyLevelHD test.txt features/test.txt.py_PovertyLevelHD 26
+features/train.txt.py_TeacherAccFullyFundedCount  features/test.txt.py_TeacherAccFullyFundedCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_TeacherAccFullyFundedCount test.txt features/test.txt.py_TeacherAccFullyFundedCount 1 3
+features/train.txt.py_TeacherAccGreenDonationCount  features/test.txt.py_TeacherAccGreenDonationCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_TeacherAccGreenDonationCount test.txt features/test.txt.py_TeacherAccGreenDonationCount 1 4
+
+
 
 
 
