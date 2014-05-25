@@ -163,6 +163,18 @@ features/train.txt.py_TeacherAccFullyFundedCount  features/test.txt.py_TeacherAc
 	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_TeacherAccFullyFundedCount test.txt features/test.txt.py_TeacherAccFullyFundedCount 1 3
 features/train.txt.py_TeacherAccGreenDonationCount  features/test.txt.py_TeacherAccGreenDonationCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
 	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_TeacherAccGreenDonationCount test.txt features/test.txt.py_TeacherAccGreenDonationCount 1 4
+features/train.txt.py_TeacherAccGreatChatCount  features/test.txt.py_TeacherAccGreatChatCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_TeacherAccGreatChatCount test.txt features/test.txt.py_TeacherAccGreatChatCount 1 5
+features/train.txt.py_TeacherAccThreeOrMoreCount  features/test.txt.py_TeacherAccThreeOrMoreCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_TeacherAccThreeOrMoreCount test.txt features/test.txt.py_TeacherAccThreeOrMoreCount 1 6
+features/train.txt.py_TeacherAccOneNonTeacherCount  features/test.txt.py_TeacherAccOneNonTeacherCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_TeacherAccOneNonTeacherCount test.txt features/test.txt.py_TeacherAccOneNonTeacherCount 1 7
+features/train.txt.py_TeacherAccDonationFromCount  features/test.txt.py_TeacherAccDonationFromCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_TeacherAccDonationFromCount test.txt features/test.txt.py_TeacherAccDonationFromCount 1 8
+
+
+
+
 
 
 
