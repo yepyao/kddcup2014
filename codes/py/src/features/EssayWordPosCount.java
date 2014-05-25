@@ -8,6 +8,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Hashtable;
 
 import preprocessing.CSVFileUtil;
@@ -63,6 +65,8 @@ public class EssayWordPosCount {
 		s = in.readLine();
 		int field = Integer.valueOf(args[7]);
 		int index = 0;
+		Hashtable<String, Integer> wordTable = new Hashtable<String, Integer>();
+		ArrayList<String> totalWords = new ArrayList<String>();
 		while (s != null){
 			ArrayList<String> splits = CSVFileUtil.fromCSVLinetoArray(s);
 			projectEssay.put(splits.get(0), splits.get(field));
@@ -76,6 +80,10 @@ public class EssayWordPosCount {
 						if (words[i].charAt(j) >= 'a' && words[i].charAt(j) <= 'z')
 							newWord = newWord + words[i].charAt(j);
 					words[i] = newWord;
+					if (wordTable.get(words[i]) == null){
+						wordTable.put(words[i], 1);
+						totalWords.add(words[i]);
+					}
 				}
 				
 				Hashtable<String, Integer> occur = new Hashtable<String, Integer>();
@@ -149,7 +157,7 @@ public class EssayWordPosCount {
 						if (Double.valueOf(hit1.get(words[i])) / (double)show1.get(words[i]) > threshold)
 							num++;
 			}
-			out.write("1 0:"+String.valueOf(num)+"\n");
+			out.write("1 0:"+String.valueOf((double)num/words.length)+"\n");
 			s = in.readLine();
 		}
 		in.close();
@@ -182,10 +190,49 @@ public class EssayWordPosCount {
 					ans2 = Double.valueOf(hit2.get(words[i])) / (double)show2.get(words[i]);
 				if ((ans1 + ans2)/2 > threshold) num++;
 			}
-			out.write("1 0:"+String.valueOf(num)+"\n");
+			out.write("1 0:"+String.valueOf((double)num/words.length)+"\n");
 			s = in.readLine();
 		}
 		in.close();
+		out.close();
+		
+		f2 = new FileOutputStream(args[9]);
+		out = new BufferedWriter(new OutputStreamWriter(f2));
+		ArrayList<Tuple> a = new ArrayList<Tuple>();
+		for (int i = 0; i < totalWords.size(); i++){
+			double ans1 = 0;
+			double ans2 = 0;
+			if (hit1.get(totalWords.get(i)) != null)
+				ans1 = Double.valueOf(hit1.get(totalWords.get(i))) / (double)show1.get(totalWords.get(i));
+			if (hit2.get(totalWords.get(i)) != null)
+				ans2 = Double.valueOf(hit2.get(totalWords.get(i))) / (double)show2.get(totalWords.get(i));
+			if (hit1.get(totalWords.get(i)) != null && hit2.get(totalWords.get(i)) != null && hit1.get(totalWords.get(i)) + hit2.get(totalWords.get(i)) >= 5){
+				Tuple temp = new Tuple();
+				temp.word = totalWords.get(i);
+				temp.hit1 = hit1.get(totalWords.get(i));
+				temp.show1 = show1.get(totalWords.get(i));
+				temp.ratio1 = temp.hit1 / temp.show1;
+				temp.hit2 = hit2.get(totalWords.get(i));
+				temp.show2 = show2.get(totalWords.get(i));
+				temp.ratio2 = temp.hit2 / temp.show2;
+				a.add(temp);
+			}
+		}
+			
+		Collections.sort(a, new Comparator<Tuple>() {
+
+			@Override
+			public int compare(Tuple o1, Tuple o2) {
+				// TODO Auto-generated method stub
+				return -new Double(o1.ratio1).compareTo(o2.ratio1);
+			}
+		});
+		for (int i = 0; i < a.size(); i++){
+			out.write(a.get(i).word + " "+String.valueOf(a.get(i).hit1) + " " + String.valueOf(a.get(i).show1)+ " "+
+					String.valueOf(a.get(i).ratio1)+" ");
+			out.write(String.valueOf(a.get(i).hit2) + " " + String.valueOf(a.get(i).show2)+ " "+
+					String.valueOf(a.get(i).ratio2)+"\n");
+		}
 		out.close();
 	}
 }
