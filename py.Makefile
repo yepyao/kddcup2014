@@ -136,7 +136,7 @@ features/train.txt.py_TitleWordNum  features/test.txt.py_TitleWordNum:data/proje
 features/train.txt.py_EssayTopicModel features/test.txt.py_EssayTopicModel:data/projectIDMapping data/topic/essay-topic-distributions.csv train.txt test.txt
 	java -cp codes/py/bin features.EssayTopicModel data/projectIDMapping data/topic/essay-topic-distributions.csv train.txt features/train.txt.py_EssayTopicModel test.txt features/test.txt.py_EssayTopicModel 30
 features/train.txt.py_EssayWordPosCount  features/test.txt.py_EssayWordPosCount:data/outcomes.csv data/projectIDMapping data/essays.csv train.txt test.txt
-	java -cp codes/py/bin features.EssayWordPosCount data/outcomes.csv data/projectIDMapping data/essays.csv train.txt features/train.txt.py_EssayWordPosCount test.txt features/test.txt.py_EssayWordPosCount 5 0.2 Word.txt
+	java -cp codes/py/bin features.EssayWordPosCount data/outcomes.csv data/projectIDMapping data/essays.csv train.txt features/train.txt.py_EssayWordPosCount test.txt features/test.txt.py_EssayWordPosCount 5 0.05 Word.txt
 features/train.txt.py_SchoolCharterHD  features/test.txt.py_SchoolCharterHD:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
 	java -cp codes/py/bin features.HighDimFeature data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolCharterHD test.txt features/test.txt.py_SchoolCharterHD 12
 features/train.txt.py_SchoolMagnetHD  features/test.txt.py_SchoolMagnetHD:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
@@ -149,6 +149,16 @@ features/train.txt.py_PrimaryFocusSubjectHD  features/test.txt.py_PrimaryFocusSu
 	java -cp codes/py/bin features.HighDimFeature data/projectIDMapping data/projects.csv train.txt features/train.txt.py_PrimaryFocusSubjectHD test.txt features/test.txt.py_PrimaryFocusSubjectHD 21
 features/train.txt.py_PrimaryFocusAreaHD  features/test.txt.py_PrimaryFocusAreaHD:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
 	java -cp codes/py/bin features.HighDimFeature data/projectIDMapping data/projects.csv train.txt features/train.txt.py_PrimaryFocusAreaHD test.txt features/test.txt.py_PrimaryFocusAreaHD 22
+features/train.txt.py_ResourceItemNum  features/test.txt.py_ResourceItemNum:data/projectIDMapping data/resources.csv train.txt test.txt
+	java -cp codes/py/bin features.ResourceItemNum data/projectIDMapping data/resources.csv train.txt features/train.txt.py_ResourceItemNum test.txt features/test.txt.py_ResourceItemNum
+features/train.txt.py_SecondFocusSubjectHD  features/test.txt.py_SecondFocusSubjectHD:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.HighDimFeature data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SecondFocusSubjectHD test.txt features/test.txt.py_SecondFocusSubjectHD 23
+features/train.txt.py_SecondFocusAreaHD  features/test.txt.py_SecondFocusAreaHD:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.HighDimFeature data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SecondFocusAreaHD test.txt features/test.txt.py_SecondFocusAreaHD 24
+features/train.txt.py_ResourceTypeHD  features/test.txt.py_ResourceTypeHD:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.HighDimFeature data/projectIDMapping data/projects.csv train.txt features/train.txt.py_ResourceTypeHD test.txt features/test.txt.py_ResourceTypeHD 25
+
+
 
 
 
