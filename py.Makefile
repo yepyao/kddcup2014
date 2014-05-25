@@ -133,6 +133,8 @@ features/train.txt.py_TeacherAccTeacherReferedDonorCount  features/test.txt.py_T
 	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_TeacherAccTeacherReferedDonorCount test.txt features/test.txt.py_TeacherAccTeacherReferedDonorCount 1 2
 features/train.txt.py_TitleWordNum  features/test.txt.py_TitleWordNum:data/projectIDMapping data/essays.csv train.txt test.txt
 	java -cp codes/py/bin features.TitleWordNum data/projectIDMapping data/essays.csv train.txt features/train.txt.py_TitleWordNum test.txt features/test.txt.py_TitleWordNum
+features/train.txt.py_EssayTopicModel features/test.txt.py_EssayTopicModel:data/projectIDMapping data/topic/essay-topic-distributions.csv train.txt test.txt
+	java -cp codes/py/bin features.EssayTopicModel data/projectIDMapping data/topic/essay-topic-distributions.csv train.txt features/train.txt.py_EssayTopicModel test.txt features/test.txt.py_EssayTopicModel 30
 
 
 
