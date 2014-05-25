@@ -145,6 +145,12 @@ features/train.txt.py_YearRoundHD  features/test.txt.py_YearRoundHD:data/outcome
 	java -cp codes/py/bin features.HighDimFeature data/projectIDMapping data/projects.csv train.txt features/train.txt.py_YearRoundHD test.txt features/test.txt.py_YearRoundHD 14
 features/train.txt.py_TeacherPrefixHD  features/test.txt.py_TeacherPrefixHD:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
 	java -cp codes/py/bin features.HighDimFeature data/projectIDMapping data/projects.csv train.txt features/train.txt.py_TeacherPrefixHD test.txt features/test.txt.py_TeacherPrefixHD 18
+features/train.txt.py_PrimaryFocusSubjectHD  features/test.txt.py_PrimaryFocusSubjectHD:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.HighDimFeature data/projectIDMapping data/projects.csv train.txt features/train.txt.py_PrimaryFocusSubjectHD test.txt features/test.txt.py_PrimaryFocusSubjectHD 21
+features/train.txt.py_PrimaryFocusAreaHD  features/test.txt.py_PrimaryFocusAreaHD:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.HighDimFeature data/projectIDMapping data/projects.csv train.txt features/train.txt.py_PrimaryFocusAreaHD test.txt features/test.txt.py_PrimaryFocusAreaHD 22
+
+
 
 
 
