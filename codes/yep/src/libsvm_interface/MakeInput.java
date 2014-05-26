@@ -26,7 +26,7 @@ public class MakeInput {
 			String temp = null;
 			while ((temp = reader.readLine()) != null) {
 				String[] arr = temp.split(" ");
-				int label = Integer.parseInt(arr[2]);
+				double label = Double.parseDouble(arr[2]);
 				lines.add(new SVMLine(label));
 			}
 			reader.close();
