@@ -82,21 +82,22 @@ public class Stat {
 
 	private static String getString(Project project) {
 		//return (project.school_magnet)?"True":"False" ;
-		/*
+		
 		//return project.grade_level;
 		//return (project.teacher_teach_for_america)?"T":"F";
-		boolean has_social_keyword = false;
+		boolean has_keyword = false;
 		Essay essay = data.essays.get(project.projectid);
 		
-		String essay_str = essay.essay.toLowerCase();
-		if (essay_str.contains("facebook")
-				|| essay_str.contains("twitter")
-				|| essay_str.contains("myspace")
-				|| essay_str.contains("google+")){
-			has_social_keyword = true;
+		String essay_str = essay.title.toLowerCase();
+		if (essay_str.contains("music")
+				|| essay_str.contains("art")
+				|| essay_str.contains("photo")
+				|| essay_str.contains("?")){
+			has_keyword = true;
 		}
-		return (has_social_keyword)?"True":"False";
-		*/
+		return (has_keyword)?"True":"False";
+		
+		/*
 		ArrayList<Resource> resources = data.project2resourses.get(project.projectid);
 		boolean samevandor = true;
 		int vendorid = resources.get(0).vendorid;
@@ -107,6 +108,7 @@ public class Stat {
 			}
 		}
 		return (samevandor)?"True":"False";
+		*/
 	}
 
 }

@@ -32,11 +32,16 @@ public class ResourceVendorNum {
 		String last = "";
 		while (s != null){
 			ArrayList<String> splits = CSVFileUtil.fromCSVLinetoArray(s);
+			Hashtable<String, Integer> h = new Hashtable<String, Integer>();
 			last = splits.get(1);
 			int num = 0;
 			while (last.equals(splits.get(1))){
-				num++;
+				if (h.get(splits.get(2)) == null){
+					num++;
+					h.put(splits.get(2), 1);
+				}
 				s = csv.readLine();
+				if (s == null) break;
 				splits = CSVFileUtil.fromCSVLinetoArray(s);
 			}
 			resourceVendor.put(last, num);

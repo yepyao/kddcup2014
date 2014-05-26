@@ -37,3 +37,6 @@
 37 py_EligibleAlmostHomeMatchPosRatioCount0 q
 38 py_EligibleAlmostHomeMatchPosRatioCount1 q
 39 py_EligibleAlmostHomeMatchPosRatioCount2 q
+40 py_ResourceVendorPosCount0 q
+41 py_ResourceVendorPosCount1 q
+42 py_ResourceVendorPosCount2 q
