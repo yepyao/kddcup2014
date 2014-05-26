@@ -34,6 +34,8 @@ public class MakeInput {
 
 			BufferedReader conf_reader = new BufferedReader(new FileReader(
 					"./T.buf/" + conf_id + ".conf"));
+			PrintStream fmap_outp = new PrintStream("xgboost_run/" + conf_id
+					+ "/fmap.txt");
 			temp = null;
 			int f_count = 0;
 			while ((temp = conf_reader.readLine()) != null) {
@@ -46,6 +48,11 @@ public class MakeInput {
 						+ ".txt." + feature_name));
 				String feature_line = reader.readLine();
 				int feature_num = Integer.parseInt(feature_line);
+
+				for (int i = 0; i < feature_num; i++) {
+					fmap_outp
+							.println((f_count + i + 1) + " " + temp + i + " q");
+				}
 
 				Iterator<SVMLine> iter = lines.iterator();
 				while (iter.hasNext()) {
@@ -77,6 +84,7 @@ public class MakeInput {
 
 			}// end of each feature line
 			conf_reader.close();
+			fmap_outp.close();
 
 			// begin to output
 			PrintStream outp = new PrintStream(args[1] + t + "." + conf_id

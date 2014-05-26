@@ -20,6 +20,8 @@ xgboost $1.conf num_round=$round
 xgboost $1.conf task=pred model_in=$round.model
 echo auc evaluation and make submission
 java -cp ../../codes/yep/bin evaluation.MakeSubmission pred.txt ../../test.txt submission.txt ../../data/projectIDMapping
+
+xgboost $1.conf task=dump model_in=$round.model fmap=fmap.txt name_dump=dump.nice.txt
 cd -
 
 
