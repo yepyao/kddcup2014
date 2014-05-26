@@ -18,7 +18,7 @@ public class Export {
 		PrintStream outp = new PrintStream("model/export.csv");
 		PrintStream outp2 = new PrintStream("model/export_ex.csv");
 
-		Iterator<Project> iter = data.projects.values().iterator();
+		Iterator<Project> iter = data.projects_list.iterator();
 		SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd");
 		Date compare = dateformat.parse("2010-03-15");
 		Date point = dateformat.parse("2013-06-30");
@@ -28,11 +28,14 @@ public class Export {
 			Date date = dateformat.parse(project.date_posted);
 			if (date.getTime() < compare.getTime())
 				continue;
-			if (!data.outcomes.containsKey(project.projectid))
-				continue;
+			//if (!data.outcomes.containsKey(project.projectid))
+				//continue;
+			//System.out.println(project.date_posted);
+			//Outcome outcome = data.outcomes.get(project.projectid);
 			
 			outp.println(project.school_latitude+","+project.school_longitude);
-			
+			//if (outcome.is_exciting) 
+				//outp2.println(project.school_latitude+","+project.school_longitude);
 			
 
 		}

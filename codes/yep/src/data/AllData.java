@@ -13,6 +13,7 @@ public class AllData {
 	//config
 	static String input_dir = "./data/";
 	//raw data
+	public LinkedList<Project> projects_list = new LinkedList<Project>();// for iterator
 	public HashMap<String, Project> projects = new HashMap<String, Project>();  //projectid to project
 	public HashMap<String, Resource> resources = new HashMap<String, Resource>();
 	public HashMap<String, Essay> essays = new HashMap<String, Essay>(); //projectid to esssy
@@ -111,6 +112,7 @@ public class AllData {
 		while ((line = input.readLine())!=null){
 			Project project = Project.render(line);
 			projects.put(project.projectid, project);
+			projects_list.add(project);
 			if (!project2resourses.containsKey(project.projectid))
 				project2resourses.put(project.projectid, new ArrayList<Resource>());
 		}

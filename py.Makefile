@@ -177,6 +177,8 @@ features/train.txt.py_SchoolCityTeacherReferedDonorCount  features/test.txt.py_S
 	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolCityTeacherReferedDonorCount test.txt features/test.txt.py_SchoolCityTeacherReferedDonorCount 6 2
 features/train.txt.py_SchoolCityFullyFundedCount  features/test.txt.py_SchoolCityFullyFundedCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
 	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolCityFullyFundedCount test.txt features/test.txt.py_SchoolCityFullyFundedCount 6 3
+features/train.txt.py_SchoolCityGreenDonationCount  features/test.txt.py_SchoolCityGreenDonationCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolCityGreenDonationCount test.txt features/test.txt.py_SchoolCityGreenDonationCount 6 4
 
 
 
