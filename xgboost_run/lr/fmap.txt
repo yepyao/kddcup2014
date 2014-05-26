@@ -37,3 +37,6 @@
 37 py_EligibleAlmostHomeMatchPosRatioCount0 q
 38 py_EligibleAlmostHomeMatchPosRatioCount1 q
 39 py_EligibleAlmostHomeMatchPosRatioCount2 q
+40 py_SchoolCityFullyFundedCount0 q
+41 py_SchoolCityFullyFundedCount1 q
+42 py_SchoolCityFullyFundedCount2 q

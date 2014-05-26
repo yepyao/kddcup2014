@@ -4,8 +4,8 @@ then
   echo "Usage: <conf name>"
   exit -1
 fi
-rm ./model/train.$1.svm_buffer.buffer
-rm ./model/test.$1.svm_buffer.buffer
+rm ./model/train.$1.*
+rm ./model/test.$1.*
 
 echo make feature
 ./T.buf/mkbuf.sh $1 Makefile

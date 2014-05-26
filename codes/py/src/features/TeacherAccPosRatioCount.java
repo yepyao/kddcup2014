@@ -9,7 +9,6 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.Hashtable;
-import java.util.Random;
 
 import preprocessing.CSVFileUtil;
 
@@ -29,17 +28,14 @@ public class TeacherAccPosRatioCount {
 		f = new FileInputStream(args[3]); //train.txt
 		in = new BufferedReader(new InputStreamReader(f));
 		Hashtable<String, Integer> train = new Hashtable<String, Integer>();
-		Random random = new Random(1000);
+		int trainSum = 0;
 		s = in.readLine();
-		int z = 0;
-		int o = 0;
 		while (s != null){
+			trainSum++;
 			String[] temp = s.split(" ");
-			train.put(id.get(temp[1]), random.nextInt(2));
+			train.put(id.get(temp[1]), 1);
 			s = in.readLine();
-			if (train.get(id.get(temp[1])) == 0) z++; else o++;
 		}
-		System.out.println(z+" "+o);
 		in.close();
 		
 		f = new FileInputStream(args[0]); // outcomes.csv
@@ -66,12 +62,14 @@ public class TeacherAccPosRatioCount {
 		s  = in.readLine();
 		s = in.readLine();
 		int field = Integer.valueOf(args[7]);
+		int index = 0;
 		while (s != null){
 			ArrayList<String> splits = CSVFileUtil.fromCSVLinetoArray(s);
 			projectTeacher.put(splits.get(0), splits.get(field));
+			if (train.get(splits.get(0)) != null) index++;
 			if (train.get(splits.get(0)) != null && splits.size() > 33){
 //				index++;
-				if (train.get(splits.get(0)) == 0){
+				if (index < trainSum / 2){
 					if (posH.get(splits.get(0)) != null){
 						if (teacher.get(splits.get(field)) == null) teacher.put(splits.get(field), 1);
 						else teacher.put(splits.get(field), teacher.get(splits.get(field))+1);
@@ -97,12 +95,14 @@ public class TeacherAccPosRatioCount {
 		BufferedWriter out = new BufferedWriter(new OutputStreamWriter(f2));
 		s = in.readLine();
 		out.write("3"+"\n");
+		index = 0;
 		while (s != null){
 			String[] temp = s.split(" ");
 			int one = 0;
 			int two = 0;
 			double three = 0;
-			if (train.get(id.get(temp[1])) == 0){
+			index++;
+			if (index < trainSum / 2){
 				if (teacher2.get(projectTeacher.get(id.get(temp[1]))) != null)
 					one = teacher2.get(projectTeacher.get(id.get(temp[1])));
 				if (teacherAll2.get(projectTeacher.get(id.get(temp[1]))) != null)
