@@ -179,48 +179,8 @@ features/train.txt.py_SchoolCityFullyFundedCount  features/test.txt.py_SchoolCit
 	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolCityFullyFundedCount test.txt features/test.txt.py_SchoolCityFullyFundedCount 6 3
 features/train.txt.py_SchoolCityGreenDonationCount  features/test.txt.py_SchoolCityGreenDonationCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
 	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolCityGreenDonationCount test.txt features/test.txt.py_SchoolCityGreenDonationCount 6 4
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+features/train.txt.py_ResourceVendorNum  features/test.txt.py_ResourceVendorNum:data/projectIDMapping data/resources.csv train.txt test.txt
+	java -cp codes/py/bin features.ResourceVendorNum data/projectIDMapping data/resources.csv train.txt features/train.txt.py_ResourceVendorNum test.txt features/test.txt.py_ResourceVendorNum
 
 
 

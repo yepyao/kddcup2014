@@ -12,7 +12,7 @@ import java.util.Hashtable;
 
 import preprocessing.CSVFileUtil;
 
-public class ResourceNum {
+public class ResourceVendorNum {
 	public static void main(String[] args) throws Exception{
 		FileInputStream f = new FileInputStream(args[0]); //mapping
 		BufferedReader in = new BufferedReader(new InputStreamReader(f));
@@ -25,16 +25,21 @@ public class ResourceNum {
 		}
 		in.close();
 		
-		Hashtable<String, Integer> resourceNum = new Hashtable<String, Integer>();
-		CSVFileUtil csv = new CSVFileUtil(args[1]); //resources.csv
+		Hashtable<String, Integer> resourceVendor = new Hashtable<String, Integer>();
+		CSVFileUtil csv = new CSVFileUtil(args[1]);
 		s  = csv.readLine();
-		s  = csv.readLine();
+		s = csv.readLine();
+		String last = "";
 		while (s != null){
 			ArrayList<String> splits = CSVFileUtil.fromCSVLinetoArray(s);
-			if (splits.size() > 1)
-			if (resourceNum.get(splits.get(1)) == null) resourceNum.put(splits.get(1), 1);
-			else resourceNum.put(splits.get(1), resourceNum.get(splits.get(1))+1);
-			s  = csv.readLine();
+			last = splits.get(1);
+			int num = 0;
+			while (last.equals(splits.get(1))){
+				num++;
+				s = csv.readLine();
+				splits = CSVFileUtil.fromCSVLinetoArray(s);
+			}
+			resourceVendor.put(last, num);
 		}
 		in.close();
 		
@@ -43,25 +48,15 @@ public class ResourceNum {
 		FileOutputStream f2 = new FileOutputStream(args[3]);
 		BufferedWriter out = new BufferedWriter(new OutputStreamWriter(f2));
 		s = in.readLine();
-		double avg = 0;
-		double deviation = 0;
-		ArrayList<Double> num = new ArrayList<Double>();
 		out.write("1"+"\n");
 		while (s != null){
 			String[] temp = s.split(" ");
-			Double ans = Double.valueOf(0);
-			if (resourceNum.get(id.get(temp[1])) != null) 
-				ans = Double.valueOf(resourceNum.get(id.get(temp[1])));
-			num.add(ans);
-			avg += ans;
+			int ans = 0;
+			if (resourceVendor.get(id.get(temp[1])) != null) 
+				ans = resourceVendor.get(id.get(temp[1]));
 			s = in.readLine();
+			out.write("1 0:"+String.valueOf(ans)+"\n");
 		}
-		avg = avg / num.size();
-		for (int i = 0; i < num.size(); i++)
-			deviation += (num.get(i) - avg) * (num.get(i) - avg);
-		deviation = Math.sqrt(deviation / num.size());
-		for (int i = 0; i < num.size(); i++)
-			out.write("1 0:"+String.valueOf((num.get(i)-avg)/deviation)+"\n");
 		in.close();
 		out.close();
 		
@@ -73,12 +68,11 @@ public class ResourceNum {
 		out.write("1"+"\n");
 		while (s != null){
 			String[] temp = s.split(" ");
-			Double ans = Double.valueOf(0);
-			if (resourceNum.get(id.get(temp[1])) != null) 
-				ans = Double.valueOf(resourceNum.get(id.get(temp[1])));
-			ans = (ans - avg) /deviation;
-			out.write("1 0:"+String.valueOf(ans)+"\n");
+			int ans = 0;
+			if (resourceVendor.get(id.get(temp[1])) != null) 
+				ans = resourceVendor.get(id.get(temp[1]));
 			s = in.readLine();
+			out.write("1 0:"+String.valueOf(ans)+"\n");
 		}
 		in.close();
 		out.close();

@@ -3,6 +3,7 @@ package data;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -15,7 +16,7 @@ public class Stat {
 		String dir = null;
 		if (args.length > 0)
 			dir = args[0];
-		data = AllData.getInstance(dir, "projects,essays,outcomes");
+		data = AllData.getInstance(dir, "projects,resources,essays,outcomes");
 
 		/*
 		Iterator<Project> iter = data.projects.values().iterator();
@@ -80,7 +81,7 @@ public class Stat {
 	}
 
 	private static String getString(Project project) {
-		return (project.school_magnet)?"True":"False" ;
+		//return (project.school_magnet)?"True":"False" ;
 		/*
 		//return project.grade_level;
 		//return (project.teacher_teach_for_america)?"T":"F";
@@ -96,6 +97,16 @@ public class Stat {
 		}
 		return (has_social_keyword)?"True":"False";
 		*/
+		ArrayList<Resource> resources = data.project2resourses.get(project.projectid);
+		boolean samevandor = true;
+		int vendorid = resources.get(0).vendorid;
+		for(int i=1;i<resources.size();i++){
+			if (resources.get(i).vendorid != vendorid){
+				samevandor = false;
+				break;
+			}
+		}
+		return (samevandor)?"True":"False";
 	}
 
 }
