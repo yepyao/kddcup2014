@@ -13,7 +13,7 @@ public class AllData {
 	//config
 	static String input_dir = "./data/";
 	//raw data
-	public LinkedList<Project> projects_list = new LinkedList<Project>();// for iterator
+	public ArrayList<Project> projects_list = new ArrayList<Project>();// for iterator
 	public HashMap<String, Project> projects = new HashMap<String, Project>();  //projectid to project
 	public HashMap<String, Resource> resources = new HashMap<String, Resource>();
 	public HashMap<String, Essay> essays = new HashMap<String, Essay>(); //projectid to esssy

@@ -99,6 +99,9 @@ public class MakeFeature {
 			if (feature_name.equals("yep_MaxUnitPrize")) {
 				featurelist = new MaxUnitPrize();
 			} 
+			if (feature_name.equals("yep_RecentProject")) {
+				featurelist = new RecentProject();
+			}
 
 			featurelist.train_pid = train_pid;
 			featurelist.test_pid = test_pid;
