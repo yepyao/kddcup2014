@@ -114,6 +114,7 @@ public class MakeFeature {
 			int feature_num = featurelist.feature_num;
 			
 			Iterator<SVMFeature> iter = null;
+			
 			for (int i=0; i<feature_num; i++){
 				// scale
 				double mean = 0;

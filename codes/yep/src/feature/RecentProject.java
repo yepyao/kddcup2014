@@ -42,7 +42,7 @@ public class RecentProject extends FeatureList {
 					.add(dateformat.parse(p_list.get(i).date_posted).getTime());
 		}
 
-		final int days = 30;
+		final long days = 30;
 		int sum = 0;
 		int p = 0, q = 0;
 		while (q < p_list.size()) {
@@ -51,6 +51,7 @@ public class RecentProject extends FeatureList {
 				p++;
 				sum++;
 			}
+			//System.out.println(q+" "+p+" "+sum);
 			int temp = sum;
 			while (q < p_list.size()
 					&& (p >= p_list.size() || time_list.get(q)
