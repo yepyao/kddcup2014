@@ -107,6 +107,9 @@ public class MakeFeature {
 			if (feature_name.equals("yep_RecentProjectA20")) {
 				featurelist = new RecentProjectA20();
 			}
+			if (feature_name.equals("yep_RecentProjectPrizeA20")) {
+				featurelist = new RecentProjectPrizeA20();
+			}
 			if (feature_name.equals("yep_RecentProjectA15")) {
 				featurelist = new RecentProjectA15();
 			}

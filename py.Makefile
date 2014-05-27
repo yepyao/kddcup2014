@@ -191,6 +191,8 @@ features/train.txt.py_FulfillmentPosRatioCount  features/test.txt.py_Fulfillment
 	java -cp codes/py/bin features.TeacherAccPosRatioCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_FulfillmentPosRatioCount test.txt features/test.txt.py_FulfillmentPosRatioCount 28
 features/train.txt.py_PriceStudent features/test.txt.py_PriceStudent:data/projectIDMapping data/projects.csv train.txt test.txt
 	java -cp codes/py/bin features.PriceStudent data/projectIDMapping data/projects.csv train.txt features/train.txt.py_PriceStudent test.txt features/test.txt.py_PriceStudent
+features/train.txt.py_PriceGap features/test.txt.py_PriceGap:data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.PriceGap data/projectIDMapping data/projects.csv train.txt features/train.txt.py_PriceGap test.txt features/test.txt.py_PriceGap
 
 
 
