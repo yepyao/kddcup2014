@@ -41,7 +41,7 @@ public class MakeFeature {
 		map_reader.close();
 		System.out.println("map reading ok: " + count);
 
-		AllData data = AllData.getInstance(null, "projects,resources,essays");
+		AllData data = AllData.getInstance(null, "projects,resources,essays,outcomes");
 
 		String[] feature_names = args[0].split(",");
 		for (String feature_name : feature_names) {
@@ -113,6 +113,9 @@ public class MakeFeature {
 			}
 			if (feature_name.equals("yep_TeacherRecentProject")) {
 				featurelist = new TeacherRecentProject();
+			}
+			if (feature_name.equals("yep_TeacherPastProject")) {
+				featurelist = new TeacherPastProject();
 			}
 
 			featurelist.train_pid = train_pid;
