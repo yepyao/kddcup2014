@@ -40,7 +40,9 @@ public class TeacherPastProject extends FeatureList {
 			for (int i = 0; i < projects.size(); i++) {
 				Project p = projects.get(i);
 				if (dateformat.parse(p.date_posted).getTime() < dateformat
-						.parse(project.date_posted).getTime())
+						.parse(project.date_posted).getTime()
+						&& dateformat.parse(p.date_posted).getTime() < dateformat
+								.parse("2013-10-05").getTime())
 					if (data.outcomes.containsKey(p.projectid)
 							&& data.outcomes.get(p.projectid).at_least_1_teacher_referred_donor)
 						count++;
