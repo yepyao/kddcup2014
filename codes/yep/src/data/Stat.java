@@ -85,6 +85,7 @@ public class Stat {
 		
 		//return project.grade_level;
 		//return (project.teacher_teach_for_america)?"T":"F";
+		/*
 		boolean has_keyword = false;
 		Essay essay = data.essays.get(project.projectid);
 		
@@ -96,19 +97,20 @@ public class Stat {
 			has_keyword = true;
 		}
 		return (has_keyword)?"True":"False";
+		*/
 		
-		/*
 		ArrayList<Resource> resources = data.project2resourses.get(project.projectid);
 		boolean samevandor = true;
 		int vendorid = resources.get(0).vendorid;
+		String vendor = resources.get(0).vendor_name;
 		for(int i=1;i<resources.size();i++){
 			if (resources.get(i).vendorid != vendorid){
 				samevandor = false;
 				break;
 			}
 		}
-		return (samevandor)?"True":"False";
-		*/
+		return (samevandor)?vendor:"not_same";
+		
 	}
 
 }

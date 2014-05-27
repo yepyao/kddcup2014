@@ -183,6 +183,15 @@ features/train.txt.py_ResourceVendorNum  features/test.txt.py_ResourceVendorNum:
 	java -cp codes/py/bin features.ResourceVendorNum data/projectIDMapping data/resources.csv train.txt features/train.txt.py_ResourceVendorNum test.txt features/test.txt.py_ResourceVendorNum
 features/train.txt.py_ResourceVendorPosCount  features/test.txt.py_ResourceVendorPosCount:data/outcomes.csv data/projectIDMapping data/resources.csv train.txt test.txt
 	java -cp codes/py/bin features.ResourceVendorPosCount data/outcomes.csv data/projectIDMapping data/resources.csv train.txt features/train.txt.py_ResourceVendorPosCount test.txt features/test.txt.py_ResourceVendorPosCount 2
+features/train.txt.py_TeacherRecentProject  features/test.txt.py_TeacherRecentProject:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.TeacherRecentProject data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_TeacherRecentProject test.txt features/test.txt.py_TeacherRecentProject 1
+features/train.txt.py_StudentReachedPosRatioCount  features/test.txt.py_StudentReachedPosRatioCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.TeacherAccPosRatioCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_StudentReachedPosRatioCount test.txt features/test.txt.py_StudentReachedPosRatioCount 31
+features/train.txt.py_FulfillmentPosRatioCount  features/test.txt.py_FulfillmentPosRatioCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.TeacherAccPosRatioCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_FulfillmentPosRatioCount test.txt features/test.txt.py_FulfillmentPosRatioCount 28
+features/train.txt.py_PriceStudent features/test.txt.py_PriceStudent:data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.PriceStudent data/projectIDMapping data/projects.csv train.txt features/train.txt.py_PriceStudent test.txt features/test.txt.py_PriceStudent
+
 
 
 

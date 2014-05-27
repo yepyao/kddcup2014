@@ -79,14 +79,14 @@ public class ResourceVendorPosCount {
 			Hashtable<String, Integer> h = new Hashtable<String, Integer>();
 			last = splits.get(1);
 			while (last.equals(splits.get(1))){
-				if (h.get(splits.get(2)) == null){
-					h.put(splits.get(2), 1);
+				if (h.get(splits.get(field)) == null){
+					h.put(splits.get(field), 1);
 					if (projectVendor.get(splits.get(1))  == null){
 						ArrayList<String> temp = new ArrayList<String>();
-						temp.add(splits.get(2));
+						temp.add(splits.get(field));
 						projectVendor.put(splits.get(1), temp);
 					}else{
-						projectVendor.get(splits.get(1)).add(splits.get(2));
+						projectVendor.get(splits.get(1)).add(splits.get(field));
 					}
 					if (train.get(splits.get(1)) != null){
 						if (train.get(splits.get(1)) == 0){

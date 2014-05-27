@@ -41,7 +41,8 @@ public class MakeFeature {
 		map_reader.close();
 		System.out.println("map reading ok: " + count);
 
-		AllData data = AllData.getInstance(null, "projects,resources,essays,outcomes");
+		AllData data = AllData.getInstance(null,
+				"projects,resources,essays,outcomes");
 
 		String[] feature_names = args[0].split(",");
 		for (String feature_name : feature_names) {
@@ -71,6 +72,7 @@ public class MakeFeature {
 
 			FeatureList featurelist = null;
 
+			boolean nomal = true;
 			// switch
 			if (feature_name.equals("yep_EssayLength")) {
 				featurelist = new EssayLength();
@@ -89,16 +91,16 @@ public class MakeFeature {
 			}
 			if (feature_name.equals("yep_GradeLevel")) {
 				featurelist = new GradeLevel();
-			} 
+			}
 			if (feature_name.equals("yep_PostDate")) {
 				featurelist = new PostDate();
-			} 
+			}
 			if (feature_name.equals("yep_Fulfillment")) {
 				featurelist = new Fulfillment();
-			} 
+			}
 			if (feature_name.equals("yep_MaxUnitPrize")) {
 				featurelist = new MaxUnitPrize();
-			} 
+			}
 			if (feature_name.equals("yep_RecentProject")) {
 				featurelist = new RecentProject();
 			}
@@ -117,6 +119,10 @@ public class MakeFeature {
 			if (feature_name.equals("yep_TeacherPastProject")) {
 				featurelist = new TeacherPastProject();
 			}
+			if (feature_name.equals("yep_Vendor")) {
+				featurelist = new Vendor();
+				nomal = false;
+			}
 
 			featurelist.train_pid = train_pid;
 			featurelist.test_pid = test_pid;
@@ -127,63 +133,68 @@ public class MakeFeature {
 			featurelist.getFeature(train_feature, test_feature);
 
 			int feature_num = featurelist.feature_num;
-			
+
 			Iterator<SVMFeature> iter = null;
-			
-			for (int i=0; i<feature_num; i++){
-				// scale
-				double mean = 0;
-				iter = train_feature.iterator();
-				while (iter.hasNext()) {
-					SVMFeature f = iter.next();
-					if (f.fid != i) continue;
-					mean += f.fv;
+			if (nomal) {
+				for (int i = 0; i < feature_num; i++) {
+					// scale
+					double mean = 0;
+					iter = train_feature.iterator();
+					while (iter.hasNext()) {
+						SVMFeature f = iter.next();
+						if (f.fid != i)
+							continue;
+						mean += f.fv;
+					}
+					mean /= train_feature.size();
+
+					double var = 0;
+					iter = train_feature.iterator();
+					while (iter.hasNext()) {
+						SVMFeature f = iter.next();
+						if (f.fid != i)
+							continue;
+						double v = f.fv;
+						var += (v - mean) * (v - mean);
+					}
+					var = var / train_feature.size();
+					System.out.println("feature_name: " + feature_name
+							+ "\tfid: " + i + "\tmean: " + mean + "\tvar: "
+							+ var);
+
+					iter = train_feature.iterator();
+					while (iter.hasNext()) {
+						SVMFeature f = iter.next();
+						if (f.fid != i)
+							continue;
+						f.fv = (f.fv - mean) / Math.sqrt(var);
+					}
+					iter = test_feature.iterator();
+					while (iter.hasNext()) {
+						SVMFeature f = iter.next();
+						if (f.fid != i)
+							continue;
+						f.fv = (f.fv - mean) / Math.sqrt(var);
+					}
+
 				}
-				mean /= train_feature.size();
-	
-				double var = 0;
-				iter = train_feature.iterator();
-				while (iter.hasNext()) {
-					SVMFeature f = iter.next();
-					if (f.fid != i) continue;
-					double v = f.fv;
-					var += (v - mean) * (v - mean);
-				}
-				var = var / train_feature.size();
-				System.out.println("feature_name: "+feature_name+"\tfid: "+i+"\tmean: " + mean + "\tvar: " + var);
-	
-				
-				iter = train_feature.iterator();
-				while (iter.hasNext()) {
-					SVMFeature f = iter.next();
-					if (f.fid != i) continue;
-					f.fv = (f.fv - mean) / Math.sqrt(var);
-				}
-				iter = test_feature.iterator();
-				while (iter.hasNext()) {
-					SVMFeature f = iter.next();
-					if (f.fid != i) continue;
-					f.fv = (f.fv - mean) / Math.sqrt(var);
-				}
-	
 			}
-			
 			PrintStream outp = new PrintStream("features/train.txt."
 					+ feature_name);
 			outp.println(feature_num);
 			iter = train_feature.iterator();
 			while (iter.hasNext()) {
 				SVMFeature f = iter.next();
-				outp.println("1 "+f.fid+":"+f.fv);
+				outp.println("1 " + f.fid + ":" + f.fv);
 			}
 			outp.close();
-			
+
 			outp = new PrintStream("features/test.txt." + feature_name);
 			outp.println(feature_num);
 			iter = test_feature.iterator();
 			while (iter.hasNext()) {
 				SVMFeature f = iter.next();
-				outp.println("1 "+f.fid+":"+f.fv);
+				outp.println("1 " + f.fid + ":" + f.fv);
 			}
 			outp.close();
 		}
