@@ -22,6 +22,7 @@ public class AllData {
 	
 	//relations
 	public HashMap<String,ArrayList<Resource>> project2resourses = new HashMap<String, ArrayList<Resource>>();
+	public HashMap<String,ArrayList<Project>> teacher2projects = new HashMap<String, ArrayList<Project>>();
 	
 	
 	static AllData instance = null;
@@ -115,6 +116,12 @@ public class AllData {
 			projects_list.add(project);
 			if (!project2resourses.containsKey(project.projectid))
 				project2resourses.put(project.projectid, new ArrayList<Resource>());
+			
+			String teacherid = project.teacher_acctid;
+			//add to project2resources list
+			if (!teacher2projects.containsKey(teacherid))
+				teacher2projects.put(teacherid, new ArrayList<Project>());
+			teacher2projects.get(teacherid).add(project);
 		}
 		System.out.println("End loading projects...");
 		System.out.println("Get projects entry: " + projects.keySet().size());

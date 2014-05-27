@@ -1,17 +1,15 @@
 package feature;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
 
-import data.Essay;
 import data.Project;
 import libsvm_interface.SVMFeature;
 
-public class RecentProject extends FeatureList {
+public class RecentProjectA30 extends FeatureList {
 
 	HashMap<String, Double> feature_map = new HashMap<String, Double>();
 
@@ -42,21 +40,21 @@ public class RecentProject extends FeatureList {
 					.add(dateformat.parse(p_list.get(i).date_posted).getTime());
 		}
 
-		final long days = 5;
+		final long days = 30;
 		int sum = 0;
 		int p = 0, q = 0;
 		while (q < p_list.size()) {
 			while (p < p_list.size()
 					&& time_list.get(q) - time_list.get(p) < days * 24 * 3600 * 1000) {
+				double mutipler = (days+1.0)/((time_list.get(q) - time_list.get(p))/24/3600/1000+1); 
+				feature_map.put(p_list.get(p).projectid, mutipler*sum);
 				p++;
 				sum++;
 			}
-			//System.out.println(q+" "+p+" "+sum);
-			int temp = sum;
 			while (q < p_list.size()
 					&& (p >= p_list.size() || time_list.get(q)
 							- time_list.get(p) >= days * 24 * 3600 * 1000)) {
-				feature_map.put(p_list.get(q).projectid, (double) temp);
+				
 				q++;
 				sum--;
 			}

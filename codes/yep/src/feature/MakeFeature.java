@@ -102,6 +102,18 @@ public class MakeFeature {
 			if (feature_name.equals("yep_RecentProject")) {
 				featurelist = new RecentProject();
 			}
+			if (feature_name.equals("yep_RecentProjectA20")) {
+				featurelist = new RecentProjectA20();
+			}
+			if (feature_name.equals("yep_RecentProjectA15")) {
+				featurelist = new RecentProjectA15();
+			}
+			if (feature_name.equals("yep_RecentProjectA30")) {
+				featurelist = new RecentProjectA30();
+			}
+			if (feature_name.equals("yep_TeacherRecentProject")) {
+				featurelist = new TeacherRecentProject();
+			}
 
 			featurelist.train_pid = train_pid;
 			featurelist.test_pid = test_pid;
