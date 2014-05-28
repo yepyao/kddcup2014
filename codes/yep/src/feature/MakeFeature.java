@@ -110,6 +110,12 @@ public class MakeFeature {
 			if (feature_name.equals("yep_RecentProjectPrizeA20")) {
 				featurelist = new RecentProjectPrizeA20();
 			}
+			if (feature_name.equals("yep_RecentProjectEssayA20")) {
+				featurelist = new RecentProjectEssayA20();
+			}
+			if (feature_name.equals("yep_RecentProjectPovertyA20")) {
+				featurelist = new RecentProjectPovertyA20();
+			}
 			if (feature_name.equals("yep_RecentProjectA15")) {
 				featurelist = new RecentProjectA15();
 			}
@@ -125,6 +131,9 @@ public class MakeFeature {
 			if (feature_name.equals("yep_Vendor")) {
 				featurelist = new Vendor();
 				nomal = false;
+			}
+			if (feature_name.equals("yep_HighestPoverty")) {
+				featurelist = new HighestPoverty();
 			}
 
 			featurelist.train_pid = train_pid;
