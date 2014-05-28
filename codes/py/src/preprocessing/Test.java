@@ -14,9 +14,9 @@ import preprocessing.CSVFileUtil;
 
 public class Test {
 	private static final String inpath = "D:\\Users\\panye\\kddcup2014\\outcomes.csv\\outcomes.csv";
-	private static final String inpath2 = "D:\\Users\\panye\\kddcup2014\\resources.csv\\resources.csv";
+	private static final String inpath2 = "D:\\Users\\panye\\kddcup2014\\essays.csv\\essays.csv";
 	private static final String inpath3 = "D:\\Users\\panye\\kddcup2014\\projectIDMapping";
-	private static final String outpath = "D:\\Users\\panye\\kddcup2014\\resource.txt";
+	private static final String outpath = "D:\\Users\\panye\\kddcup2014\\Essays.txt";
 	
 	public static void main(String[] args) throws Exception{
 		FileInputStream f = new FileInputStream(inpath); // outcomes.csv
@@ -46,9 +46,10 @@ public class Test {
 			ArrayList<String> splits = CSVFileUtil.fromCSVLinetoArray(s);
 			if (s.equals("")) error++;else{
 	//			System.out.println(s+" "+i);
-				if (posH.get(splits.get(1)) != null){
-					out.write(s+"\n");
+				if (posH.get(splits.get(0)) != null){
+					out.write("1 "+splits.get(5)+"\n");
 				}
+				else out.write("0 "+splits.get(5)+"\n");
 			}
 			s = csv.readLine();
 		}

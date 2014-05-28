@@ -13,7 +13,7 @@ import java.util.Hashtable;
 import preprocessing.CSVFileUtil;
 
 public class EssayLength {
-	public static void main(String[] args) throws IOException{
+	public static void main(String[] args) throws Exception{
 		FileInputStream f = new FileInputStream(args[0]); //mapping
 		BufferedReader in = new BufferedReader(new InputStreamReader(f));
 		Hashtable<String, String> id = new Hashtable<String, String>();
@@ -25,17 +25,18 @@ public class EssayLength {
 		}
 		in.close();
 		
-		f = new FileInputStream(args[1]); //essay.csv
-		in = new BufferedReader(new InputStreamReader(f));
+		//f = new FileInputStream(args[1]); //essay.csv
+		//in = new BufferedReader(new InputStreamReader(f));
 		Hashtable<String, String> essayLength = new Hashtable<String, String>();
-		s  = in.readLine();
-		s = in.readLine();
+		CSVFileUtil cs = new CSVFileUtil(args[1]);
+		s  = cs.readLine();
+		s = cs.readLine();
 		while (s != null){
 			ArrayList<String> splits = CSVFileUtil.fromCSVLinetoArray(s);
 			double length = 0;
 			if (splits.size() > 5) length = Math.log(splits.get(5).length()+1);
 			essayLength.put(splits.get(0), String.valueOf(length));
-			s = in.readLine();
+			s = cs.readLine();
 		}
 		in.close();
 		
