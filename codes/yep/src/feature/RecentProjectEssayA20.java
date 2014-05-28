@@ -51,11 +51,11 @@ public class RecentProjectEssayA20 extends FeatureList {
 				int count = 0;
 				Iterator<Double> iter = essay_list.iterator();
 				while (iter.hasNext()){
-					if (iter.next()<data.essays.get(p_list.get(p)).essay.length()) count++;
+					if (iter.next()<getEssayLength(p_list.get(p))) count++;
 				}
 				feature_map.put(p_list.get(p).projectid, mutipler*count);
 				sum++;
-				essay_list.add((double)data.essays.get(p_list.get(p)).essay.length());
+				essay_list.add(getEssayLength(p_list.get(p)));
 				p++;
 				
 			}
@@ -69,6 +69,9 @@ public class RecentProjectEssayA20 extends FeatureList {
 			}
 		}
 
+	}
+	private Double getEssayLength(Project project){
+		return (double)data.essays.get(project.projectid).essay.length();
 	}
 
 	private void fillFeature(Iterator<Integer> iter, LinkedList<SVMFeature> list) {
