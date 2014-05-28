@@ -55,14 +55,7 @@ public class HighDimFeature {
 		out.write(String.valueOf(SchoolCityNum)+"\n");
 		while (s != null){
 			String[] temp = s.split(" ");
-			out.write(String.valueOf(SchoolCityNum));
-			for (int i = 0; i < SchoolCityNum; i++){
-				if (i == SchoolCity.get(projectSchoolCity.get(id.get(temp[1]))))
-					out.write(" "+String.valueOf(i)+":1");
-				else
-					out.write(" "+String.valueOf(i)+":0");
-			}
-			out.write("\n");
+			out.write("1 "+String.valueOf(SchoolCity.get(projectSchoolCity.get(id.get(temp[1]))))+":1"+"\n");
 			s = in.readLine();
 		}
 		in.close();
@@ -76,14 +69,7 @@ public class HighDimFeature {
 		out.write(String.valueOf(SchoolCityNum)+"\n");
 		while (s != null){
 			String[] temp = s.split(" ");
-			out.write(String.valueOf(SchoolCityNum));
-			for (int i = 0; i < SchoolCityNum; i++){
-				if (i == SchoolCity.get(projectSchoolCity.get(id.get(temp[1]))))
-					out.write(" "+String.valueOf(i)+":1");
-				else
-					out.write(" "+String.valueOf(i)+":0");
-			}
-			out.write("\n");
+			out.write("1 "+String.valueOf(SchoolCity.get(projectSchoolCity.get(id.get(temp[1]))))+":1"+"\n");
 			s = in.readLine();
 		}
 		in.close();

@@ -58,7 +58,7 @@ do
     fi
 done
 
-cp pred.txt ../../${PWD##*/}.pred.txt
-cp pred.train.txt ../../${PWD##*/}.pred.train.txt
+#cp pred.txt ../../${PWD##*/}.pred.txt
+#cp pred.train.txt ../../${PWD##*/}.pred.train.txt
 rm *.model
-cp log.txt ../../${PWD##*/}.log.txt
+#cp log.txt ../../${PWD##*/}.log.txt
