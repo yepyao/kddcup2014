@@ -195,6 +195,9 @@ features/train.txt.py_PriceGap features/test.txt.py_PriceGap:data/projectIDMappi
 	java -cp codes/py/bin features.PriceGap data/projectIDMapping data/projects.csv train.txt features/train.txt.py_PriceGap test.txt features/test.txt.py_PriceGap
 features/train.txt.py_TeacherAccHD  features/test.txt.py_TeacherAccHD:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
 	java -cp codes/py/bin features.HighDimFeature data/projectIDMapping data/projects.csv train.txt features/train.txt.py_TeacherAccHD test.txt features/test.txt.py_TeacherAccHD 1
+features/train.txt.py_TeacherDonationNumber  features/test.txt.py_TeacherDonationNumber:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.TeacherDonationNumber data/projectIDMapping data/projects.csv data/donations.csv train.txt features/train.txt.py_TeacherDonationNumber test.txt features/test.txt.py_TeacherDonationNumber
+
 
 
 
