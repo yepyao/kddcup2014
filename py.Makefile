@@ -201,6 +201,8 @@ features/train.txt.py_SchoolIDTeacherReferedDonorCount  features/test.txt.py_Sch
 	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolIDTeacherReferedDonorCount test.txt features/test.txt.py_SchoolIDTeacherReferedDonorCount 2 2
 features/train.txt.py_TeacherDonor  features/test.txt.py_TeacherDonor:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
 	java -cp codes/py/bin features.TeacherDonor data/projectIDMapping data/projects.csv data/donations.csv train.txt features/train.txt.py_TeacherDonor test.txt features/test.txt.py_TeacherDonor
+features/train.txt.py_TeacherAccCountByTime  features/test.txt.py_TeacherAccCountByTime:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.CountByTime data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_TeacherAccCountByTime test.txt features/test.txt.py_TeacherAccCountByTime 1
 
 
 
