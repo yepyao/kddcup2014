@@ -65,16 +65,18 @@ public class CountByTime {
 		while (s != null){
 			ArrayList<String> splits = CSVFileUtil.fromCSVLinetoArray(s);
 			projectTeacher.put(splits.get(0), splits.get(field));
-			Info temp = new Info();
-			temp.time = d.parse(splits.get(34)).getTime();
 			projectTime.put(splits.get(0), d.parse(splits.get(34)).getTime());
-			temp.projectID = splits.get(0);
-			if (teacherInfo.get(splits.get(field)) == null){
-				ArrayList<Info> a = new ArrayList<Info>();
-				a.add(temp);
-				teacherInfo.put(splits.get(field), a);
-			}else
-				teacherInfo.get(splits.get(field)).add(temp);
+			if (train.get(splits.get(0)) != null){
+				Info temp = new Info();
+				temp.time = d.parse(splits.get(34)).getTime();
+				temp.projectID = splits.get(0);
+				if (teacherInfo.get(splits.get(field)) == null){
+					ArrayList<Info> a = new ArrayList<Info>();
+					a.add(temp);
+					teacherInfo.put(splits.get(field), a);
+				}else
+					teacherInfo.get(splits.get(field)).add(temp);
+			}
 			s = in.readLine();
 		}
 		in.close();
@@ -124,8 +126,7 @@ public class CountByTime {
 			String teacher = projectTeacher.get(id.get(temp[1]));
 			if (teacherInfo.get(teacher) != null){
 				for (int i = teacherInfo.get(teacher).size()-1; i>=0; i--){
-					if (teacherInfo.get(teacher).get(i).projectID.equals(id.get(temp[1]))) break;
-					else if (posH.get(teacherInfo.get(teacher).get(i).projectID) != null
+					if (posH.get(teacherInfo.get(teacher).get(i).projectID) != null
 							&& time - teacherInfo.get(teacher).get(i).time < gap) 
 						hit++;
 		//			show++;
