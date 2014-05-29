@@ -39,4 +39,3 @@
 39 py_EligibleAlmostHomeMatchPosRatioCount2 q
 40 yep_RecentProjectA200 q
 41 py_TeacherAccCountByTime0 q
-42 py_TeacherAccCountByTime1 q
