@@ -12,6 +12,8 @@ features/train.txt.yep_RecentLatitude features/test.txt.yep_RecentLatitude featu
 	java -cp ./codes/yep/bin/ feature.MakeFeature yep_RecentLatitude,yep_RecentLongitude
 features/train.txt.yep_EssayParaNum features/test.txt.yep_EssayParaNum: data/projectIDMapping data/essays.csv train.txt test.txt
 	java -cp ./codes/yep/bin/ feature.MakeFeature yep_EssayParaNum
+features/train.txt.yep_EssayPosWord features/test.txt.yep_EssayPosWord: data/projectIDMapping data/essays.csv train.txt test.txt
+	java -cp ./codes/yep/bin/ feature.MakeFeature yep_EssayPosWord
 yep_clear:
 	rm features/train.txt.yep_*
 	rm features/test.txt.yep_*

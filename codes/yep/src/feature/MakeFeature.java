@@ -81,6 +81,10 @@ public class MakeFeature {
 				featurelist = new EssayParaNum();
 				nomal = false;
 			}
+			if (feature_name.equals("yep_EssayPosWord")) {
+				featurelist = new EssayPosWord();
+				nomal = false;
+			}
 			if (feature_name.equals("yep_StudentReached")) {
 				featurelist = new StudentReached();
 			}
