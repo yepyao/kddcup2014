@@ -29,7 +29,8 @@ public class PostDate extends FeatureList {
 				Project project = data.projects.get(projectid);
 				SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 				Date date = dateFormat.parse(project.date_posted);
-				list.add(new SVMFeature(0, date.getTime()));
+				long days = 365;
+				list.add(new SVMFeature(0, date.getTime()%(days*24*3600*1000)));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

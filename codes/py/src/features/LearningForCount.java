@@ -37,6 +37,8 @@ public class LearningForCount {
 			s = in.readLine();
 		}
 		in.close();
+		int n = Integer.valueOf(args[9]);
+		int unit = trainSum / n + 1;
 		
 		f = new FileInputStream(args[0]); // outcomes.csv
 		in = new BufferedReader(new InputStreamReader(f));
@@ -55,10 +57,15 @@ public class LearningForCount {
 		
 		f = new FileInputStream(args[2]); //projects.csv
 		in = new BufferedReader(new InputStreamReader(f));
-		Hashtable<String, Integer> teacher = new Hashtable<String, Integer>();
-		Hashtable<String, Integer> teacherAll = new Hashtable<String, Integer>();
-		Hashtable<String, Integer> teacher2 = new Hashtable<String, Integer>();
-		Hashtable<String, Integer> teacherAll2 = new Hashtable<String, Integer>();
+		ArrayList<Hashtable<String, Integer>> hit = new ArrayList<Hashtable<String, Integer>>();
+		ArrayList<Hashtable<String, Integer>> show = new ArrayList<Hashtable<String, Integer>>();
+		for (int i = 0; i < n; i++){
+			Hashtable<String, Integer> temp = new Hashtable<String, Integer>();
+			hit.add(temp);
+			temp = new Hashtable<String, Integer>();
+			show.add(temp);
+		}
+			
 		Hashtable<String, String> projectTeacher = new Hashtable<String, String>();
 		s  = in.readLine();
 		s = in.readLine();
@@ -69,21 +76,13 @@ public class LearningForCount {
 			projectTeacher.put(splits.get(0), splits.get(field));
 			if (train.get(splits.get(0)) != null && splits.size() > 33){
 				index++;
-				if (index < trainSum / 2){
-					if (posH.get(splits.get(0)) != null){
-						if (teacher.get(splits.get(field)) == null) teacher.put(splits.get(field), 1);
-						else teacher.put(splits.get(field), teacher.get(splits.get(field))+1);
-					}
-					if (teacherAll.get(splits.get(field)) == null) teacherAll.put(splits.get(field), 1);
-					else teacherAll.put(splits.get(field), teacherAll.get(splits.get(field))+1);
-				}else{
-					if (posH.get(splits.get(0)) != null){
-						if (teacher2.get(splits.get(field)) == null) teacher2.put(splits.get(field), 1);
-						else teacher2.put(splits.get(field), teacher2.get(splits.get(field))+1);
-					}
-					if (teacherAll2.get(splits.get(field)) == null) teacherAll2.put(splits.get(field), 1);
-					else teacherAll2.put(splits.get(field), teacherAll2.get(splits.get(field))+1);
+				int part = index / unit;
+				if (posH.get(splits.get(0)) != null){
+					if (hit.get(part).get(splits.get(field)) == null) hit.get(part).put(splits.get(field), 1);
+					else hit.get(part).put(splits.get(field), hit.get(part).get(splits.get(field))+1);
 				}
+				if (show.get(part).get(splits.get(field)) == null) show.get(part).put(splits.get(field), 1);
+				else show.get(part).put(splits.get(field), show.get(part).get(splits.get(field))+1);
 			}
 			s = in.readLine();
 		}
@@ -102,19 +101,15 @@ public class LearningForCount {
 			int two = 0;
 			double three = 0;
 			index++;
-			if (index < trainSum / 2){
-				if (teacher2.get(projectTeacher.get(id.get(temp[1]))) != null)
-					one = teacher2.get(projectTeacher.get(id.get(temp[1])));
-				if (teacherAll2.get(projectTeacher.get(id.get(temp[1]))) != null)
-					two = teacherAll2.get(projectTeacher.get(id.get(temp[1])));
-				if (two != 0) three = (double) one / two;
-			}else{
-				if (teacher.get(projectTeacher.get(id.get(temp[1]))) != null)
-					one = teacher.get(projectTeacher.get(id.get(temp[1])));
-				if (teacherAll.get(projectTeacher.get(id.get(temp[1]))) != null)
-					two = teacherAll.get(projectTeacher.get(id.get(temp[1])));
-				if (two != 0) three = (double) one / two;
-			}
+			int part = index / unit;
+			for (int i = 0; i < n; i++)
+				if (i != part){
+					if (hit.get(i).get(projectTeacher.get(id.get(temp[1]))) != null)
+						one  = one + hit.get(i).get(projectTeacher.get(id.get(temp[1])));
+					if (show.get(i).get(projectTeacher.get(id.get(temp[1]))) != null)
+						two  = two + show.get(i).get(projectTeacher.get(id.get(temp[1])));
+				}
+			if (two != 0) three = (double) one / two;
 			out.write("3 "+"0:"+String.valueOf(one)+" 1:"+String.valueOf(two)+" 2:"+String.valueOf(three)+"\n");
 	//		out.write("2 "+"0:"+String.valueOf(one)+" 1:"+String.valueOf(two)+"\n");
 			s = in.readLine();
@@ -131,24 +126,18 @@ public class LearningForCount {
 		while (s != null){
 			String[] temp = s.split(" ");
 			double one = 0;
-			if (teacher.get(projectTeacher.get(id.get(temp[1]))) != null){
-				one += teacher.get(projectTeacher.get(id.get(temp[1])));
-			}
-			if (teacher2.get(projectTeacher.get(id.get(temp[1]))) != null){
-				one += teacher2.get(projectTeacher.get(id.get(temp[1])));
-			}
 			double two = 0;
-			if (teacherAll.get(projectTeacher.get(id.get(temp[1]))) != null){
-				two += teacherAll.get(projectTeacher.get(id.get(temp[1])));
+			for (int i = 0; i < n; i++){
+				if (hit.get(i).get(projectTeacher.get(id.get(temp[1]))) != null)
+					one  = one + hit.get(i).get(projectTeacher.get(id.get(temp[1])));
+				if (show.get(i).get(projectTeacher.get(id.get(temp[1]))) != null)
+					two  = two + show.get(i).get(projectTeacher.get(id.get(temp[1])));
 			}
-			if (teacherAll2.get(projectTeacher.get(id.get(temp[1]))) != null){
-				two += teacherAll2.get(projectTeacher.get(id.get(temp[1])));
-			}
-			one = one / 2;
-			two = two / 2;
+//			one = one * (n-1) / n;
+//			two = two * (n-1) / n;
 			double three = 0;
 			if (two != 0) three = (double) one / two; 
-			out.write("3 "+"0:"+String.valueOf((int)one)+" 1:"+String.valueOf((int)two)+" 2:"+String.valueOf(three)+"\n");
+			out.write("3 "+"0:"+String.valueOf(one)+" 1:"+String.valueOf(two)+" 2:"+String.valueOf(three)+"\n");
 	//		out.write("2 "+"0:"+String.valueOf(one)+" 1:"+String.valueOf(two)+"\n");
 			s = in.readLine();
 		}

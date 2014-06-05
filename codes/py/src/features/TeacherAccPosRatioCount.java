@@ -91,10 +91,19 @@ public class TeacherAccPosRatioCount {
 		
 		f = new FileInputStream(args[3]); //train.txt
 		in = new BufferedReader(new InputStreamReader(f));
-		FileOutputStream f2 = new FileOutputStream(args[4]);
+		FileOutputStream f2 = new FileOutputStream(args[4]+"_1");
 		BufferedWriter out = new BufferedWriter(new OutputStreamWriter(f2));
+		FileOutputStream f3 = new FileOutputStream(args[4]+"_2");
+		BufferedWriter out2 = new BufferedWriter(new OutputStreamWriter(f3));
+		FileOutputStream f4 = new FileOutputStream(args[4]+"_3");
+		BufferedWriter out3 = new BufferedWriter(new OutputStreamWriter(f4));
+		FileOutputStream f5 = new FileOutputStream(args[4]);
+		BufferedWriter out4 = new BufferedWriter(new OutputStreamWriter(f5));
 		s = in.readLine();
-		out.write("3"+"\n");
+		out.write("1"+"\n");
+		out2.write("1"+"\n");
+		out3.write("1"+"\n");
+		out4.write("3"+"\n");
 		index = 0;
 		while (s != null){
 			String[] temp = s.split(" ");
@@ -115,19 +124,34 @@ public class TeacherAccPosRatioCount {
 					two = teacherAll.get(projectTeacher.get(id.get(temp[1])));
 				if (two != 0) three = (double) one / two;
 			}
-			out.write("3 "+"0:"+String.valueOf(one)+" 1:"+String.valueOf(two)+" 2:"+String.valueOf(three)+"\n");
+			out4.write("3 "+"0:"+String.valueOf(one)+" 1:"+String.valueOf(two)+" 2:"+String.valueOf(three)+"\n");
  	//		out.write("2 "+"0:"+String.valueOf(two)+" 1:"+String.valueOf(three)+"\n");
+			out.write("1 0:"+String.valueOf(one)+"\n");
+			out2.write("1 0:"+String.valueOf(two)+"\n");
+			out3.write("1 0:"+String.valueOf(three)+"\n");
 			s = in.readLine();
 		}
 		in.close();
 		out.close();
+		out2.close();
+		out3.close();
+		out4.close();
 		
 		f = new FileInputStream(args[5]); //test.txt
 		in = new BufferedReader(new InputStreamReader(f));
-		f2 = new FileOutputStream(args[6]);
+		f2 = new FileOutputStream(args[6]+"_1");
 		out = new BufferedWriter(new OutputStreamWriter(f2));
+		f3 = new FileOutputStream(args[6]+"_2");
+		out2 = new BufferedWriter(new OutputStreamWriter(f3));
+		f4 = new FileOutputStream(args[6]+"_3");
+		out3 = new BufferedWriter(new OutputStreamWriter(f4));
+		f5 = new FileOutputStream(args[6]);
+		out4 = new BufferedWriter(new OutputStreamWriter(f5));
 		s = in.readLine();
-		out.write("3"+"\n");
+		out.write("1"+"\n");
+		out2.write("1"+"\n");
+		out3.write("1"+"\n");
+		out4.write("3"+"\n");
 		while (s != null){
 			String[] temp = s.split(" ");
 			double one = 0;
@@ -148,12 +172,18 @@ public class TeacherAccPosRatioCount {
 			two = two / 2;
 			double three = 0;
 			if (two != 0) three = (double) one / two; 
-			out.write("3 "+"0:"+String.valueOf((int)one)+" 1:"+String.valueOf((int)two)+" 2:"+String.valueOf(three)+"\n");
+			out4.write("3 "+"0:"+String.valueOf((int)one)+" 1:"+String.valueOf((int)two)+" 2:"+String.valueOf(three)+"\n");
 	//		out.write("2 "+"0:"+String.valueOf(two)+" 1:"+String.valueOf(three)+"\n");
+			out.write("1 0:"+String.valueOf((int)one)+"\n");
+			out2.write("1 0:"+String.valueOf((int)two)+"\n");
+			out3.write("1 0:"+String.valueOf(three)+"\n");
 			s = in.readLine();
 		}
 		in.close();
 		out.close();
+		out2.close();
+		out3.close();
+		out4.close();
 	}
 }
 

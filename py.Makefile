@@ -120,9 +120,9 @@ features/train.txt.py_EligibleDoubleYourImpactMatchPosRatioCount  features/test.
 features/train.txt.py_EligibleAlmostHomeMatchPosRatioCount  features/test.txt.py_EligibleAlmostHomeMatchPosRatioCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
 	java -cp codes/py/bin features.TeacherAccPosRatioCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_EligibleAlmostHomeMatchPosRatioCount test.txt features/test.txt.py_EligibleAlmostHomeMatchPosRatioCount 33
 features/train.txt.py_Latitude features/test.txt.py_Latitude:data/projectIDMapping data/projects.csv train.txt test.txt
-	java -cp codes/py/bin features.Latitude data/projectIDMapping data/projects.csv train.txt features/train.txt.py_Latitude test.txt features/test.txt.py_Latitude
-features/train.txt.py_Longitude features/test.txt.py_Longitude:data/projectIDMapping data/projects.csv train.txt test.txt
-	java -cp codes/py/bin features.Longitude data/projectIDMapping data/projects.csv train.txt features/train.txt.py_Longitude test.txt features/test.txt.py_Longitude
+	java -cp codes/py/bin features.Latitude data/projectIDMapping data/projects.csv train.txt features/train.txt.py_Latitude test.txt features/test.txt.py_Latitude 15
+features/train.txt.py_Longitude features/test.txt.py_Longitude:data/projectIDMapping data/projects.csv train.txt test.txt 
+	java -cp codes/py/bin features.Longitude data/projectIDMapping data/projects.csv train.txt features/train.txt.py_Longitude test.txt features/test.txt.py_Longitude 20
 features/train.txt.py_Month1 features/test.txt.py_Month1:data/projectIDMapping data/projects.csv train.txt test.txt
 	java -cp codes/py/bin features.Month1 data/projectIDMapping data/projects.csv train.txt features/train.txt.py_Month1 test.txt features/test.txt.py_Month1
 features/train.txt.py_EssayWordNum  features/test.txt.py_EssayWordNum:data/projectIDMapping data/essays.csv train.txt test.txt
@@ -203,6 +203,51 @@ features/train.txt.py_TeacherDonor  features/test.txt.py_TeacherDonor:data/outco
 	java -cp codes/py/bin features.TeacherDonor data/projectIDMapping data/projects.csv data/donations.csv train.txt features/train.txt.py_TeacherDonor test.txt features/test.txt.py_TeacherDonor
 features/train.txt.py_TeacherAccCountByTime  features/test.txt.py_TeacherAccCountByTime:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
 	java -cp codes/py/bin features.CountByTime data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_TeacherAccCountByTime test.txt features/test.txt.py_TeacherAccCountByTime 1 2
+features/train.txt.py_LongitudeCount  features/test.txt.py_LongitudeCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.LongitudeCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_LongitudeCount test.txt features/test.txt.py_LongitudeCount 5 2
+features/train.txt.py_ResourcePrice  features/test.txt.py_ResourcePrice:data/projectIDMapping data/resources.csv train.txt test.txt
+	java -cp codes/py/bin features.ResourcePrice data/projectIDMapping data/resources.csv train.txt features/train.txt.py_ResourcePrice test.txt features/test.txt.py_ResourcePrice
+features/train.txt.py_ResourcePriceEmpty  features/test.txt.py_ResourcePriceEmpty:data/projectIDMapping data/resources.csv train.txt test.txt
+	java -cp codes/py/bin features.ResourcePriceEmpty data/projectIDMapping data/resources.csv train.txt features/train.txt.py_ResourcePriceEmpty test.txt features/test.txt.py_ResourcePriceEmpty
+features/train.txt.py_TeacherAccExcitingCount  features/test.txt.py_TeacherAccExcitingCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_TeacherAccExcitingCount test.txt features/test.txt.py_TeacherAccExcitingCount 1 1 2
+features/train.txt.py_SchoolCityExcitingCount  features/test.txt.py_SchoolCityExcitingCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolCityExcitingCount test.txt features/test.txt.py_SchoolCityExcitingCount 6 1 2
+features/train.txt.py_ResourceTypeExcitingCount  features/test.txt.py_ResourceTypeExcitingCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_ResourceTypeExcitingCount test.txt features/test.txt.py_ResourceTypeExcitingCount 25 1 2
+features/train.txt.py_SchoolIDExcitingCount  features/test.txt.py_SchoolIDExcitingCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolIDExcitingCount test.txt features/test.txt.py_SchoolIDExcitingCount 2 1 2
+features/train.txt.py_SchoolNcesIDExcitingCount  features/test.txt.py_SchoolNcesIDExcitingCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolNcesIDExcitingCount test.txt features/test.txt.py_SchoolNcesIDExcitingCount 3 1 2
+features/train.txt.py_SchoolStateExcitingCount  features/test.txt.py_SchoolStateExcitingCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolStateExcitingCount test.txt features/test.txt.py_SchoolStateExcitingCount 7 1 2
+features/train.txt.py_SchoolZipExcitingCount  features/test.txt.py_SchoolZipExcitingCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolZipExcitingCount test.txt features/test.txt.py_SchoolZipExcitingCount 8 1 2
+features/train.txt.py_SchoolMetroExcitingCount  features/test.txt.py_SchoolMetroExcitingCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolMetroExcitingCount test.txt features/test.txt.py_SchoolMetroExcitingCount 9 1 2
+features/train.txt.py_SchoolDistrictExcitingCount  features/test.txt.py_SchoolDistrictExcitingCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolDistrictExcitingCount test.txt features/test.txt.py_SchoolDistrictExcitingCount 10 1 2
+features/train.txt.py_SchoolCountyExcitingCount  features/test.txt.py_SchoolCountyExcitingCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolCountyExcitingCount test.txt features/test.txt.py_SchoolCountyExcitingCount 11 1 2
+features/train.txt.py_SchoolCharterExcitingCount  features/test.txt.py_SchoolCharterExcitingCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolCharterExcitingCount test.txt features/test.txt.py_SchoolCharterExcitingCount 12 1 2
+features/train.txt.py_SchoolMagnetExcitingCount  features/test.txt.py_SchoolMagnetExcitingCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolMagnetExcitingCount test.txt features/test.txt.py_SchoolMagnetExcitingCount 13 1 2
+features/train.txt.py_SchoolYearRoundExcitingCount  features/test.txt.py_SchoolYearRoundExcitingCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolYearRoundExcitingCount test.txt features/test.txt.py_SchoolYearRoundExcitingCount 14 1 2
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

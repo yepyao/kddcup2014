@@ -13,7 +13,7 @@ import java.util.Hashtable;
 import preprocessing.CSVFileUtil;
 
 public class ResourceItemNum {
-	public static void main(String[] args) throws IOException{
+	public static void main(String[] args) throws Exception{
 		FileInputStream f = new FileInputStream(args[0]); //mapping
 		BufferedReader in = new BufferedReader(new InputStreamReader(f));
 		Hashtable<String, String> id = new Hashtable<String, String>();
@@ -25,17 +25,16 @@ public class ResourceItemNum {
 		}
 		in.close();
 		
-		f = new FileInputStream(args[1]); //resource.csv
-		in = new BufferedReader(new InputStreamReader(f));
+		CSVFileUtil csv = new CSVFileUtil(args[1]);
 		Hashtable<String, Double> resourceNum = new Hashtable<String, Double>();
-		s  = in.readLine();
-		s = in.readLine();
+		s  = csv.readLine();
+		s = csv.readLine();
 		while (s != null){
 			ArrayList<String> splits = CSVFileUtil.fromCSVLinetoArray(s);
 			if (splits.size() > 8 && !splits.get(8).equals(""))
 			if (resourceNum.get(splits.get(1)) == null) resourceNum.put(splits.get(1), Double.valueOf(splits.get(8)));
 			else resourceNum.put(splits.get(1), resourceNum.get(splits.get(1))+Double.valueOf(splits.get(8)));
-			s = in.readLine();
+			s = csv.readLine();
 		}
 		in.close();
 		

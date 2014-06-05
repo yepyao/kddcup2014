@@ -81,8 +81,8 @@ public class Stat {
 	}
 
 	private static String getString(Project project) {
-		return (project.total_price_including_optional_support>10000)?"True":"False" ;
-		
+		//return (project.total_price_including_optional_support>10000)?"True":"False" ;
+		//return project.primary_focus_subject;
 		//return project.grade_level;
 		//return (project.teacher_teach_for_america)?"T":"F";
 		/*
@@ -111,6 +111,8 @@ public class Stat {
 		}
 		return (samevandor)?vendor:"not_same";
 		*/
+		Essay essay = data.essays.get(project.projectid);
+		return "1";
 	}
 
 }

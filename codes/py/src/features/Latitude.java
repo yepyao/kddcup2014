@@ -47,7 +47,7 @@ public class Latitude {
 		out.write("1"+"\n");
 		while (s != null){
 			String[] temp = s.split(" ");
-			out.write("1 0:"+price.get(id.get(temp[1]))+"\n");
+			out.write("1 0:"+String.valueOf(Math.floor(price.get(id.get(temp[1]))/Integer.valueOf(args[6])))+"\n");
 			s = in.readLine();
 		}
 		
@@ -62,7 +62,7 @@ public class Latitude {
 		out.write("1"+"\n");
 		while (s != null){
 			String[] temp = s.split(" ");
-			out.write("1 0:"+price.get(id.get(temp[1]))+"\n");
+			out.write("1 0:"+String.valueOf(Math.floor(price.get(id.get(temp[1]))/Integer.valueOf(args[6])))+"\n");
 			s = in.readLine();
 		}
 		in.close();

@@ -77,6 +77,10 @@ public class MakeFeature {
 			if (feature_name.equals("yep_EssayLength")) {
 				featurelist = new EssayLength();
 			}
+			if (feature_name.equals("yep_EssayParaNum")) {
+				featurelist = new EssayParaNum();
+				nomal = false;
+			}
 			if (feature_name.equals("yep_StudentReached")) {
 				featurelist = new StudentReached();
 			}
@@ -113,6 +117,9 @@ public class MakeFeature {
 			if (feature_name.equals("yep_RecentProjectEssayA20")) {
 				featurelist = new RecentProjectEssayA20();
 			}
+			if (feature_name.equals("yep_RecentProjectStateA20")) {
+				featurelist = new RecentProjectStateA20();
+			}
 			if (feature_name.equals("yep_RecentProjectPovertyA20")) {
 				featurelist = new RecentProjectPovertyA20();
 			}
@@ -134,6 +141,14 @@ public class MakeFeature {
 			}
 			if (feature_name.equals("yep_HighestPoverty")) {
 				featurelist = new HighestPoverty();
+			}
+			if (feature_name.equals("yep_RecentLatitude")) {
+				featurelist = new RecentLatitude();
+				nomal = false;
+			}
+			if (feature_name.equals("yep_RecentLongitude")) {
+				featurelist = new RecentLongitude();
+				nomal = false;
 			}
 
 			featurelist.train_pid = train_pid;
@@ -197,7 +212,10 @@ public class MakeFeature {
 			iter = train_feature.iterator();
 			while (iter.hasNext()) {
 				SVMFeature f = iter.next();
-				outp.println("1 " + f.fid + ":" + f.fv);
+				if (f.fid != -1)
+					outp.println("1 " + f.fid + ":" + f.fv);
+				else
+					outp.println("0");
 			}
 			outp.close();
 

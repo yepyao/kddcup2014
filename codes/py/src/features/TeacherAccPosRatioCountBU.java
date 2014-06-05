@@ -116,7 +116,7 @@ public class TeacherAccPosRatioCountBU {
 				if (two != 0) three = (double) one / two;
 			}
 			out.write("3 "+"0:"+String.valueOf(one)+" 1:"+String.valueOf(two)+" 2:"+String.valueOf(three)+"\n");
-	//		out.write("2 "+"0:"+String.valueOf(one)+" 1:"+String.valueOf(two)+"\n");
+ 	//		out.write("2 "+"0:"+String.valueOf(two)+" 1:"+String.valueOf(three)+"\n");
 			s = in.readLine();
 		}
 		in.close();
@@ -149,7 +149,7 @@ public class TeacherAccPosRatioCountBU {
 			double three = 0;
 			if (two != 0) three = (double) one / two; 
 			out.write("3 "+"0:"+String.valueOf((int)one)+" 1:"+String.valueOf((int)two)+" 2:"+String.valueOf(three)+"\n");
-	//		out.write("2 "+"0:"+String.valueOf(one)+" 1:"+String.valueOf(two)+"\n");
+	//		out.write("2 "+"0:"+String.valueOf(two)+" 1:"+String.valueOf(three)+"\n");
 			s = in.readLine();
 		}
 		in.close();
