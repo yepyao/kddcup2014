@@ -243,6 +243,15 @@ features/train.txt.py_SchoolCharterPromiseExcitingCount  features/test.txt.py_Sc
 	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolCharterPromiseExcitingCount test.txt features/test.txt.py_SchoolCharterPromiseExcitingCount 17 1 2
 features/train.txt.py_TeacherPrefixExcitingCount  features/test.txt.py_TeacherPrefixExcitingCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
 	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_TeacherPrefixExcitingCount test.txt features/test.txt.py_TeacherPrefixExcitingCount 18 1 2
+features/train.txt.py_TeacherTeachForAmericaExcitingCount  features/test.txt.py_TeacherTeachForAmericaExcitingCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_TeacherTeachForAmericaExcitingCount test.txt features/test.txt.py_TeacherTeachForAmericaExcitingCount 19 1 2
+features/train.txt.py_TeacherNyTeachingFellowExcitingCount  features/test.txt.py_TeacherNyTeachingFellowExcitingCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_TeacherNyTeachingFellowExcitingCount test.txt features/test.txt.py_TeacherNyTeachingFellowExcitingCount 20 1 2
+features/train.txt.py_PrimaryFocusSubjectExcitingCount  features/test.txt.py_PrimaryFocusSubjectExcitingCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_PrimaryFocusSubjectExcitingCount test.txt features/test.txt.py_PrimaryFocusSubjectExcitingCount 21 1 2
+
+
+
 
 
 

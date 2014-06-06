@@ -32,3 +32,9 @@
 32 py_TeacherPrefixExcitingCount0 q
 33 py_TeacherPrefixExcitingCount1 q
 34 py_TeacherPrefixExcitingCount2 q
+35 py_TeacherTeachForAmericaExcitingCount0 q
+36 py_TeacherTeachForAmericaExcitingCount1 q
+37 py_TeacherTeachForAmericaExcitingCount2 q
+38 py_TeacherNyTeachingFellowExcitingCount0 q
+39 py_TeacherNyTeachingFellowExcitingCount1 q
+40 py_TeacherNyTeachingFellowExcitingCount2 q
