@@ -23,6 +23,3 @@
 23 py_SchoolNcesIDExcitingCount0 q
 24 py_SchoolNcesIDExcitingCount1 q
 25 py_SchoolNcesIDExcitingCount2 q
-26 py_SchoolYearRoundExcitingCount0 q
-27 py_SchoolYearRoundExcitingCount1 q
-28 py_SchoolYearRoundExcitingCount2 q
