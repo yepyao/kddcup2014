@@ -235,6 +235,17 @@ features/train.txt.py_SchoolMagnetExcitingCount  features/test.txt.py_SchoolMagn
 	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolMagnetExcitingCount test.txt features/test.txt.py_SchoolMagnetExcitingCount 13 1 2
 features/train.txt.py_SchoolYearRoundExcitingCount  features/test.txt.py_SchoolYearRoundExcitingCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
 	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolYearRoundExcitingCount test.txt features/test.txt.py_SchoolYearRoundExcitingCount 14 1 2
+features/train.txt.py_SchoolNlnsExcitingCount  features/test.txt.py_SchoolNlnsExcitingCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolNlnsExcitingCount test.txt features/test.txt.py_SchoolNlnsExcitingCount 15 1 2
+features/train.txt.py_SchoolKippExcitingCount  features/test.txt.py_SchoolKippExcitingCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolKippExcitingCount test.txt features/test.txt.py_SchoolKippExcitingCount 16 1 2
+features/train.txt.py_SchoolCharterPromiseExcitingCount  features/test.txt.py_SchoolCharterPromiseExcitingCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolCharterPromiseExcitingCount test.txt features/test.txt.py_SchoolCharterPromiseExcitingCount 17 1 2
+features/train.txt.py_TeacherPrefixExcitingCount  features/test.txt.py_TeacherPrefixExcitingCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_TeacherPrefixExcitingCount test.txt features/test.txt.py_TeacherPrefixExcitingCount 18 1 2
+
+
+
 
 
 

@@ -23,3 +23,12 @@
 23 py_SchoolNcesIDExcitingCount0 q
 24 py_SchoolNcesIDExcitingCount1 q
 25 py_SchoolNcesIDExcitingCount2 q
+26 py_SchoolNlnsExcitingCount0 q
+27 py_SchoolNlnsExcitingCount1 q
+28 py_SchoolNlnsExcitingCount2 q
+29 py_SchoolKippExcitingCount0 q
+30 py_SchoolKippExcitingCount1 q
+31 py_SchoolKippExcitingCount2 q
+32 py_TeacherPrefixExcitingCount0 q
+33 py_TeacherPrefixExcitingCount1 q
+34 py_TeacherPrefixExcitingCount2 q
