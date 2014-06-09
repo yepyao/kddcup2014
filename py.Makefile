@@ -255,6 +255,22 @@ features/train.txt.py_SecondaryFocusSubjectExcitingCount  features/test.txt.py_S
 	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SecondaryFocusSubjectExcitingCount test.txt features/test.txt.py_SecondaryFocusSubjectExcitingCount 23 1 2
 features/train.txt.py_SecondaryFocusAreaExcitingCount  features/test.txt.py_SecondaryFocusAreaExcitingCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
 	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SecondaryFocusAreaExcitingCount test.txt features/test.txt.py_SecondaryFocusAreaExcitingCount 24 1 2
+features/train.txt.py_ProvertyLevelExcitingCount  features/test.txt.py_ProvertyLevelExcitingCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_ProvertyLevelExcitingCount test.txt features/test.txt.py_ProvertyLevelExcitingCount 26 1 2
+features/train.txt.py_GradeLevelExcitingCount  features/test.txt.py_GradeLevelExcitingCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_GradeLevelExcitingCount test.txt features/test.txt.py_GradeLevelExcitingCount 27 1 2
+features/train.txt.py_StudentReachedExcitingCount  features/test.txt.py_StudentReachedExcitingCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_StudentReachedExcitingCount test.txt features/test.txt.py_StudentReachedExcitingCount 31 1 2
+features/train.txt.py_EligibleDoubleExcitingCount  features/test.txt.py_EligibleDoubleExcitingCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_EligibleDoubleExcitingCount test.txt features/test.txt.py_EligibleDoubleExcitingCount 32 1 2
+features/train.txt.py_EligibleHomeExcitingCount  features/test.txt.py_EligibleHomeExcitingCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_EligibleHomeExcitingCount test.txt features/test.txt.py_EligibleHomeExcitingCount 33 1 2
+
+
+
+
+
+
 
 
 
