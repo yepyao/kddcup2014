@@ -50,3 +50,6 @@
 50 py_SchoolYearRoundPosRatioCount0 q
 51 py_SchoolYearRoundPosRatioCount1 q
 52 py_SchoolYearRoundPosRatioCount2 q
+53 py_GradeLevelPosRatioCount0 q
+54 py_GradeLevelPosRatioCount1 q
+55 py_GradeLevelPosRatioCount2 q
