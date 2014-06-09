@@ -38,3 +38,6 @@
 38 py_TeacherNyTeachingFellowExcitingCount0 q
 39 py_TeacherNyTeachingFellowExcitingCount1 q
 40 py_TeacherNyTeachingFellowExcitingCount2 q
+41 py_SecondaryFocusAreaExcitingCount0 q
+42 py_SecondaryFocusAreaExcitingCount1 q
+43 py_SecondaryFocusAreaExcitingCount2 q

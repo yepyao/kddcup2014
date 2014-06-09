@@ -249,6 +249,15 @@ features/train.txt.py_TeacherNyTeachingFellowExcitingCount  features/test.txt.py
 	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_TeacherNyTeachingFellowExcitingCount test.txt features/test.txt.py_TeacherNyTeachingFellowExcitingCount 20 1 2
 features/train.txt.py_PrimaryFocusSubjectExcitingCount  features/test.txt.py_PrimaryFocusSubjectExcitingCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
 	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_PrimaryFocusSubjectExcitingCount test.txt features/test.txt.py_PrimaryFocusSubjectExcitingCount 21 1 2
+features/train.txt.py_PrimaryFocusAreaExcitingCount  features/test.txt.py_PrimaryFocusAreaExcitingCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_PrimaryFocusAreaExcitingCount test.txt features/test.txt.py_PrimaryFocusAreaExcitingCount 22 1 2
+features/train.txt.py_SecondaryFocusSubjectExcitingCount  features/test.txt.py_SecondaryFocusSubjectExcitingCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SecondaryFocusSubjectExcitingCount test.txt features/test.txt.py_SecondaryFocusSubjectExcitingCount 23 1 2
+features/train.txt.py_SecondaryFocusAreaExcitingCount  features/test.txt.py_SecondaryFocusAreaExcitingCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SecondaryFocusAreaExcitingCount test.txt features/test.txt.py_SecondaryFocusAreaExcitingCount 24 1 2
+
+
+
 
 
 
