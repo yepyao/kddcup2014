@@ -170,23 +170,18 @@ public class MakeInputWithNegSample {
 		Outcome outcome = data.outcomes.get(pid);
 		double count = 0;
 		if (outcome.is_exciting)
-			count = 1;
+			return 1;
 		else {
 
-			if (outcome.at_least_1_green_donation)
-				count++;
-			if (outcome.at_least_1_teacher_referred_donor)
-				count++;
-			if (outcome.fully_funded)
-				count++;
-			if (outcome.great_chat)
-				count++;
-			if (outcome.donation_from_thoughtful_donor
-					|| outcome.one_non_teacher_referred_donor_giving_100_plus
-					|| outcome.three_or_more_non_teacher_referred_donors)
-				count++;
+			if (outcome.at_least_1_green_donation
+					&& outcome.at_least_1_teacher_referred_donor
+					&& outcome.fully_funded
+					&& (outcome.donation_from_thoughtful_donor
+							|| outcome.one_non_teacher_referred_donor_giving_100_plus || outcome.three_or_more_non_teacher_referred_donors)
+					&& outcome.great_messages_proportion > 50)
+				return 1;
 		}
 
-		return count * 0.1;
+		return 0;
 	}
 }
