@@ -14,6 +14,8 @@ features/train.txt.yep_EssayParaNum features/test.txt.yep_EssayParaNum: data/pro
 	java -cp ./codes/yep/bin/ feature.MakeFeature yep_EssayParaNum
 features/train.txt.yep_EssayPosWord features/test.txt.yep_EssayPosWord: data/projectIDMapping data/essays.csv train.txt test.txt
 	java -cp ./codes/yep/bin/ feature.MakeFeature yep_EssayPosWord
+features/train.txt.yep_PriceInExDiff features/test.txt.yep_PriceInExDiff: data/projectIDMapping data/essays.csv train.txt test.txt
+	java -cp ./codes/yep/bin/ feature.MakeFeature yep_PriceInExDiff
 yep_clear:
 	rm features/train.txt.yep_*
 	rm features/test.txt.yep_*

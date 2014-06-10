@@ -131,8 +131,8 @@ public class MakeInputWithNegSample {
 			while (iter.hasNext()) {
 				SVMLine line = iter.next();
 				int duplicate = 1;
-				// if (t.equals("train") && count_line < lines.size() * 0.2)
-				// duplicate = 2;
+				if (t.equals("train") && count_line < lines.size() * 0.2)
+					duplicate = 2;
 				// if (t.equals("train") && count_line < lines.size() * 0.1)
 				// duplicate = 3;
 				if (t.equals("train") && filter(line))

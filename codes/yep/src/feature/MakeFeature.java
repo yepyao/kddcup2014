@@ -91,6 +91,9 @@ public class MakeFeature {
 			if (feature_name.equals("yep_Price")) {
 				featurelist = new Price();
 			}
+			if (feature_name.equals("yep_PriceInExDiff")) {
+				featurelist = new PriceInExDiff();
+			}
 			if (feature_name.equals("yep_PriceSquare")) {
 				featurelist = new PriceSquare();
 			}
