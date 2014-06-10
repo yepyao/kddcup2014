@@ -201,8 +201,6 @@ features/train.txt.py_SchoolIDTeacherReferedDonorCount  features/test.txt.py_Sch
 	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_SchoolIDTeacherReferedDonorCount test.txt features/test.txt.py_SchoolIDTeacherReferedDonorCount 2 2
 features/train.txt.py_TeacherDonor  features/test.txt.py_TeacherDonor:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
 	java -cp codes/py/bin features.TeacherDonor data/projectIDMapping data/projects.csv data/donations.csv train.txt features/train.txt.py_TeacherDonor test.txt features/test.txt.py_TeacherDonor
-features/train.txt.py_TeacherAccCountByTime  features/test.txt.py_TeacherAccCountByTime:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
-	java -cp codes/py/bin features.CountByTime data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_TeacherAccCountByTime test.txt features/test.txt.py_TeacherAccCountByTime 1 2
 features/train.txt.py_LongitudeCount  features/test.txt.py_LongitudeCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
 	java -cp codes/py/bin features.LongitudeCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_LongitudeCount test.txt features/test.txt.py_LongitudeCount 5 2
 features/train.txt.py_ResourcePrice  features/test.txt.py_ResourcePrice:data/projectIDMapping data/resources.csv train.txt test.txt
@@ -265,6 +263,8 @@ features/train.txt.py_EligibleDoubleExcitingCount  features/test.txt.py_Eligible
 	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_EligibleDoubleExcitingCount test.txt features/test.txt.py_EligibleDoubleExcitingCount 32 1 2
 features/train.txt.py_EligibleHomeExcitingCount  features/test.txt.py_EligibleHomeExcitingCount:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
 	java -cp codes/py/bin features.LearningForCount data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_EligibleHomeExcitingCount test.txt features/test.txt.py_EligibleHomeExcitingCount 33 1 2
+features/train.txt.py_TeacherAccCountByTime  features/test.txt.py_TeacherAccCountByTime:data/outcomes.csv data/projectIDMapping data/projects.csv train.txt test.txt
+	java -cp codes/py/bin features.CountByTime data/outcomes.csv data/projectIDMapping data/projects.csv train.txt features/train.txt.py_TeacherAccCountByTime test.txt features/test.txt.py_TeacherAccCountByTime 1 100 0.5
 
 
 

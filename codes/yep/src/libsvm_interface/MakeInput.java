@@ -120,10 +120,10 @@ public class MakeInput {
 			}
 			outp.close();
 
-			outp = new PrintStream(args[1] + t + "." + conf_id
-					+ ".svm_buffer.group");
-			outp.println(dup_lines.size());
-			outp.close();
+			//outp = new PrintStream(args[1] + t + "." + conf_id
+			//		+ ".svm_buffer.group");
+			//outp.println(dup_lines.size());
+			//outp.close();
 		}// end for "test" "train"
 	}
 }

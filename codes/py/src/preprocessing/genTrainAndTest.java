@@ -24,9 +24,11 @@ public class genTrainAndTest {
 		String s = in.readLine();
 		s = in.readLine();
 		Hashtable<String, Integer> posH = new Hashtable<String, Integer>();
+		Hashtable<String, String> outcome = new Hashtable<String, String>();
 		while (s != null){
 			ArrayList<String> splits = CSVFileUtil.fromCSVLinetoArray(s);
 			if (splits.get(1).equals("t")) 	posH.put(splits.get(0), 1);
+			outcome.put(splits.get(0), s);
 			s = in.readLine();
 		}
 		in.close();
@@ -47,10 +49,12 @@ public class genTrainAndTest {
 		while (s != null){
 			ArrayList<String> splits = CSVFileUtil.fromCSVLinetoArray(s);
 			if (splits.get(34).equals("2010-03-14")){
-//				flag = 1;
-				break;
+				flag = 1;
 			};
-			if (flag == 0 || flag == 1 && posH.get(splits.get(0)) != null){
+			String label = outcome.get(splits.get(0));
+			ArrayList<String> labels = CSVFileUtil.fromCSVLinetoArray(label);
+			if (!(flag == 1 && labels.get(3).equals("t") && labels.get(4).equals("t") && labels.get(5).equals("t") && 
+					(labels.get(6).equals("t") || labels.get(7).equals("t") || labels.get(8).equals("t")))){
 				if (h.get(splits.get(0)) == null){
 					h.put(splits.get(0), id);
 					out3.write(splits.get(0)+" "+String.valueOf(id)+"\n");

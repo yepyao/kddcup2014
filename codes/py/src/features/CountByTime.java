@@ -86,12 +86,14 @@ public class CountByTime {
 		FileOutputStream f2 = new FileOutputStream(args[4]);
 		BufferedWriter out = new BufferedWriter(new OutputStreamWriter(f2));
 		s = in.readLine();
-		out.write("1"+"\n");
+		out.write("3"+"\n");
 		double gap = Double.valueOf(args[8])*365*24*3600*1000;
+		int index = 0;
 		while (s != null){
+			index++;
 			String[] temp = s.split(" ");
 			int hit = 0;
-		//	int show = 0;
+			int show = 0;
 			long time = projectTime.get(id.get(temp[1]));
 			String teacher = projectTeacher.get(id.get(temp[1]));
 			if (teacherInfo.get(teacher) != null){
@@ -100,13 +102,15 @@ public class CountByTime {
 					else if (posH.get(teacherInfo.get(teacher).get(i).projectID) != null
 							&& time - teacherInfo.get(teacher).get(i).time < gap) 
 						hit++;
-		//			show++;
+					show++;
 				}
 			}
-			//double rate = 0;
-			//if (show != 0) rate = (double)hit /show;
+			double rate = 0;
+			if (show != 0) rate = (double)hit /show;
 			//out.write("2 0:"+String.valueOf(hit)+" 1:"+String.valueOf(show)+"\n");
-			out.write("1 0:"+String.valueOf(hit)+"\n");
+			if (index < trainSum * Double.valueOf(args[9])) out.write("0"+"\n");
+			else out.write("3 0:"+String.valueOf(hit)+" 1:"+String.valueOf(show)+" 2:"+String.valueOf(rate)+"\n");
+			//out.write("1 0:"+String.valueOf(hit)+"\n");
 			s = in.readLine();
 		}
 		in.close();
@@ -117,11 +121,11 @@ public class CountByTime {
 		f2 = new FileOutputStream(args[6]);
 		out = new BufferedWriter(new OutputStreamWriter(f2));
 		s = in.readLine();
-		out.write("1"+"\n");
+		out.write("3"+"\n");
 		while (s != null){
 			String[] temp = s.split(" ");
 			int hit = 0;
-		//	int show = 0;
+			int show = 0;
 			long time = projectTime.get(id.get(temp[1]));
 			String teacher = projectTeacher.get(id.get(temp[1]));
 			if (teacherInfo.get(teacher) != null){
@@ -129,13 +133,14 @@ public class CountByTime {
 					if (posH.get(teacherInfo.get(teacher).get(i).projectID) != null
 							&& time - teacherInfo.get(teacher).get(i).time < gap) 
 						hit++;
-		//			show++;
+					show++;
 				}
 			}
-			//double rate = 0;
-			//if (show != 0) rate = (double)hit /show;
+			double rate = 0;
+			if (show != 0) rate = (double)hit /show;
 			//out.write("2 0:"+String.valueOf(hit)+" 1:"+String.valueOf(show)+"\n");
-			out.write("1 0:"+String.valueOf(hit)+"\n");
+			//out.write("1 0:"+String.valueOf(hit)+"\n");
+			out.write("3 0:"+String.valueOf(hit)+" 1:"+String.valueOf(show)+" 2:"+String.valueOf(rate)+"\n");
 			s = in.readLine();
 		}
 		in.close();

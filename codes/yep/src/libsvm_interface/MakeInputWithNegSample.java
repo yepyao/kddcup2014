@@ -135,8 +135,8 @@ public class MakeInputWithNegSample {
 					duplicate = 2;
 				// if (t.equals("train") && count_line < lines.size() * 0.1)
 				// duplicate = 3;
-				if (t.equals("train") && filter(line))
-					continue;
+				if (t.equals("train"))
+					line.label = filter(line);
 				for (int i = 0; i < duplicate; i++) {
 					dup_lines.add(line);
 				}
@@ -158,21 +158,21 @@ public class MakeInputWithNegSample {
 			}
 			outp.close();
 
-			outp = new PrintStream(args[1] + t + "." + conf_id
-					+ ".svm_buffer.group");
-			outp.println(dup_lines.size());
-			outp.close();
+			// outp = new PrintStream(args[1] + t + "." + conf_id
+			// + ".svm_buffer.group");
+			// outp.println(dup_lines.size());
+			// outp.close();
 		}// end for "test" "train"
 	}
 
-	private static boolean filter(SVMLine line) {
+	private static double filter(SVMLine line) {
 		String pid = map.get(line.projectId);
 		Outcome outcome = data.outcomes.get(pid);
-
+		double count = 0;
 		if (outcome.is_exciting)
-			return false;
+			count = 1;
 		else {
-			int count = 0;
+
 			if (outcome.at_least_1_green_donation)
 				count++;
 			if (outcome.at_least_1_teacher_referred_donor)
@@ -181,10 +181,12 @@ public class MakeInputWithNegSample {
 				count++;
 			if (outcome.great_chat)
 				count++;
-			if (count > 2)
-				return true;
+			if (outcome.donation_from_thoughtful_donor
+					|| outcome.one_non_teacher_referred_donor_giving_100_plus
+					|| outcome.three_or_more_non_teacher_referred_donors)
+				count++;
 		}
 
-		return false;
+		return count * 0.1;
 	}
 }
