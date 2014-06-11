@@ -62,7 +62,7 @@ public class RecentEssayLength {
 		FileOutputStream f2 = new FileOutputStream(args[3]);
 		BufferedWriter out = new BufferedWriter(new OutputStreamWriter(f2));
 		s = in.readLine();
-		out.write("1"+"\n");
+		out.write("2"+"\n");
 		double forwardGap = Double.valueOf(args[7])*24*3600*1000;
 		double backGap = Double.valueOf(args[8])*24*3600*1000;
 		while (s != null){
@@ -83,7 +83,8 @@ public class RecentEssayLength {
 				sum++;
 			}
 			//out.write("3 0:"+String.valueOf(sum)+" 1:"+String.valueOf(bigger)+" 2:"+String.valueOf((double)bigger/sum)+"\n");
-			out.write("1 0:"+String.valueOf(sum)+"\n");
+			//out.write("1 0:"+String.valueOf(sum)+"\n");
+			out.write("2 0:"+String.valueOf(sum)+" 1:"+String.valueOf((double)bigger/sum)+"\n");
 			s = in.readLine();
 		}
 		in.close();
@@ -94,7 +95,7 @@ public class RecentEssayLength {
 		f2 = new FileOutputStream(args[5]);
 		out = new BufferedWriter(new OutputStreamWriter(f2));
 		s = in.readLine();
-		out.write("1"+"\n");
+		out.write("2"+"\n");
 		while (s != null){
 			String[] temp = s.split(" ");
 			int position = projectIndex.get(id.get(temp[1]));
@@ -113,7 +114,8 @@ public class RecentEssayLength {
 				sum++;
 			}
 			//out.write("3 0:"+String.valueOf(sum)+" 1:"+String.valueOf(bigger)+" 2:"+String.valueOf((double)bigger/sum)+"\n");
-			out.write("1 0:"+String.valueOf(sum)+"\n");
+			//out.write("1 0:"+String.valueOf(sum)+"\n");
+			out.write("2 0:"+String.valueOf(sum)+" 1:"+String.valueOf((double)bigger/sum)+"\n");
 			s = in.readLine();
 		}
 		in.close();
