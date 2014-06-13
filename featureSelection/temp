@@ -1,4 +1,4 @@
-40512x8 matrix with 283584 entries is loaded from ../../model/test.lr.svm_buffer.buffer
+40512x6 matrix with 202560 entries is loaded from ../../model/test.lr.svm_buffer.buffer
 data contains 1 groups
 start prediction...
 writing prediction to pred.txt
