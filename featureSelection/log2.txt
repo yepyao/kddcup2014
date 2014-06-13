@@ -1,2 +1,22 @@
 AUC: 0.661847160176564
 /home/tqchen/kalen/kddcup2014/kddcup2014_0
+AUC: 0.661847160176564
+/home/tqchen/kalen/kddcup2014/kddcup2014_0
+AUC: 0.661847160176564
+/home/tqchen/kalen/kddcup2014/kddcup2014_0
+AUC: 0.661847160176564
+/home/tqchen/kalen/kddcup2014/kddcup2014_0
+AUC: 0.661847160176564
+/home/tqchen/kalen/kddcup2014/kddcup2014_0
+AUC: 0.661847160176564
+/home/tqchen/kalen/kddcup2014/kddcup2014_0
+AUC: 0.661847160176564
+/home/tqchen/kalen/kddcup2014/kddcup2014_0
+AUC: 0.661847160176564
+/home/tqchen/kalen/kddcup2014/kddcup2014_0
+AUC: 0.661847160176564
+/home/tqchen/kalen/kddcup2014/kddcup2014_0
+AUC: 0.661847160176564
+/home/tqchen/kalen/kddcup2014/kddcup2014_0
+AUC: 0.661847160176564
+/home/tqchen/kalen/kddcup2014/kddcup2014_0
