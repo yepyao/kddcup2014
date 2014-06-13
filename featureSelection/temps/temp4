@@ -108,127 +108,129 @@
 [107]	test-auc:0.552620	test-rmse:0.336227	trainname-auc:0.562925	trainname-rmse:0.280592
 [108]	test-auc:0.552620	test-rmse:0.336227	trainname-auc:0.562925	trainname-rmse:0.280592
 [109]	test-auc:0.552620	test-rmse:0.336227	trainname-auc:0.562925	trainname-rmse:0.280592
-462222x8 matrix with 2773332 entries is loaded from buffer/train.lr.buffer_4
-462222x8 matrix with 2773332 entries is saved to buffer/train.lr.buffer_4.buffer
-40512x8 matrix with 243072 entries is loaded from buffer/test.lr.buffer_4
-40512x8 matrix with 243072 entries is saved to buffer/test.lr.buffer_4.buffer
+[110]	test-auc:0.552620	test-rmse:0.336227	trainname-auc:0.562925	trainname-rmse:0.280592
+[111]	test-auc:0.552620	test-rmse:0.336227	trainname-auc:0.562925	trainname-rmse:0.280592
+[112]	test-auc:0.552620	test-rmse:0.336227	trainname-auc:0.562925	trainname-rmse:0.280592
+[113]	test-auc:0.552620	test-rmse:0.336227	trainname-auc:0.562925	trainname-rmse:0.280592
+462222x8 matrix with 2773332 entries is loaded from buffer/train.lr.buffer_4.buffer
+40512x8 matrix with 243072 entries is loaded from buffer/test.lr.buffer_4.buffer
 462222x8 matrix with 2773332 entries is loaded from buffer/train.lr.buffer_4.buffer
 buffer_size=964956
 boosting round 0, 0 sec elapsed
 boosting round 1, 0 sec elapsed
-boosting round 2, 0 sec elapsed
+boosting round 2, 1 sec elapsed
 boosting round 3, 1 sec elapsed
 boosting round 4, 1 sec elapsed
 boosting round 5, 1 sec elapsed
 boosting round 6, 1 sec elapsed
 boosting round 7, 1 sec elapsed
-boosting round 8, 1 sec elapsed
+boosting round 8, 2 sec elapsed
 boosting round 9, 2 sec elapsed
 boosting round 10, 2 sec elapsed
 boosting round 11, 2 sec elapsed
 boosting round 12, 2 sec elapsed
 boosting round 13, 2 sec elapsed
-boosting round 14, 2 sec elapsed
-boosting round 15, 2 sec elapsed
+boosting round 14, 3 sec elapsed
+boosting round 15, 3 sec elapsed
 boosting round 16, 3 sec elapsed
 boosting round 17, 3 sec elapsed
 boosting round 18, 3 sec elapsed
 boosting round 19, 3 sec elapsed
-boosting round 20, 3 sec elapsed
-boosting round 21, 3 sec elapsed
+boosting round 20, 4 sec elapsed
+boosting round 21, 4 sec elapsed
 boosting round 22, 4 sec elapsed
 boosting round 23, 4 sec elapsed
 boosting round 24, 4 sec elapsed
 boosting round 25, 4 sec elapsed
-boosting round 26, 4 sec elapsed
-boosting round 27, 4 sec elapsed
+boosting round 26, 5 sec elapsed
+boosting round 27, 5 sec elapsed
 boosting round 28, 5 sec elapsed
 boosting round 29, 5 sec elapsed
 boosting round 30, 5 sec elapsed
 boosting round 31, 5 sec elapsed
-boosting round 32, 5 sec elapsed
-boosting round 33, 5 sec elapsed
-boosting round 34, 5 sec elapsed
+boosting round 32, 6 sec elapsed
+boosting round 33, 6 sec elapsed
+boosting round 34, 6 sec elapsed
 boosting round 35, 6 sec elapsed
 boosting round 36, 6 sec elapsed
 boosting round 37, 6 sec elapsed
 boosting round 38, 6 sec elapsed
-boosting round 39, 6 sec elapsed
-boosting round 40, 6 sec elapsed
+boosting round 39, 7 sec elapsed
+boosting round 40, 7 sec elapsed
 boosting round 41, 7 sec elapsed
 boosting round 42, 7 sec elapsed
 boosting round 43, 7 sec elapsed
 boosting round 44, 7 sec elapsed
-boosting round 45, 7 sec elapsed
-boosting round 46, 7 sec elapsed
-boosting round 47, 7 sec elapsed
+boosting round 45, 8 sec elapsed
+boosting round 46, 8 sec elapsed
+boosting round 47, 8 sec elapsed
 boosting round 48, 8 sec elapsed
 boosting round 49, 8 sec elapsed
 boosting round 50, 8 sec elapsed
-boosting round 51, 8 sec elapsed
-boosting round 52, 8 sec elapsed
-boosting round 53, 8 sec elapsed
+boosting round 51, 9 sec elapsed
+boosting round 52, 9 sec elapsed
+boosting round 53, 9 sec elapsed
 boosting round 54, 9 sec elapsed
 boosting round 55, 9 sec elapsed
 boosting round 56, 9 sec elapsed
-boosting round 57, 9 sec elapsed
-boosting round 58, 9 sec elapsed
-boosting round 59, 9 sec elapsed
-boosting round 60, 9 sec elapsed
+boosting round 57, 10 sec elapsed
+boosting round 58, 10 sec elapsed
+boosting round 59, 10 sec elapsed
+boosting round 60, 10 sec elapsed
 boosting round 61, 10 sec elapsed
 boosting round 62, 10 sec elapsed
-boosting round 63, 10 sec elapsed
-boosting round 64, 10 sec elapsed
-boosting round 65, 10 sec elapsed
-boosting round 66, 10 sec elapsed
+boosting round 63, 11 sec elapsed
+boosting round 64, 11 sec elapsed
+boosting round 65, 11 sec elapsed
+boosting round 66, 11 sec elapsed
 boosting round 67, 11 sec elapsed
 boosting round 68, 11 sec elapsed
 boosting round 69, 11 sec elapsed
-boosting round 70, 11 sec elapsed
-boosting round 71, 11 sec elapsed
-boosting round 72, 11 sec elapsed
-boosting round 73, 11 sec elapsed
+boosting round 70, 12 sec elapsed
+boosting round 71, 12 sec elapsed
+boosting round 72, 12 sec elapsed
+boosting round 73, 12 sec elapsed
 boosting round 74, 12 sec elapsed
 boosting round 75, 12 sec elapsed
-boosting round 76, 12 sec elapsed
-boosting round 77, 12 sec elapsed
-boosting round 78, 12 sec elapsed
-boosting round 79, 12 sec elapsed
+boosting round 76, 13 sec elapsed
+boosting round 77, 13 sec elapsed
+boosting round 78, 13 sec elapsed
+boosting round 79, 13 sec elapsed
 boosting round 80, 13 sec elapsed
 boosting round 81, 13 sec elapsed
-boosting round 82, 13 sec elapsed
-boosting round 83, 13 sec elapsed
-boosting round 84, 13 sec elapsed
-boosting round 85, 13 sec elapsed
-boosting round 86, 13 sec elapsed
+boosting round 82, 14 sec elapsed
+boosting round 83, 14 sec elapsed
+boosting round 84, 14 sec elapsed
+boosting round 85, 14 sec elapsed
+boosting round 86, 14 sec elapsed
 boosting round 87, 14 sec elapsed
-boosting round 88, 14 sec elapsed
-boosting round 89, 14 sec elapsed
-boosting round 90, 14 sec elapsed
-boosting round 91, 14 sec elapsed
-boosting round 92, 14 sec elapsed
+boosting round 88, 15 sec elapsed
+boosting round 89, 15 sec elapsed
+boosting round 90, 15 sec elapsed
+boosting round 91, 15 sec elapsed
+boosting round 92, 15 sec elapsed
 boosting round 93, 15 sec elapsed
 boosting round 94, 15 sec elapsed
-boosting round 95, 15 sec elapsed
-boosting round 96, 15 sec elapsed
-boosting round 97, 15 sec elapsed
-boosting round 98, 15 sec elapsed
+boosting round 95, 16 sec elapsed
+boosting round 96, 16 sec elapsed
+boosting round 97, 16 sec elapsed
+boosting round 98, 16 sec elapsed
 boosting round 99, 16 sec elapsed
 boosting round 100, 16 sec elapsed
-boosting round 101, 16 sec elapsed
-boosting round 102, 16 sec elapsed
-boosting round 103, 16 sec elapsed
-boosting round 104, 16 sec elapsed
-boosting round 105, 16 sec elapsed
+boosting round 101, 17 sec elapsed
+boosting round 102, 17 sec elapsed
+boosting round 103, 17 sec elapsed
+boosting round 104, 17 sec elapsed
+boosting round 105, 17 sec elapsed
 boosting round 106, 17 sec elapsed
-boosting round 107, 17 sec elapsed
-boosting round 108, 17 sec elapsed
-boosting round 109, 17 sec elapsed
-boos[110]	test-auc:0.552620	test-rmse:0.336227	trainname-auc:0.562925	trainname-rmse:0.280592
-[111]	test-auc:0.552620	test-rmse:0.336227	trainname-auc:0.562925	trainname-rmse:0.280592
-[112]	test-auc:0.552620	test-rmse:0.336227	trainname-auc:0.562925	trainname-rmse:0.280592
-[113]	test-auc:0.552620	test-rmse:0.336227	trainname-auc:0.562925	trainname-rmse:0.280592
-[114]	test-auc:0.552620	test-rmse:0.336227	trainname-auc:0.562925	trainname-rmse:0.280592
+boosting round 107, 18 sec elapsed
+boosting round 108, 18 sec elapsed
+boosting round 109, 18 sec elapsed
+boosting round 110, 18 sec elapsed
+boosting round 111, 18 sec elapsed
+boosting round 112, 18 sec elapsed
+boosting round 113, 19 sec elapsed
+boost[114]	test-auc:0.552620	test-rmse:0.336227	trainname-auc:0.562925	trainname-rmse:0.280592
 [115]	test-auc:0.552620	test-rmse:0.336227	trainname-auc:0.562925	trainname-rmse:0.280592
 [116]	test-auc:0.552620	test-rmse:0.336227	trainname-auc:0.562925	trainname-rmse:0.280592
 [117]	test-auc:0.552620	test-rmse:0.336227	trainname-auc:0.562925	trainname-rmse:0.280592
@@ -264,48 +266,44 @@ boos[110]	test-auc:0.552620	test-rmse:0.336227	trainname-auc:0.562925	trainname-
 [147]	test-auc:0.552620	test-rmse:0.336227	trainname-auc:0.562925	trainname-rmse:0.280592
 [148]	test-auc:0.552620	test-rmse:0.336227	trainname-auc:0.562925	trainname-rmse:0.280592
 [149]	test-auc:0.552620	test-rmse:0.336227	trainname-auc:0.562925	trainname-rmse:0.280592
-ting round 110, 17 sec elapsed
-boosting round 111, 17 sec elapsed
-boosting round 112, 18 sec elapsed
-boosting round 113, 18 sec elapsed
-boosting round 114, 18 sec elapsed
-boosting round 115, 18 sec elapsed
-boosting round 116, 18 sec elapsed
-boosting round 117, 18 sec elapsed
-boosting round 118, 18 sec elapsed
-boosting round 119, 19 sec elapsed
-boosting round 120, 19 sec elapsed
-boosting round 121, 19 sec elapsed
-boosting round 122, 19 sec elapsed
-boosting round 123, 19 sec elapsed
-boosting round 124, 19 sec elapsed
-boosting round 125, 20 sec elapsed
-boosting round 126, 20 sec elapsed
-boosting round 127, 20 sec elapsed
-boosting round 128, 20 sec elapsed
-boosting round 129, 20 sec elapsed
-boosting round 130, 20 sec elapsed
-boosting round 131, 20 sec elapsed
-boosting round 132, 21 sec elapsed
-boosting round 133, 21 sec elapsed
-boosting round 134, 21 sec elapsed
-boosting round 135, 21 sec elapsed
-boosting round 136, 21 sec elapsed
-boosting round 137, 21 sec elapsed
-boosting round 138, 22 sec elapsed
-boosting round 139, 22 sec elapsed
-boosting round 140, 22 sec elapsed
-boosting round 141, 22 sec elapsed
-boosting round 142, 22 sec elapsed
-boosting round 143, 22 sec elapsed
-boosting round 144, 23 sec elapsed
-boosting round 145, 23 sec elapsed
-boosting round 146, 23 sec elapsed
-boosting round 147, 23 sec elapsed
-boosting round 148, 23 sec elapsed
-boosting round 149, 23 sec elapsed
+ing round 114, 19 sec elapsed
+boosting round 115, 19 sec elapsed
+boosting round 116, 19 sec elapsed
+boosting round 117, 19 sec elapsed
+boosting round 118, 19 sec elapsed
+boosting round 119, 20 sec elapsed
+boosting round 120, 20 sec elapsed
+boosting round 121, 20 sec elapsed
+boosting round 122, 20 sec elapsed
+boosting round 123, 20 sec elapsed
+boosting round 124, 20 sec elapsed
+boosting round 125, 21 sec elapsed
+boosting round 126, 21 sec elapsed
+boosting round 127, 21 sec elapsed
+boosting round 128, 21 sec elapsed
+boosting round 129, 21 sec elapsed
+boosting round 130, 21 sec elapsed
+boosting round 131, 21 sec elapsed
+boosting round 132, 22 sec elapsed
+boosting round 133, 22 sec elapsed
+boosting round 134, 22 sec elapsed
+boosting round 135, 22 sec elapsed
+boosting round 136, 22 sec elapsed
+boosting round 137, 22 sec elapsed
+boosting round 138, 23 sec elapsed
+boosting round 139, 23 sec elapsed
+boosting round 140, 23 sec elapsed
+boosting round 141, 23 sec elapsed
+boosting round 142, 23 sec elapsed
+boosting round 143, 23 sec elapsed
+boosting round 144, 24 sec elapsed
+boosting round 145, 24 sec elapsed
+boosting round 146, 24 sec elapsed
+boosting round 147, 24 sec elapsed
+boosting round 148, 24 sec elapsed
+boosting round 149, 24 sec elapsed
 
-updating end, 24 sec in all
+updating end, 25 sec in all
 40512x8 matrix with 243072 entries is loaded from buffer/test.lr.buffer_4.buffer
 start prediction...
 writing prediction to pred.txt
