@@ -1,7 +1,8 @@
-currentLine=$(wc -l < ../test.txt)
-echo $currentLine
-line=$(head -1 ../model/train.gbrt.svm_buffer)
+line=$(head -1 ../model/train.$1.svm_buffer)
 read -a array <<<$line
 sum=$((${#array[*]}-1))
 echo $sum
-
+for ((i=0;i<sum;i++))
+do
+    echo $i
+done
