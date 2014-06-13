@@ -1,0 +1,311 @@
+[0]	test-auc:0.546618	test-rmse:0.335359	trainname-auc:0.564755	trainname-rmse:0.290358
+[1]	test-auc:0.549780	test-rmse:0.334802	trainname-auc:0.565488	trainname-rmse:0.280902
+[2]	test-auc:0.553561	test-rmse:0.335993	trainname-auc:0.566088	trainname-rmse:0.280532
+[3]	test-auc:0.555381	test-rmse:0.336154	trainname-auc:0.566260	trainname-rmse:0.280523
+[4]	test-auc:0.555555	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[5]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[6]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[7]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[8]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[9]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[10]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[11]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[12]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[13]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[14]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[15]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[16]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[17]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[18]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[19]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[20]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[21]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[22]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[23]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[24]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[25]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[26]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[27]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[28]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[29]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[30]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[31]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[32]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[33]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[34]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[35]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[36]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[37]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[38]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[39]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[40]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[41]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[42]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[43]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[44]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[45]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[46]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[47]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[48]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[49]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[50]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[51]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[52]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[53]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[54]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[55]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[56]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[57]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[58]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[59]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[60]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[61]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[62]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[63]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[64]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[65]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[66]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[67]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[68]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[69]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[70]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[71]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[72]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[73]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[74]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[75]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[76]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[77]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[78]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[79]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[80]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[81]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[82]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[83]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[84]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[85]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[86]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[87]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[88]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[89]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[90]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[91]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[92]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[93]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[94]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[95]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[96]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[97]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[98]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[99]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[100]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[101]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[102]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[103]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[104]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[105]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[106]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[107]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[108]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[109]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+462222x8 matrix with 2773332 entries is loaded from buffer/train.lr.buffer_5
+462222x8 matrix with 2773332 entries is saved to buffer/train.lr.buffer_5.buffer
+40512x8 matrix with 243072 entries is loaded from buffer/test.lr.buffer_5
+40512x8 matrix with 243072 entries is saved to buffer/test.lr.buffer_5.buffer
+462222x8 matrix with 2773332 entries is loaded from buffer/train.lr.buffer_5.buffer
+buffer_size=964956
+boosting round 0, 0 sec elapsed
+boosting round 1, 1 sec elapsed
+boosting round 2, 1 sec elapsed
+boosting round 3, 1 sec elapsed
+boosting round 4, 1 sec elapsed
+boosting round 5, 1 sec elapsed
+boosting round 6, 1 sec elapsed
+boosting round 7, 2 sec elapsed
+boosting round 8, 2 sec elapsed
+boosting round 9, 2 sec elapsed
+boosting round 10, 2 sec elapsed
+boosting round 11, 2 sec elapsed
+boosting round 12, 2 sec elapsed
+boosting round 13, 3 sec elapsed
+boosting round 14, 3 sec elapsed
+boosting round 15, 3 sec elapsed
+boosting round 16, 3 sec elapsed
+boosting round 17, 3 sec elapsed
+boosting round 18, 3 sec elapsed
+boosting round 19, 3 sec elapsed
+boosting round 20, 4 sec elapsed
+boosting round 21, 4 sec elapsed
+boosting round 22, 4 sec elapsed
+boosting round 23, 4 sec elapsed
+boosting round 24, 4 sec elapsed
+boosting round 25, 4 sec elapsed
+boosting round 26, 5 sec elapsed
+boosting round 27, 5 sec elapsed
+boosting round 28, 5 sec elapsed
+boosting round 29, 5 sec elapsed
+boosting round 30, 5 sec elapsed
+boosting round 31, 5 sec elapsed
+boosting round 32, 6 sec elapsed
+boosting round 33, 6 sec elapsed
+boosting round 34, 6 sec elapsed
+boosting round 35, 6 sec elapsed
+boosting round 36, 6 sec elapsed
+boosting round 37, 6 sec elapsed
+boosting round 38, 6 sec elapsed
+boosting round 39, 7 sec elapsed
+boosting round 40, 7 sec elapsed
+boosting round 41, 7 sec elapsed
+boosting round 42, 7 sec elapsed
+boosting round 43, 7 sec elapsed
+boosting round 44, 7 sec elapsed
+boosting round 45, 8 sec elapsed
+boosting round 46, 8 sec elapsed
+boosting round 47, 8 sec elapsed
+boosting round 48, 8 sec elapsed
+boosting round 49, 8 sec elapsed
+boosting round 50, 8 sec elapsed
+boosting round 51, 9 sec elapsed
+boosting round 52, 9 sec elapsed
+boosting round 53, 9 sec elapsed
+boosting round 54, 9 sec elapsed
+boosting round 55, 9 sec elapsed
+boosting round 56, 9 sec elapsed
+boosting round 57, 10 sec elapsed
+boosting round 58, 10 sec elapsed
+boosting round 59, 10 sec elapsed
+boosting round 60, 10 sec elapsed
+boosting round 61, 10 sec elapsed
+boosting round 62, 10 sec elapsed
+boosting round 63, 10 sec elapsed
+boosting round 64, 11 sec elapsed
+boosting round 65, 11 sec elapsed
+boosting round 66, 11 sec elapsed
+boosting round 67, 11 sec elapsed
+boosting round 68, 11 sec elapsed
+boosting round 69, 11 sec elapsed
+boosting round 70, 12 sec elapsed
+boosting round 71, 12 sec elapsed
+boosting round 72, 12 sec elapsed
+boosting round 73, 12 sec elapsed
+boosting round 74, 12 sec elapsed
+boosting round 75, 12 sec elapsed
+boosting round 76, 13 sec elapsed
+boosting round 77, 13 sec elapsed
+boosting round 78, 13 sec elapsed
+boosting round 79, 13 sec elapsed
+boosting round 80, 13 sec elapsed
+boosting round 81, 13 sec elapsed
+boosting round 82, 13 sec elapsed
+boosting round 83, 14 sec elapsed
+boosting round 84, 14 sec elapsed
+boosting round 85, 14 sec elapsed
+boosting round 86, 14 sec elapsed
+boosting round 87, 14 sec elapsed
+boosting round 88, 14 sec elapsed
+boosting round 89, 15 sec elapsed
+boosting round 90, 15 sec elapsed
+boosting round 91, 15 sec elapsed
+boosting round 92, 15 sec elapsed
+boosting round 93, 15 sec elapsed
+boosting round 94, 15 sec elapsed
+boosting round 95, 16 sec elapsed
+boosting round 96, 16 sec elapsed
+boosting round 97, 16 sec elapsed
+boosting round 98, 16 sec elapsed
+boosting round 99, 16 sec elapsed
+boosting round 100, 16 sec elapsed
+boosting round 101, 16 sec elapsed
+boosting round 102, 17 sec elapsed
+boosting round 103, 17 sec elapsed
+boosting round 104, 17 sec elapsed
+boosting round 105, 17 sec elapsed
+boosting round 106, 17 sec elapsed
+boosting round 107, 17 sec elapsed
+boosting round 108, 18 sec elapsed
+boosting round 109, 18 sec elapsed
+[110]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[111]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[112]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[113]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[114]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[115]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[116]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[117]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[118]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[119]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[120]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[121]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[122]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[123]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[124]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[125]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[126]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[127]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[128]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[129]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[130]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[131]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[132]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[133]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[134]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[135]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[136]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[137]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[138]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[139]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[140]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[141]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[142]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[143]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[144]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[145]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[146]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[147]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[148]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+[149]	test-auc:0.555564	test-rmse:0.336169	trainname-auc:0.566269	trainname-rmse:0.280523
+boosting round 110, 18 sec elapsed
+boosting round 111, 18 sec elapsed
+boosting round 112, 18 sec elapsed
+boosting round 113, 18 sec elapsed
+boosting round 114, 19 sec elapsed
+boosting round 115, 19 sec elapsed
+boosting round 116, 19 sec elapsed
+boosting round 117, 19 sec elapsed
+boosting round 118, 19 sec elapsed
+boosting round 119, 19 sec elapsed
+boosting round 120, 19 sec elapsed
+boosting round 121, 20 sec elapsed
+boosting round 122, 20 sec elapsed
+boosting round 123, 20 sec elapsed
+boosting round 124, 20 sec elapsed
+boosting round 125, 20 sec elapsed
+boosting round 126, 20 sec elapsed
+boosting round 127, 21 sec elapsed
+boosting round 128, 21 sec elapsed
+boosting round 129, 21 sec elapsed
+boosting round 130, 21 sec elapsed
+boosting round 131, 21 sec elapsed
+boosting round 132, 21 sec elapsed
+boosting round 133, 21 sec elapsed
+boosting round 134, 22 sec elapsed
+boosting round 135, 22 sec elapsed
+boosting round 136, 22 sec elapsed
+boosting round 137, 22 sec elapsed
+boosting round 138, 22 sec elapsed
+boosting round 139, 22 sec elapsed
+boosting round 140, 23 sec elapsed
+boosting round 141, 23 sec elapsed
+boosting round 142, 23 sec elapsed
+boosting round 143, 23 sec elapsed
+boosting round 144, 23 sec elapsed
+boosting round 145, 23 sec elapsed
+boosting round 146, 23 sec elapsed
+boosting round 147, 24 sec elapsed
+boosting round 148, 24 sec elapsed
+boosting round 149, 24 sec elapsed
+
+updating end, 24 sec in all
+40512x8 matrix with 243072 entries is loaded from buffer/test.lr.buffer_5.buffer
+start prediction...
+writing prediction to pred.txt
