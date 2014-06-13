@@ -252,4 +252,396 @@ boosting round 54, 50 sec elapsed
 
 build GBRT with 462222 instances
 tree train end, 1 roots, 62 extra nodes, 0 pruned nodes ,max_depth=5
-boosting rou
+boosting round 55, 51 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 56 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 56, 52 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 56 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 57, 53 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 48 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 58, 54 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 52 extra nodes, 2 pruned nodes ,max_depth=5
+boosting round 59, 55 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 62 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 60, 56 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 58 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 61, 57 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 60 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 62, 58 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 62 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 63, 59 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 54 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 64, 60 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 60 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 65, 61 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 58 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 66, 62 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 56 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 67, 63 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 32 extra nodes, 2 pruned nodes ,max_depth=5
+boosting round 68, 63 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 58 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 69, 64 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 54 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 70, 65 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 48 extra nodes, 2 pruned nodes ,max_depth=5
+boosting round 71, 66 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 62 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 72, 67 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 32 extra nodes, 2 pruned nodes ,max_depth=5
+boosting round 73, 68 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 62 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 74, 69 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 54 extra nodes, 2 pruned nodes ,max_depth=5
+boosting round 75, 70 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 54 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 76, 71 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 50 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 77, 72 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 62 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 78, 73 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 58 extra nodes, 2 pruned nodes ,max_depth=5
+boosting round 79, 74 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 48 extra nodes, 4 pruned nodes ,max_depth=5
+boosting round 80, 75 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 54 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 81, 76 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 62 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 82, 77 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 60 extra nodes, 2 pruned nodes ,max_depth=5
+boosting round 83, 77 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 58 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 84, 78 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 60 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 85, 79 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 38 extra nodes, 2 pruned nodes ,max_depth=5
+boosting round 86, 80 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 38 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 87, 81 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 36 extra nodes, 2 pruned nodes ,max_depth=5
+boosting round 88, 82 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 52 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 89, 83 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 60 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 90, 84 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 60 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 91, 85 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 34 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 92, 86 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 60 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 93, 87 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 52 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 94, 88 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 32 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 95, 89 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 58 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 96, 90 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 46 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 97, 91 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 60 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 98, 92 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 38 extra nodes, 2 pruned nodes ,max_depth=5
+boosting round 99, 93 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 62 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 100, 94 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 58 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 101, 94 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 56 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 102, 95 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 62 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 103, 96 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 58 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 104, 97 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 18 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 105, 98 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 58 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 106, 99 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 44 extra nodes, 4 pruned nodes ,max_depth=5
+boosting round 107, 100 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 42 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 108, 101 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 62 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 109, 102 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 40 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 110, 103 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 46 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 111, 104 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 32 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 112, 105 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 26 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 113, 106 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 52 extra nodes, 2 pruned nodes ,max_depth=5
+boosting round 114, 107 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 40 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 115, 108 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 60 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 116, 109 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 52 extra nodes, 2 pruned nodes ,max_depth=5
+boosting round 117, 110 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 26 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 118, 111 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 58 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 119, 111 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 60 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 120, 112 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 46 extra nodes, 2 pruned nodes ,max_depth=5
+boosting round 121, 113 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 48 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 122, 114 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 62 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 123, 115 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 38 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 124, 116 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 62 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 125, 117 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 62 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 126, 118 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 54 extra nodes, 2 pruned nodes ,max_depth=5
+boosting round 127, 119 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 54 extra nodes, 2 pruned nodes ,max_depth=5
+boosting round 128, 120 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 50 extra nodes, 2 pruned nodes ,max_depth=5
+boosting round 129, 121 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 58 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 130, 122 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 30 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 131, 123 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 34 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 132, 124 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 60 extra nodes, 2 pruned nodes ,max_depth=5
+boosting round 133, 125 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 56 extra nodes, 4 pruned nodes ,max_depth=5
+boosting round 134, 126 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 44 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 135, 127 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 54 extra nodes, 2 pruned nodes ,max_depth=5
+boosting round 136, 128 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 36 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 137, 129 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 54 extra nodes, 2 pruned nodes ,max_depth=5
+boosting round 138, 130 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 50 extra nodes, 2 pruned nodes ,max_depth=5
+boosting round 139, 131 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 56 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 140, 132 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 52 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 141, 133 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 44 extra nodes, 2 pruned nodes ,max_depth=5
+boosting round 142, 134 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 54 extra nodes, 2 pruned nodes ,max_depth=5
+boosting round 143, 134 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 22 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 144, 135 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 60 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 145, 136 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 34 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 146, 137 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 48 extra nodes, 0 pruned nodes ,max_depth=5
+boosting round 147, 138 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 58 extra nodes, 2 pruned nodes ,max_depth=5
+boosting round 148, 139 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 42 extra nodes, 2 pruned nodes ,max_depth=5
+boosting round 149, 140 sec elapsed
+
+build GBRT with 462222 instances
+tree train end, 1 roots, 62 extra nodes, 0 pruned nodes ,max_depth=5
+
+updating end, 141 sec in all
+462222x41 matrix with 18488880 entries is loaded from ../../model/train.gbrt.svm_buffer.buffer
+data contains 1 groups
+start prediction...
+writing prediction to pred.txt
+40512x41 matrix with 1620480 entries is loaded from ../../model/test.gbrt.svm_buffer.buffer
+data contains 1 groups
+start prediction...
+writing prediction to pred.txt
+auc evaluation and make submission
+AUC: 0.661847160176564
+/home/tqchen/kalen/kddcup2014/kddcup2014_0
