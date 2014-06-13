@@ -1,6 +1,7 @@
 1 py_EssayLength0 q
 2 py_ResourceNum0 q
-3 py_NeedStatementLength0 q
-4 py_TitleLength0 q
-5 yep_StudentReached0 q
-6 yep_Price0 q
+3 py_ShortDescriptionLength0 q
+4 py_NeedStatementLength0 q
+5 py_TitleLength0 q
+6 yep_StudentReached0 q
+7 yep_Price0 q

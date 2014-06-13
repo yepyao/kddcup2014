@@ -1,9 +1,10 @@
-line=$(head -1 ../model/train.$1.svm_buffer)
+cd ../xgboost_run/$1/
+round=0150
+xgboost $1.conf num_round=$round > ../../featureSelection/temp
+xgboost $1.conf task=pred model_in=$round.model 
+cd ../../featureSelection
+java -cp ../codes/yep/bin evaluation.MakeSubmission pred.txt ../test.txt submission.txt ../data/projectIDMapping > result/temp
+line=$(head -1 result/temp)
 read -a array <<<$line
-sum=$((${#array[*]}-1))
-echo $sum
-cp ../model/train.$1.svm_buffer buffer/train.$1.buffer
-cp ../model/test.$1.svm_buffer buffer/test.$1.buffer
-java -cp ../codes/py/bin preprocessing.SplitBuffer buffer/train.$1.buffer $sum 
-java -cp ../codes/py/bin preprocessing.SplitBuffer buffer/test.$1.buffer $sum 
-
+best=${array[1]}
+echo $best
