@@ -1,16 +1,8 @@
-rm log.txt
 round=0150
-echo begin to run xgboost
-cd ../xgboost_run/$1/
-xgboost $1.conf num_round=$round
-xgboost $1.conf task=pred model_in=$round.model test:data="../../model/train.$1.svm_buffer"
-cp pred.txt pred_train.txt
-xgboost $1.conf task=pred model_in=$round.model
-cp pred.txt pred_test.txt
-echo auc evaluation and make submission
-java -cp ../../codes/yep/bin evaluation.MakeSubmission pred.txt ../../test.txt submission.txt ../../data/projectIDMapping &> ../../featureSelection/log.txt
-xgboost $1.conf task=dump model_in=$round.model fmap=fmap.txt name_dump=dump.nice.txt
+xgboost ../xgboost_run/$1/$1.conf num_round=$round data="buffer/train.$1.buffer_$2" test:data="buffer/test.$1.buffer_$2"
+xgboost ../xgboost_run/$1/$1.conf task=pred model_in=$round.model data="buffer/train.$1.buffer_$2" test:data="buffer/test.$1.buffer_$2"
+java -cp ../../codes/yep/bin evaluation.MakeSubmission pred.txt ../../test.txt submission.txt ../../data/projectIDMapping > result/result_$2.txt
 
-line=$(head -1 log.txt)
+line=$(head -1 result.txt)
 read -a array <<<$line
 echo ${array[1]}
