@@ -36,7 +36,7 @@ do
     java -cp ../codes/py/bin preprocessing.GenNewBuffer result/result.$1 $sum $best buffer/test.$1.buffer buffer/temp.$1.buffer 
     mv buffer/temp.$1.buffer buffer/test.$1.buffer
     delete=$(head -1 delete)
-    if [ $delelte == -1 ]
+    if [ $delete -eq -1 ]
     then
         break
     fi
